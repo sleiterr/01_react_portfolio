@@ -1,0 +1,75 @@
+/*******************************/
+/*! NAV-BAR */
+/*******************************/
+
+/*? BURGER-BTTN */
+
+/* .burger-btn {
+  display: none;
+} */
+
+header {
+  /* position: relative; */
+}
+
+.nav_bar {
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* top: 0;
+  left: 0;
+  right: 0; */
+  padding: 0 30px;
+  /* z-index: 3; */
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: transparent;
+}
+
+.nav_logo {
+  position: relative;
+  padding: 16px 0;
+  width: 160px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.nav_logo::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  right: -22px;
+  height: 70%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.nav_list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+}
+
+/*! LANGUAGE-SELECT */
+
+.lang_value:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav_links {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 600;
+  font-size: clamp(18px, 2.5vw, 26px);
+  color: #333;
+  letter-spacing: 0.1rem;
+}
+
+.nav_cta {
+  color: #333;
+}

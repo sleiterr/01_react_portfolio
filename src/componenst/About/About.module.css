@@ -1,0 +1,75 @@
+.aboutSection {
+  background-color: black;
+}
+
+.aboutContainer {
+  padding: 120px 0;
+}
+
+.aboutFeature {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 60px;
+  grid-row-gap: 0px;
+
+  width: 100%;
+}
+
+.aboutcontent {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+/* .border {
+  padding: 0 15px;
+} */
+
+.aboutTitle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Source Code Pro", monospace;
+  font-weight: 500;
+  font-size: 56px;
+  color: #fff;
+  letter-spacing: 0.2rem;
+
+  text-align: center;
+  /* margin-bottom: 35px; */
+}
+
+.aboutTitle::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 80%;
+  background-color: rgb(31, 152, 189);
+}
+
+.aboutSubtitle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: clamp(18px, 3.5vw, 22px);
+
+  color: #fff;
+  letter-spacing: 0.06em;
+  line-height: 1.4em;
+  text-align: start;
+}
+
+.aboutDevelopment {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: clamp(18px, 3.5vw, 22px);
+
+  color: #fff;
+  letter-spacing: 0.06em;
+  line-height: 1.4em;
+}

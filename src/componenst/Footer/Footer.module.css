@@ -1,0 +1,39 @@
+.footer {
+  padding: 120px 0;
+  background-color: #000;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoFooter {
+  width: 320px;
+  height: 100%;
+}
+
+.footerContact {
+  margin-top: 20px;
+}
+
+.footerList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 20px;
+}
+
+/** check - font-family import */
+.footerLinks {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+
+  font-size: 18px;
+  letter-spacing: 0.06em;
+
+  color: #fff;
+}

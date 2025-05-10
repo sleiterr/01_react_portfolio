@@ -1,0 +1,31 @@
+.educContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  padding: 120px 0;
+}
+
+.educTitle {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 500;
+  font-size: 4rem;
+  color: #333;
+}
+
+.educSubtitle {
+  font-weight: 400;
+  font-size: 1.8em;
+  color: #333;
+}
+
+.iconCheveron {
+  position: absolute;
+  right: 0;
+  top: -4px;
+  font-size: 45px;
+  color: #087f5d;
+  transition: transform 250ms ease;
+}

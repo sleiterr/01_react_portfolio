@@ -3,12 +3,12 @@ import s from "./About.module.css";
 
 const About = () => {
   return (
-      <section className={ s.aboutSection}>
+    <section className={s.aboutSection}>
       <div className={`${s.aboutContainer} container`}>
-        <div class={s.aboutFeature}>
-          <h2 class={s.aboutTitle}>About Me</h2>
-          <div class={s.aboutContent}>
-            <p class={s.aboutSubtitle}>
+        <div className={s.aboutFeature}>
+          <h2 className={s.aboutTitle}>About Me</h2>
+          <div className={s.aboutContent}>
+            <p className={s.aboutSubtitle}>
               I am a beginner web developer. I live and study in Denmark. I
               speak Ukrainian, Danish and English. I am currently studying at
               Viborg Media College, where Iam gaining practical web development
@@ -19,8 +19,8 @@ const About = () => {
             </p>
           </div>
 
-          <div class={s.aboutContent}>
-            <p class={s.aboutDevelopment}>
+          <div className={s.aboutContent}>
+            <p className={s.aboutDevelopment}>
               Why web development ? This field is one of the most
               customer-oriented and project-oriented, where you can enjoy
               creating something new. Yes, it is not an easy field of activity,

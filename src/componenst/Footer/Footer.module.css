@@ -8,6 +8,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  gap: 26px;
 }
 
 .logoFooter {
@@ -16,7 +18,12 @@
 }
 
 .footerContact {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 20px;
+  margin-top: 15px;
 }
 
 .footerList {
@@ -27,7 +34,7 @@
   gap: 20px;
 }
 
-/** check - font-family import */
+/**! check - font-family import */
 .footerLinks {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -35,5 +42,18 @@
   font-size: 18px;
   letter-spacing: 0.06em;
 
+  color: #fff;
+}
+
+.footerIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+}
+
+.icon {
+  font-size: 46px;
   color: #fff;
 }

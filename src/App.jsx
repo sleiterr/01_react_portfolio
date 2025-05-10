@@ -1,5 +1,5 @@
 import "./App.css";
-import accordionData from "./Data/accordionData.json";
+
 import Header from "./componenst/Header/Header";
 import HeroSection from "./componenst/Hero/HeroSection";
 import About from "./componenst/About/About";
@@ -13,7 +13,7 @@ function App() {
       <main>
         <HeroSection />
         <About />
-        <Experience accordion={accordionData} />
+        <Experience />
         <Footer />
       </main>
     </>

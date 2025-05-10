@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 0px;
+  grid-column-gap: 60px;
   grid-row-gap: 0px;
 
   padding: 120px 0;
@@ -21,11 +21,128 @@
   color: #333;
 }
 
+/*! ACCORDION-LIST */
+
+.accordion {
+  position: relative;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  /* padding: 18px; */
+
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.3s ease;
+  padding: 24px;
+
+  margin-bottom: 50px;
+}
+
+.accordion::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.contentContainer {
+  display: flex;
+  align-items: center;
+
+  gap: 24px;
+}
+
+.title {
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  font-size: 48px;
+
+  color: #343a40;
+  text-align: center;
+
+  margin-top: 50px;
+}
+
+.numTitle {
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  font-size: 24px;
+
+  margin: 0;
+  color: #ced4da;
+}
+
+.accTitle {
+  font-family: "Montserrat", serif;
+  font-weight: 500;
+  font-size: 24px;
+
+  color: #343a40;
+  /* padding: 24px; */
+  margin: 0;
+}
+
+.accContent {
+  font-family: "Montserrat";
+  font-size: 16px;
+  color: #343a40;
+  line-height: 1.6em;
+
+  padding: 24px;
+}
+
+.accordionList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 1em;
+  color: #868e96;
+  margin-bottom: 24px;
+}
+
+.accordion .panel {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  /* display: none; */
+}
+
+.accordion.active .panel {
+  max-height: 500px;
+  opacity: 1;
+  /* display: block; */
+}
+
+.panel {
+  /* padding: 0 18px; */
+  background-color: white;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.accordionIcon {
+  position: relative;
+}
+
 .iconCheveron {
   position: absolute;
   right: 0;
-  top: -4px;
+  top: -10px;
   font-size: 45px;
   color: #087f5d;
   transition: transform 250ms ease;
+}
+
+.accordion.active .iconCheveron {
+  transform: rotate(90deg);
 }

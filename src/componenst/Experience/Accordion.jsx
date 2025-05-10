@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import s from "./Experience.module.css";
 
 const Accordion = ({ accordion = [] }) => {
+  const [clicked, setClicked] = useState(null);
+
+  const handleToggle = (index) => {
+    setClicked(clicked === index ? null : index);
+  };
   return (
     <div>
       {accordion.map(({ id, title, subtitle, list }, index) => {
         const accordionIndex = (index + 1).toString().padStart(2, "0");
+        const isActive = clicked === index;
         return (
-          <div className={s.accordion} key={id}>
+          <div
+            className={`${s.accordion} ${isActive ? s.active : ""}`}
+            onClick={() => handleToggle(index)}
+            key={id}
+          >
             <div className={s.accordionIcon}>
               <IoIosArrowForward className={s.iconCheveron} />
             </div>
@@ -18,7 +28,7 @@ const Accordion = ({ accordion = [] }) => {
               <h4 className={s.accTitle}>{title}</h4>
             </div>
 
-            <div className={s.panel}>
+            <div className={`${s.panel} ${isActive ? s.active : ""}`}>
               <p className={s.accContent}>{subtitle}</p>
               <ul className={s.accordionList}>
                 {list.map((li, i) => (

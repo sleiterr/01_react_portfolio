@@ -114,13 +114,13 @@
   opacity: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-  /* display: none; */
+  display: block;
 }
 
 .accordion.active .panel {
   max-height: 500px;
   opacity: 1;
-  /* display: block; */
+  display: block;
 }
 
 .panel {

@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "src": "../assets/imgProjects/card-1.jpg",
+    "title": "Le gout infini",
+    "caption": "Osteria Francescana in Modena.",
+    "category": "landing",
+    "url": "https://sleiterr.github.io/md-11-html-Le-go-t-infini/"
+  },
+  {
+    "id": 2,
+    "src": "../assets/imgProjects/card-2.jpg",
+    "title": "Bjarke Ingels",
+    "caption": "The cultural mediator.",
+    "category": "landing",
+    "url": "https://sleiterr.github.io/md-bjarke-ingels/"
+  },
+  {
+    "id": 3,
+    "src": "../assets/imgProjects/card-3.jpg",
+    "title": "Italian Cuisine",
+    "caption": "Italian cuisine is more than just food; it's art, tradition, and love.",
+    "category": "landing",
+    "url": "https://sleiterr.github.io/delizi-oso/"
+  },
+  {
+    "id": 4,
+    "src": "../assets/imgProjects/сhildrens-toys.jpg",
+    "title": "To play is to live",
+    "caption": "Here at our store we have a large selection of high quality toys.",
+    "category": "landing",
+    "url": "https://sleiterr.github.io/md-ex-lege-krogen/"
+  },
+
+  {
+    "id": 5,
+    "src": "../assets/imgProjects/products-search-bar.jpg",
+    "title": "Search Bar",
+    "caption": "An interactive product search bar based on JSON data for dynamic filtering.",
+    "category": "js-project",
+    "url": "https://sleiterr.github.io/md-js-01-favorites.json/"
+  },
+  {
+    "id": 6,
+    "src": "../assets/imgProjects/sweet-ice-cream.jpg",
+    "title": "Sweet ice cream",
+    "caption": "Discover a world of refined flavors with our exquisite ice selection.",
+    "category": "js-project",
+    "url": "https://sleiterr.github.io/md-04-js-json-ice-cream/"
+  },
+  {
+    "id": 7,
+    "src": "../assets/imgProjects/card-4.jpg",
+    "title": "Halloween",
+    "caption": "Cutest Pumpkin",
+    "category": "js-project",
+    "url": "https://sleiterr.github.io/md-04-js-hallowin/"
+  },
+  {
+    "id": 8,
+    "src": "../assets/imgProjects/chose-your-style.jpg",
+    "title": "Chose your style",
+    "caption": "Style Product.",
+    "category": "js-project",
+    "url": "https://sleiterr.github.io/js-task-06-slider/"
+  }
+]
+s

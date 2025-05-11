@@ -25,7 +25,7 @@ const Accordion = ({ accordion = [] }) => {
 
             <div className={s.contentContainer}>
               <p className={s.numTitle}>{accordionIndex}</p>
-              <h4 className={s.accTitle}>{title}</h4>
+              <h4 className={s.accTitle}>{title}</h4> 
             </div>
 
             <div className={`${s.panel} ${isActive ? s.active : ""}`}>

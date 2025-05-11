@@ -49,6 +49,10 @@
   transition: background-color 0.3s ease;
 }
 
+.accordion.active::before {
+  background: #087f5d;
+}
+
 .contentContainer {
   display: flex;
   align-items: center;
@@ -57,7 +61,7 @@
 }
 
 .title {
-  font-family: "Montserrat", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 48px;
 
@@ -68,7 +72,7 @@
 }
 
 .numTitle {
-  font-family: "Montserrat", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 24px;
 
@@ -77,19 +81,25 @@
 }
 
 .accTitle {
-  font-family: "Montserrat", serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 24px;
 
   color: #343a40;
   /* padding: 24px; */
   margin: 0;
+  transition: color 0.6s ease;
+}
+
+.accordion.active .accTitle {
+  color: #087f5d;
 }
 
 .accContent {
-  font-family: "Montserrat";
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   color: #343a40;
+  letter-spacing: 0.06em;
   line-height: 1.6em;
 
   padding: 24px;
@@ -102,8 +112,9 @@
   justify-content: center;
   gap: 12px;
 
-  font-family: "Montserrat";
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
+  letter-spacing: 0.06em;
   line-height: 1em;
   color: #868e96;
   margin-bottom: 24px;

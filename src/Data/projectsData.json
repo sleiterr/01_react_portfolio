@@ -63,5 +63,13 @@
     "caption": "Style Product.",
     "category": "js-project",
     "url": "https://sleiterr.github.io/js-task-06-slider/"
+  },
+  {
+    "id": 9,
+    "src": "../../src/assets/imgProjects/flavorful-favorites.jpg",
+    "title": "Flavorful Favorites",
+    "caption": "A responsive food delivery web app with interactive menu filtering and dynamic UI elements.",
+    "category": "react-project",
+    "url": "https://md-06-flavorful-favorites.vercel.app/"
   }
 ]

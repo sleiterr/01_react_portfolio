@@ -16,7 +16,7 @@
 }
 
 .heroConteiner {
-  position:absolute;
+  position: absolute;
   top: 50%;
   left: 100px;
   display: flex;
@@ -61,11 +61,12 @@
 }
 
 .heroContext {
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
 
   color: #333;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   line-height: 1.6em;
   width: 518px;
 

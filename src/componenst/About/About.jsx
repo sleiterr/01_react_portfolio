@@ -5,8 +5,8 @@ const About = () => {
   return (
     <section className={s.aboutSection}>
       <div className={`${s.aboutContainer} container`}>
+        <h2 className={s.aboutTitle}>About Me</h2>
         <div className={s.aboutFeature}>
-          <h2 className={s.aboutTitle}>About Me</h2>
           <div className={s.aboutContent}>
             <p className={s.aboutSubtitle}>
               I am a beginner web developer. I live and study in Denmark. I

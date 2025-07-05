@@ -1,75 +1,68 @@
 [
   {
     "id": 1,
-    "src": "../assets/imgProjects/card-1.jpg",
     "title": "Le gout infini",
     "caption": "Osteria Francescana in Modena.",
-    "category": "landing",
-    "url": "https://sleiterr.github.io/md-11-html-Le-go-t-infini/"
+    "url": "https://sleiterr.github.io/md-11-html-Le-go-t-infini/",
+    "category": "html",
+    "image": [
+      "../assets/imgProjects/Le_gout_infini.jpg",
+      "../assets/imgProjects/Le_gout_infini-preview.jpg"
+    ]
   },
   {
     "id": 2,
-    "src": "../assets/imgProjects/card-2.jpg",
-    "title": "Bjarke Ingels",
-    "caption": "The cultural mediator.",
-    "category": "landing",
-    "url": "https://sleiterr.github.io/md-bjarke-ingels/"
+    "title": "Italian Cuisine",
+    "caption": "Italian cuisine is more than just food; it's art, tradition, and love.",
+    "url": "https://sleiterr.github.io/delizi-oso/",
+    "category": "html",
+    "image": [
+      "../assets/imgProjects/Italian_Cuisine.jpg",
+      "../assets/imgProjects/Italian_Cuisine-preview.jpg"
+    ]
   },
   {
     "id": 3,
-    "src": "../assets/imgProjects/card-3.jpg",
-    "title": "Italian Cuisine",
-    "caption": "Italian cuisine is more than just food; it's art, tradition, and love.",
-    "category": "landing",
-    "url": "https://sleiterr.github.io/delizi-oso/"
+    "title": "Halloween",
+    "caption": "Cutest Pumpkin",
+    "url": "https://sleiterr.github.io/md-04-js-hallowin/",
+    "category": "javascript",
+    "image": [
+      "../assets/imgProjects/halloween.jpg",
+      "../assets/imgProjects/halloween_preview.jpg"
+    ]
   },
   {
     "id": 4,
-    "src": "../assets/imgProjects/сhildrens-toys.jpg",
-    "title": "To play is to live",
-    "caption": "Here at our store we have a large selection of high quality toys.",
-    "category": "landing",
-    "url": "https://sleiterr.github.io/md-ex-lege-krogen/"
+    "title": "Paw Hub",
+    "caption": "A platform for pet lovers to connect, share, and care.",
+    "url": "#",
+    "category": "javascript",
+    "image": [
+      "../assets/imgProjects/paw_hub.jpg",
+      "../assets/imgProjects/paw_hub-preview.jpg"
+    ]
   },
-
   {
     "id": 5,
-    "src": "../../src/assets/imgProjects/products-search-bar.jpg",
-    "title": "Search Bar",
-    "caption": "An interactive product search bar based on JSON data for dynamic filtering.",
-    "category": "js-project",
-    "url": "https://sleiterr.github.io/md-js-01-favorites.json/"
+    "title": "To Do List",
+    "caption": "A simple and effective way to manage your tasks.",
+    "url": "https://sleiterr.github.io/md-01-js-checklist/",
+    "category": "javascript",
+    "image": [
+      "../assets/imgProjects/to_do_list.jpg",
+      "../assets/imgProjects/to_do_list-preview.jpg"
+    ]
   },
   {
     "id": 6,
-    "src": "../../src/assets/imgProjects/sweet-ice-cream.jpg",
-    "title": "Sweet ice cream",
-    "caption": "Discover a world of refined flavors with our exquisite ice selection.",
-    "category": "js-project",
-    "url": "https://sleiterr.github.io/md-04-js-json-ice-cream/"
-  },
-  {
-    "id": 7,
-    "src": "../../src/assets/imgProjects/card-4.jpg",
-    "title": "Halloween",
-    "caption": "Cutest Pumpkin",
-    "category": "js-project",
-    "url": "https://sleiterr.github.io/md-04-js-hallowin/"
-  },
-  {
-    "id": 8,
-    "src": "../../src/assets/imgProjects/chose-your-style.jpg",
-    "title": "Chose your style",
-    "caption": "Style Product.",
-    "category": "js-project",
-    "url": "https://sleiterr.github.io/js-task-06-slider/"
-  },
-  {
-    "id": 9,
-    "src": "../../src/assets/imgProjects/flavorful-favorites.jpg",
-    "title": "Flavorful Favorites",
-    "caption": "A responsive food delivery web app with interactive menu filtering and dynamic UI elements.",
-    "category": "react-project",
-    "url": "https://md-06-flavorful-favorites.vercel.app/"
+    "title": "Web Shop",
+    "caption": "A modern e-commerce platform for all your shopping needs.",
+    "url": "https://md-react-semester-project.vercel.app/",
+    "category": "react",
+    "image": [
+      "../assets/imgProjects/web_shop-view.jpg",
+      "../assets/imgProjects/web_shop-preview.jpg"
+    ]
   }
 ]

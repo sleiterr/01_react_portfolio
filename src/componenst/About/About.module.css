@@ -1,19 +1,18 @@
 .aboutSection {
-  background-color: #333;
+  background-color: #000;
 }
 
 .aboutContainer {
-  padding: 120px 0;
+  padding: 180px 0;
 }
 
 .aboutFeature {
   display: grid;
-  grid-template-columns: 0.8fr 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  grid-column-gap: 60px;
-  grid-row-gap: 0px;
 
-  width: 100%;
+  grid-column-gap: 90px;
+  grid-row-gap: 0px;
 }
 
 .aboutcontent {
@@ -30,26 +29,26 @@
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
   font-family: "Source Code Pro", monospace;
-  font-weight: 500;
+  font-weight: 400;
   font-size: 56px;
-  color: #fff;
+  text-indent: 2.5em;
+  color: #ffffff;
   letter-spacing: 0.2rem;
 
-  text-align: center;
-  /* margin-bottom: 35px; */
+  margin-bottom: 35px;
 }
 
-.aboutTitle::after {
+.aboutTitle::before {
   content: "";
   position: absolute;
-  right: 0;
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 4px;
-  height: 80%;
+  width: 120px;
+  height: 4px;
   background-color: rgb(31, 152, 189);
 }
 
@@ -58,7 +57,7 @@
   font-weight: 300;
   font-size: clamp(18px, 3.5vw, 22px);
 
-  color: #fff;
+  color: #c7c7c7;
   letter-spacing: 0.04em;
   line-height: 1.4em;
   text-align: start;
@@ -69,7 +68,8 @@
   font-weight: 300;
   font-size: clamp(18px, 3.5vw, 22px);
 
-  color: #fff;
+  /* color: #fff; */
+  color: #c7c7c7;
   letter-spacing: 0.04em;
   line-height: 1.4em;
 }

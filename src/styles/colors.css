@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+  --color-heading-primary: #fff;
+  --color-heading-accent: #22c3df;
+  --color-subheading: #fff;
+  --color-text: #fff;
+  --color-logo: #fff; /*nav-logo*/
+  --color-caption: #1ed1a8; /*about-caption*/
+  --color-caption-icon: #1ed1a8; /*about-icon*/
+  --accordion-text-active: #22c3df; /*accordion-text*/
+  --accordion-text-default: #000000; /*accordion-active*/
+  --accordion-nr-active: #22c3df; /*accordion-active*/
+  --accordion-nr-default: rgba(60, 60, 67, 0.5); /*accordion-nr*/
+  --color-link: #3182ce;
+  --logo-footer: rgba(255, 255, 255, 0.6);
+  --logo-text: rgba(255, 255, 255, 0.6);
+}

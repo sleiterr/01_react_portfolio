@@ -1,12 +1,59 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
+@import "./styles/colors.css";
+@import "./styles/gradients.css";
 
-  color: rgba(255, 255, 255, 0.87);
+.text-heading-primary {
+  color: var(--color-heading-primary);
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.text-heading-accent {
+  color: var(--color-heading-accent);
+}
+
+.text-subheading {
+  color: var(--color-subheading);
+}
+
+.text-text {
+  color: var(--color-text);
+}
+
+.text-logo {
+  color: var(--color-logo);
+}
+
+.text-caption {
+  color: var(--color-caption);
+}
+
+.text-caption-icon {
+  color: var(--color-caption-icon);
+}
+
+.text-accordion-text-active {
+  color: var(--accordion-text-active);
+}
+
+.text-accordion-text-default {
+  color: var(--accordion-text-default);
+}
+
+.text-accordion-nr-active {
+  color: var(--accordion-nr-active);
+}
+
+.text-accordion-nr-default {
+  color: var(--accordion-nr-default);
+}
+
+.text-link {
+  color: var(--color-link);
+}
+
+.text-logo-footer {
+  color: var(--logo-footer);
+}
+
+.text-logo-text {
+  color: var(--logo-text);
 }

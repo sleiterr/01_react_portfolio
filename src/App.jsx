@@ -1,4 +1,5 @@
 import "./App.css";
+import "./index.css";
 
 import Header from "./componenst/Header/Header";
 import HeroSection from "./componenst/Hero/HeroSection";

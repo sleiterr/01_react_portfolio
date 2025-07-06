@@ -12,7 +12,9 @@ const HeroSection = () => {
       <div className={`${s.heroConteiner} container`}>
         <div className={s.heroContent}>
           <h1 className={s.heroTitle}>Hi, I'm Oleg.</h1>
-          <h3 className={s.heroSubtitle}>I am a Web Developer</h3>
+          <h3 className={s.heroSubtitle}>
+            I am a <span className="text-heading-accent">Web Developer</span>
+          </h3>
           <p className={s.heroContext}>
             I am currently studying web development at Media College Denmark,
             where I am building skills in both web development and UI/UX design.

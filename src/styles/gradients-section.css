@@ -1,0 +1,39 @@
+.bg-about-gradient {
+  background-image: radial-gradient(
+    100% 100% at 50% 100%,
+    #4a5568 0%,
+    #08121d 80%
+  );
+}
+
+.bg-skills {
+  background-color: rgba(23, 32, 47, 1);
+}
+
+.bg-projects-gradient {
+  background-image: radial-gradient(
+    100% 100% at 50% 100%,
+    #4a5568 0%,
+    #08121d 80%
+  );
+}
+
+.bg-preview-gradient {
+  background-image: radial-gradient(
+    100% 100% at 50% 100%,
+    #4a5568 0%,
+    #08121d 80%
+  );
+}
+
+.bg-experiance-gradient {
+  background-image: radial-gradient(
+    100% 100% at 49.41% 100%,
+    #4a5568 0%,
+    #08121d 80%
+  );
+}
+
+.bg-footer {
+  background-color: rgba(23, 32, 47, 1);
+}

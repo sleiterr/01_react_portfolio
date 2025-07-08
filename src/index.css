@@ -1,8 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
 @import "tailwindcss";
+@import "tailwindcss/utilities";
+
 @import "./styles/colors.css";
 @import "./styles/gradients.css";
 @import "./styles/gradients-section.css";
 @import "./styles/breakpoints.css";
+@import "./styles/fonts.css";
+
+
+:root {
+  --font-poppins: "Poppins", sans-serif;
+}
+
+html {
+  font-family: var(--font-poppins);
+}
 
 .text-heading-primary {
   color: var(--color-heading-primary);

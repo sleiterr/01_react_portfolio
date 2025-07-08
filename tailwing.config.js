@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+import { sveltekit } from "@sveltejs/kit/vite";
+import tailwindcss from "tailwindcss";
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
@@ -14,7 +16,11 @@ export default {
         "2xl": "1920px", // 120rem =>
         "3xl": "2500px", // 156.25rem =>
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        code: ["Source Code Pro", "monospace"],
+      },
     },
   },
-  plugins: [],
+  plugins: [sveltekit(), tailwindcss()],
 };

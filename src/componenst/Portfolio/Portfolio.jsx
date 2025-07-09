@@ -23,19 +23,24 @@ const Portfolio = ({ type }) => {
             const formattedIndex = (index + 1).toString().padStart(2, "0");
             console.log("Image", item.image[0]);
             return (
-              <div key={item.id} className={s.galleryItem}>
-                <div className={s.galleryContent}>
+              <div key={item.id}>
+                <div className="relative w-full">
                   <img
                     src={item.image[0]}
                     alt={item.caption}
-                    className={s.img}
+                    width={500}
+                    height={850}
+                    className="w-full h-auto object-cover object-center"
                   />
-                  <a href={item.url} className={s.overlay} target="_blank">
+                  <a
+                    href={item.url}
+                    className="absolute inset-0 bg-black/80 opacity-0 hover:opacity-100 transition duration-500 ease-in-out flex flex-col items-center justify-center text-white text-center m-4"
+                    target="_blank"
+                  >
                     <p className={s.cardNumber}>{formattedIndex}</p>
                     <h3 className={`${s.cardTitle} ${s.head}`}>{item.title}</h3>
                   </a>
                 </div>
-                <p className={s.imgCaption}>{item.caption}</p>
               </div>
             );
           })}

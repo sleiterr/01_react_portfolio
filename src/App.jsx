@@ -15,8 +15,8 @@ function App() {
       <Header />
       <main>
         <HeroSection />
-        <Portfolio type={projectsData} />
         <About />
+        <Portfolio type={projectsData} />
         <Experience />
         <Footer />
       </main>

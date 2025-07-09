@@ -1,7 +1,3 @@
-.galleryContainer {
-  padding: 120px 0;
-  width: 100%;
-}
 
 .gallery {
   display: flex;
@@ -10,9 +6,6 @@
   justify-content: center;
 
   gap: 90px;
-}
-
-.galleryItem {
 }
 
 .imgCaption {
@@ -32,8 +25,8 @@
   width: 100%;
   height: auto;
 
-  max-width: 500px; /* Не більше, ніж оригінальна ширина */
-  max-height: 850px; /* Не більше, ніж оригінальна висота */
+  max-width: 500px; 
+  max-height: 850px; 
 
   object-fit: cover;
   object-position: center;

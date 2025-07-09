@@ -1,14 +1,15 @@
 import React from "react";
-
+import icon from "../../assets/icon/Icon.svg";
 const About = () => {
   return (
     <section className="bg-about-gradient">
-      <div className="py-[120px] mx-auto px-40 max-w-5x1">
-        <div className="grid grid-row-3 gap-4">
-          <span className="text-lg text-caption text-content">
+      <div className="py-[120px] mx-auto px-50 max-w-5x1">
+        <div className="grid grid-row-3 relative">
+          <span className="flex items-center gap-4 font-normal text-xl text-caption tracking-wider absolute top-[-30%] left-[-7rem]">
+            <img src={icon} alt="developer icon" className="w-10 h-10" />
             junior developer
           </span>
-          <h2 className="text-5xl text-content tracking-wide">About Me</h2>
+          <h2 className="text-5xl text-content tracking-wide mb-4">About Me</h2>
           <div className="grid grid-cols-2 gap-24">
             <p className="font-light text-content text-xl tracking-wider">
               I am a beginner web developer. I live and study in Denmark. I

@@ -5,10 +5,8 @@
     "caption": "Osteria Francescana in Modena.",
     "url": "https://sleiterr.github.io/md-11-html-Le-go-t-infini/",
     "category": "html",
-    "image": [
-      "../assets/imgProjects/Le_gout_infini.jpg",
-      "../assets/imgProjects/Le_gout_infini-preview.jpg"
-    ]
+    "image": ["/imgProjects/Le_gout_infini.jpg"],
+    "preview": ["/imgProjects/Le_gout_infini-preview.jpg"]
   },
   {
     "id": 2,
@@ -16,10 +14,8 @@
     "caption": "Italian cuisine is more than just food; it's art, tradition, and love.",
     "url": "https://sleiterr.github.io/delizi-oso/",
     "category": "html",
-    "image": [
-      "../assets/imgProjects/Italian_Cuisine.jpg",
-      "../assets/imgProjects/Italian_Cuisine-preview.jpg"
-    ]
+    "image": ["/imgProjects/Italian_Cuisine.jpg"],
+    "preview": ["/imgProjects/Italian_Cuisine-preview.jpg"]
   },
   {
     "id": 3,
@@ -27,10 +23,8 @@
     "caption": "Cutest Pumpkin",
     "url": "https://sleiterr.github.io/md-04-js-hallowin/",
     "category": "javascript",
-    "image": [
-      "../assets/imgProjects/halloween.jpg",
-      "../assets/imgProjects/halloween_preview.jpg"
-    ]
+    "image": ["/imgProjects/halloween.jpg"],
+    "preview": ["/imgProjects/halloween_preview.jpg"]
   },
   {
     "id": 4,
@@ -38,10 +32,8 @@
     "caption": "A platform for pet lovers to connect, share, and care.",
     "url": "#",
     "category": "javascript",
-    "image": [
-      "../assets/imgProjects/paw_hub.jpg",
-      "../assets/imgProjects/paw_hub-preview.jpg"
-    ]
+    "image": ["/imgProjects/paw_hub.jpg"],
+    "preview": ["/imgProjects/paw_hub-preview.jpg"]
   },
   {
     "id": 5,
@@ -49,10 +41,8 @@
     "caption": "A simple and effective way to manage your tasks.",
     "url": "https://sleiterr.github.io/md-01-js-checklist/",
     "category": "javascript",
-    "image": [
-      "../assets/imgProjects/to_do_list.jpg",
-      "../assets/imgProjects/to_do_list-preview.jpg"
-    ]
+    "image": ["/imgProjects/to_do_list.jpg"],
+    "preview": ["/imgProjects/to_do_list-preview.jpg"]
   },
   {
     "id": 6,
@@ -60,9 +50,7 @@
     "caption": "A modern e-commerce platform for all your shopping needs.",
     "url": "https://md-react-semester-project.vercel.app/",
     "category": "react",
-    "image": [
-      "../assets/imgProjects/web_shop-view.jpg",
-      "../assets/imgProjects/web_shop-preview.jpg"
-    ]
+    "image": ["/imgProjects/web_shop.jpg"],
+    "preview": ["/imgProjects/web_shop-preview.jpg"]
   }
 ]

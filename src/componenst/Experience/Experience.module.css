@@ -1,44 +1,18 @@
-.educContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 60px;
-  grid-row-gap: 0px;
 
-  padding: 120px 0;
-}
-
-.educTitle {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 500;
-  font-size: 4rem;
-  color: #333;
-}
-
-.educSubtitle {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-
-  letter-spacing: 0.04em;
-  line-height: 1.6em;
-  color: #333;
-}
 
 /*! ACCORDION-LIST */
 
 .accordion {
   position: relative;
-  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   /* padding: 18px; */
-
+  
   text-align: left;
   border: none;
   outline: none;
   transition: 0.3s ease;
   padding: 24px;
-
+  
   margin-bottom: 50px;
 }
 
@@ -56,6 +30,8 @@
 .accordion.active::before {
   background: #087f5d;
 }
+
+/*! ACCORDION-LIST */
 
 .contentContainer {
   display: flex;

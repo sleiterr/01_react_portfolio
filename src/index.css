@@ -9,7 +9,6 @@
 @import "./styles/breakpoints.css";
 @import "./styles/fonts.css";
 
-
 :root {
   --font-poppins: "Poppins", sans-serif;
 }
@@ -36,6 +35,10 @@ html {
 
 .text-logo {
   color: var(--color-logo);
+}
+
+.text-number-overlay {
+  color: var(--number-overlay);
 }
 
 .text-caption {

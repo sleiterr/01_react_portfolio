@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
+import clsx from "clsx";
 import s from "./Experience.module.css";
 
 const Accordion = ({ accordion = [] }) => {
@@ -9,13 +10,18 @@ const Accordion = ({ accordion = [] }) => {
     setClicked(clicked === index ? null : index);
   };
   return (
-    <div>
+    <div className="">
       {accordion.map(({ id, title, subtitle, list }, index) => {
         const accordionIndex = (index + 1).toString().padStart(2, "0");
         const isActive = clicked === index;
+
         return (
           <div
-            className={`${s.accordion} ${isActive ? s.active : ""}`}
+            className={clsx(
+              s.accordion,
+              "relative cursor-pointer text-left border border-none transition-all duration-300 ease-in-out",
+              isActive ? s.active : ""
+            )}
             onClick={() => handleToggle(index)}
             key={id}
           >
@@ -25,7 +31,7 @@ const Accordion = ({ accordion = [] }) => {
 
             <div className={s.contentContainer}>
               <p className={s.numTitle}>{accordionIndex}</p>
-              <h4 className={s.accTitle}>{title}</h4> 
+              <h4 className={s.accTitle}>{title}</h4>
             </div>
 
             <div className={`${s.panel} ${isActive ? s.active : ""}`}>

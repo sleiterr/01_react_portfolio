@@ -1,18 +1,16 @@
-
-
 /*! ACCORDION-LIST */
 
 .accordion {
   position: relative;
   cursor: pointer;
   /* padding: 18px; */
-  
+
   text-align: left;
   border: none;
   outline: none;
   transition: 0.3s ease;
-  padding: 24px;
-  
+  padding: 18px;
+
   margin-bottom: 50px;
 }
 
@@ -28,64 +26,12 @@
 }
 
 .accordion.active::before {
-  background: #087f5d;
+  background: var(--accordion-nr-active);
 }
 
 /*! ACCORDION-LIST */
 
-.contentContainer {
-  display: flex;
-  align-items: center;
-
-  gap: 24px;
-}
-/* 
-.title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 200;
-  font-size: 60px;
-
-  color: #344039;
-  text-align: center;
-
-  margin-top: 50px;
-} */
-
-.numTitle {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-
-  margin: 0;
-  color: #ced4da;
-}
-
-.accTitle {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-
-  color: #343a40;
-  /* padding: 24px; */
-  margin: 0;
-  transition: color 0.6s ease;
-}
-
-.accordion.active .accTitle {
-  color: #087f5d;
-}
-
-.accContent {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  color: #343a40;
-  letter-spacing: 0.04em;
-  line-height: 1.6em;
-
-  padding: 24px;
-}
-
-.accordionList {
+/* .accordionList {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -94,12 +40,12 @@
 
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  
+
   letter-spacing: 0.04em;
   line-height: 1.2em;
   color: #868e96;
   margin-bottom: 24px;
-}
+} */
 
 .accordion .panel {
   max-height: 0;
@@ -121,20 +67,7 @@
   overflow: hidden;
   margin-left: 20px;
 }
-
-.accordionIcon {
-  position: relative;
-}
-
-.iconCheveron {
-  position: absolute;
-  right: 0;
-  top: -10px;
-  font-size: 45px;
-  color: #087f5d;
-  transition: transform 250ms ease;
-}
-
+/* 
 .accordion.active .iconCheveron {
   transform: rotate(90deg);
-}
+} */

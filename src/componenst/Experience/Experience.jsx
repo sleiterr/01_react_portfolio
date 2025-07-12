@@ -11,7 +11,7 @@ const Experience = () => {
             <h2 className="font-code text-heading-primary text-5xl tracking-wide mb-4">
               Experience
             </h2>
-            <p className="font-light text-xl text-content tracking-wider">
+            <p className="font-light text-xl text-content tracking-wider leading-[1.6em]">
               At this stage of my college studies, i am gaining experience in
               creating web content, including both single-page landing pages and
               large-scale web projects with working functions. When developing a

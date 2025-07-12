@@ -11,7 +11,7 @@ const About = () => {
           </span>
           <h2 className="text-5xl text-content tracking-wide mb-4">About Me</h2>
           <div className="grid grid-cols-2 gap-24">
-            <p className="font-light text-content text-xl tracking-wider">
+            <p className="font-light text-content text-xl tracking-wider leading-[1.6em]">
               I am a beginner web developer. I live and study in Denmark. I
               speak Ukrainian, Danish and English. I am currently studying at
               Viborg Media College, where Iam gaining practical web development
@@ -21,7 +21,7 @@ const About = () => {
               userinteraction with the product.
             </p>
 
-            <p className="font-light text-content text-xl tracking-wider">
+            <p className="font-light text-content text-xl tracking-wider leading-[1.6em]">
               Why web development ? This field is one of the most
               customer-oriented and project-oriented, where you can enjoy
               creating something new. Yes, it is not an easy field of activity,

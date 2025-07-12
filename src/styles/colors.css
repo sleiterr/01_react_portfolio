@@ -9,10 +9,15 @@
   --number-overlay: #cecece; /*number-overlay*/
   --color-caption: #1ed1a8; /*about-caption*/
   --color-caption-icon: #1ed1a8; /*about-icon*/
+
   --accordion-text-active: #22c3df; /*accordion-text*/
-  --accordion-text-default: #000000; /*accordion-active*/
+  --accordion-text-default: #000; /*accordion-active*/
+
   --accordion-nr-active: #22c3df; /*accordion-active*/
-  --accordion-nr-default: rgba(60, 60, 67, 0.5); /*accordion-nr*/
+  --accordion-nr-default: rgba(60, 60, 67, 0.502); /*accordion-nr*/
+
+  --text-accordion-desc: #343a40; /*accordion-text-desc*/
+
   --color-link: #3182ce;
   --logo-footer: rgba(255, 255, 255, 0.6);
   --logo-text: rgba(255, 255, 255, 0.6);

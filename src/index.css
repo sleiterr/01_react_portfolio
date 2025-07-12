@@ -49,11 +49,15 @@ html {
   color: var(--color-caption-icon);
 }
 
-.text-accordion-text-active {
+.text-accordion {
+  color: var(--text-accordion-desc);
+}
+
+.text-accordion-title-active {
   color: var(--accordion-text-active);
 }
 
-.text-accordion-text-default {
+.text-accordion-title-default {
   color: var(--accordion-text-default);
 }
 

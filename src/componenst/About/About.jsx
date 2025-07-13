@@ -10,7 +10,9 @@ const About = () => {
             <GoCommandPalette className="w-10 h-10" />
             junior developer
           </span>
-          <h2 className="text-5xl text-content tracking-wide mb-4">About Me</h2>
+          <h2 className="text-5xl text-heading-primary tracking-wide mb-4">
+            About Me
+          </h2>
           <div className="grid grid-cols-2 gap-24">
             <p className="font-light text-content text-xl tracking-wider leading-[1.6em]">
               I am a beginner web developer. I live and study in Denmark. I

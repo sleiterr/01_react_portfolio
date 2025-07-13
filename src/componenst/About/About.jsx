@@ -1,12 +1,13 @@
 import React from "react";
-import icon from "../../assets/icon/Icon.svg";
+import { GoCommandPalette } from "react-icons/go";
+
 const About = () => {
   return (
     <section className="bg-about-gradient">
       <div className="py-[120px] mx-auto px-50 max-w-5x1">
         <div className="grid grid-row-3 relative">
           <span className="flex items-center gap-4 font-normal text-xl text-caption tracking-wider absolute top-[-30%] left-[-7rem]">
-            <img src={icon} alt="developer icon" className="w-10 h-10" />
+            <GoCommandPalette className="w-10 h-10" />
             junior developer
           </span>
           <h2 className="text-5xl text-content tracking-wide mb-4">About Me</h2>

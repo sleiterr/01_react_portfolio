@@ -45,10 +45,6 @@ html {
   color: var(--color-caption);
 }
 
-.text-caption-icon {
-  color: var(--color-caption-icon);
-}
-
 .text-accordion {
   color: var(--text-accordion-desc);
 }

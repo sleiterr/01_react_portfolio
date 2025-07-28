@@ -6,7 +6,7 @@ const Portfolio = ({ type }) => {
   );
   console.log("Filtered projects:", categoryProjects);
   return (
-    <section className="bg-projects-gradient">
+    <section className="">
       <div className="py-[120px] mx-auto px-50 max-w-5x1">
         <div className="relative mb-20">
           <h2 className="font-normal text-5xl text-heading-primary tracking-wider mb-6">

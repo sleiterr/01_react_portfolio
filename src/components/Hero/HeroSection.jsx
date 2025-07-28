@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <section
       className="relative w-full bg-cover bg-no-repeat bg-center "
-      id="#"
+      id="hero"
       style={{
         backgroundImage: `url(${heroBg})`,
         backgroundPosition: "center center",

@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Header />
-      <main>
+      <main className="bg-projects-gradient">
         <HeroSection />
         <About />
         <Skills />

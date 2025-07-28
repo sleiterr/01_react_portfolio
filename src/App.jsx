@@ -5,7 +5,6 @@ import React from "react";
 
 import Header from "./components/Header/Header";
 import HeroSection from "./components/Hero/HeroSection";
-import projectsData from "./Data/projectsData.json";
 import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
@@ -27,7 +26,7 @@ function App() {
                 <HeroSection />
                 <About />
                 <Skills />
-                <Portfolio type={projectsData} />
+                <Portfolio />
                 <Experience />
                 <Footer />
               </>

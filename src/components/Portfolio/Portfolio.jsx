@@ -1,11 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react"; // Adjust the path as necessary
 import { Link } from "react-router-dom";
 
-const Portfolio = ({ type }) => {
-  const categoryProjects = type.filter((item) =>
+const Portfolio = () => {
+  const [project, setProjects] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        // Simulate fetching data from an API or local JSON file
+        const res = await fetch("/public/data/projectsData.json"); // Adjust the path as necessary
+        const data = await res.json();
+        setProjects(data);
+      } catch (error) {
+        setError("Failed to load projects", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
+
+  const categoryProjects = project?.filter((item) =>
     ["html", "javascript", "react"].includes(item.category)
   );
   console.log("Filtered projects:", categoryProjects);
+
+  if (loading) return <p>...Loading</p>;
+  if (error || !project) return <p>Product not found</p>;
+
   return (
     <section className="">
       <div className="py-[120px] mx-auto px-50 max-w-5x1">

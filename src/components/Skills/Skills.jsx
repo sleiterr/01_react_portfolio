@@ -16,7 +16,7 @@ import {
 
 const Skills = () => {
   return (
-    <section className="bg-skills">
+    <section className="">
       <div className="py-[120px] mx-auto px-50 max-w-5x1">
         <h2 className="font-code font-normal text-5xl text-heading-primary tracking-wide mb-15">
           My Skills

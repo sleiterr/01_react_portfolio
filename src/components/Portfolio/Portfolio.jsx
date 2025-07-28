@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Portfolio = ({ type }) => {
   const categoryProjects = type.filter((item) =>
@@ -26,7 +27,10 @@ const Portfolio = ({ type }) => {
             console.log("Image", item.image[0]);
             return (
               <div key={item.id}>
-                <div className="relative w-full">
+                <Link
+                  className="relative w-full"
+                  to={`/project-detail/${item.id}`}
+                >
                   <img
                     src={item.image[0]}
                     alt={item.caption}
@@ -34,19 +38,15 @@ const Portfolio = ({ type }) => {
                     height={850}
                     className="w-full h-auto object-cover object-center"
                   />
-                  <a
-                    href={item.url}
-                    className="absolute inset-0 bg-black/80 opacity-0 hover:opacity-100 transition duration-500 ease-in-out flex flex-col items-center justify-center text-white text-center m-4"
-                    target="_blank"
-                  >
+                  <div className="absolute inset-0 bg-black/80 opacity-0 hover:opacity-100 transition duration-500 ease-in-out flex flex-col items-center justify-center text-white text-center m-4">
                     <p className="absolute font-normal text-7xl  right-4 top-4 text-number-overlay tracking-wider">
                       {formattedIndex}
                     </p>
                     <h3 className="absolute font-code font-medium text-3xl tracking-wider text-center">
                       {item.title}
                     </h3>
-                  </a>
-                </div>
+                  </div>
+                </Link>
               </div>
             );
           })}

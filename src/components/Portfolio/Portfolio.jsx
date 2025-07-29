@@ -35,7 +35,7 @@ const Portfolio = () => {
     <section className="">
       <div className="py-[120px] mx-auto px-50 max-w-5x1">
         <div className="relative mb-20">
-          <h2 className="font-normal text-5xl text-heading-primary tracking-wider mb-6">
+          <h2 className="font-code font-normal text-5xl text-heading-primary tracking-wider mb-6">
             My Projects
           </h2>
           <div className="absolute right-0 before:content-[''] before:w-60 before:h-1 before:inline-block before:align-middle before:bg-gradient-to-r before:from-cyan-400 before:to-emerald-400" />

@@ -28,13 +28,13 @@ function App() {
                 <Skills />
                 <Portfolio />
                 <Experience />
-                <Footer />
               </>
             }
           />
           <Route path="/project-detail/:id" element={<ProjectDetail />} />
         </Routes>
       </main>
+      <Footer />
     </>
   );
 }

@@ -1,13 +1,12 @@
 import React from "react";
 import logo from "../../assets/logo/logo-white.svg";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
-import s from "./Header.module.css";
 
 const Header = () => {
   return (
-    <header className={s.header}>
+    <header className="">
       <nav
-        className="absolute flex items-center justify-between top-0 left-0 tign-0 z-30 w-full border-b bg-transparent px-[30px]"
+        className="fixed flex items-center justify-between top-0 left-0 tign-0 z-30 w-full border-b bg-transparent px-[30px]"
         style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
       >
         <div className="relative py-[1rem] shrink-0">

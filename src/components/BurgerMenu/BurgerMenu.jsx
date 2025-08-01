@@ -1,13 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
-const BurgerMenu = () => {
+const BurgerMenu = ({ isOpen, toggleMenu }) => {
   //   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
     <StyledWrapper>
       <label className="burger" htmlFor="burger">
-        <input type="checkbox" id="burger" />
+        <input
+          type="checkbox"
+          checked={isOpen}
+          onChange={toggleMenu}
+          id="burger"
+        />
         <span />
         <span />
         <span />

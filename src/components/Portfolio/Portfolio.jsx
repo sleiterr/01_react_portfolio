@@ -32,7 +32,7 @@ const Portfolio = () => {
   if (error || !project) return <p>Product not found</p>;
 
   return (
-    <section className="">
+    <section className="" id="portfolio">
       <div className="py-[120px] mx-auto px-50 max-w-5x1">
         <div className="relative mb-20">
           <h2 className="font-code font-normal text-5xl text-heading-primary tracking-wider mb-6">

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
+
+// import { Link as ScrollLink } from "react-scroll";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 
@@ -35,9 +37,9 @@ const ProjectDetail = () => {
   if (error || !project) return <p>Product not found</p>;
 
   return (
-    <section className="pt-16">
-      <div className="py-[120px] px-50 mx-auto max-w-5x1">
-        <div className="grid grid-cols-2 items-center justify-center gap-4">
+    <section className="">
+      <div className="pt-16">
+        <div className="grid grid-cols-2 items-center justify-center gap-4 py-[120px] px-50 mx-auto max-w-5x1">
           <div className="flex items-center justify-center">
             <img
               src={project.preview}
@@ -46,6 +48,26 @@ const ProjectDetail = () => {
             />
           </div>
           <div className="flex flex-col items-start justify-center w-[590px]">
+            <div className="">
+              <ul className="flex items-center gap-4">
+                <li className="">
+                  <Link
+                    className="flex items-center text-content text-xl"
+                    to="/"
+                  >
+                    Home <IoIosArrowRoundForward className="" />
+                  </Link>
+                </li>
+                <li className="">
+                  <Link
+                    className="flex items-center text-content text-xl"
+                    to="/#portfolio"
+                  >
+                    Portfolio
+                  </Link>
+                </li>
+              </ul>
+            </div>
             <div className="flex flex-col gap-4 mb-[40px]">
               <h2 className="font-code font-normal text-heading-primary text-5xl tracking-wide ">
                 {project.title}

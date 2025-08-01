@@ -3,13 +3,11 @@ import "./index.css";
 import { Routes, Route } from "react-router-dom";
 import React from "react";
 
+import ScrollToHash from "./components/ScrollToHash/ScrollToHash";
 import Header from "./components/Header/Header";
-import HeroSection from "./components/Hero/HeroSection";
-import About from "./components/About/About";
-import Skills from "./components/Skills/Skills";
-import Experience from "./components/Experience/Experience";
 import Footer from "./components/Footer/Footer";
-import Portfolio from "./components/Portfolio/Portfolio";
+
+import Home from "./pages/home/Home";
 
 import ProjectDetail from "./pages/projectDetail/ProjectDetail";
 
@@ -17,20 +15,10 @@ function App() {
   return (
     <>
       <Header />
+      <ScrollToHash />
       <main className="bg-projects-gradient">
         <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <HeroSection />
-                <About />
-                <Skills />
-                <Portfolio />
-                <Experience />
-              </>
-            }
-          />
+          <Route path="/" element={<Home />} />
           <Route path="/project-detail/:id" element={<ProjectDetail />} />
         </Routes>
       </main>

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo/logo-white.svg";
+import NavLogo from "../../assets/logo/logo.svg";
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
+
+import { GoCommandPalette } from "react-icons/go";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,9 +33,11 @@ const Header = () => {
 
         <div
           className={clsx(
-            "fixed inset-0 z-[1000]",
-            "bg-[rgba(28,28,28,0.98)]",
-            "flex flex-col justify-center items-center",
+            "fixed top-0 bottom-0 right-0 z-[1000]",
+            "w-[50rem] h-full",
+            "bg-white/90 backdrop-blur-sm",
+            "flex flex-col justify-start items-start",
+            "pt-8 px-8 gap-10",
             "transition-all duration-300",
             {
               "opacity-0 -translate-y-5 pointer-events-none": !menuOpen,
@@ -41,19 +46,33 @@ const Header = () => {
           )}
           onClick={handleLinkClick}
         >
-          <nav>
-            <ul className="flex flex-col items-center gap-4">
-              <li>
+          <div className="">
+            <img src={NavLogo} alt="logo" className="w-[160px] h-auto" />
+          </div>
+
+          <nav className="self-center m-auto">
+            <ul className="flex flex-col items-start gap-4">
+              <li className="fondt-code font-normal text-nav text-3xl tracking-wide">
+                <NavLink onClick={handleLinkClick}>Home</NavLink>
+              </li>
+              <li className="fondt-code font-normal text-nav text-3xl tracking-wide">
                 <NavLink onClick={handleLinkClick}>About</NavLink>
               </li>
-              <li>
+              <li className="fondt-code font-normal text-nav text-3xl tracking-wide">
+                <NavLink onClick={handleLinkClick}>Skills</NavLink>
+              </li>
+              <li className="fondt-code font-normal text-nav text-3xl tracking-wide">
                 <NavLink onClick={handleLinkClick}>Portfolio</NavLink>
               </li>
-              <li>
+              <li className="fondt-code font-normal text-nav text-3xl tracking-wide">
                 <NavLink onClick={handleLinkClick}>Experence</NavLink>
               </li>
             </ul>
           </nav>
+          <div className="flex items-center gap-4 font-normal text-xl text-nav tracking-wider mb-4">
+            <GoCommandPalette className="w-10 h-10" />
+            junior developer
+          </div>
         </div>
       </nav>
     </header>

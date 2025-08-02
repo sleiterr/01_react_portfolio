@@ -37,6 +37,10 @@ html {
   color: var(--color-logo);
 }
 
+.text-nav {
+  color: var(--color-nav);
+}
+
 .text-number-overlay {
   color: var(--number-overlay);
 }

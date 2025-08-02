@@ -5,7 +5,7 @@ const BurgerMenu = ({ isOpen, toggleMenu }) => {
   //   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <StyledWrapper>
+    <StyledWrapper isOpen={isOpen}>
       <label className="burger" htmlFor="burger">
         <input
           type="checkbox"
@@ -41,7 +41,7 @@ const StyledWrapper = styled.div`
     position: absolute;
     height: 2px;
     width: 100%;
-    background: white;
+    background: ${({ isOpen }) => (isOpen ? "black" : "white")};
     border-radius: 9px;
     opacity: 1;
     left: 0;

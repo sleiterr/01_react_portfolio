@@ -4,7 +4,7 @@ import accordionData from "../../Data/accordionData.json";
 
 const Experience = () => {
   return (
-    <section className="">
+    <section className="" id="experience">
       <div className="py-[120px] mx-auto px-50 max-w-5x1">
         <div className="grid grid-cols-2 gap-5 items-start">
           <div className="self-start flex flex-col justify-center">

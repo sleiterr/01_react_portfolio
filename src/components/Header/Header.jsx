@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo/logo-white.svg";
 import NavLogo from "../../assets/logo/logo.svg";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import clsx from "clsx";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
@@ -30,7 +30,9 @@ const Header = () => {
             toggleMenu={() => setMenuOpen((prev) => !prev)}
           />
         </div>
-
+        {menuOpen && (
+          <div className="fixed inset-0 backdrop-blur-sm bg-white/10 transition-opacity duration-300"></div>
+        )}
         <div
           className={clsx(
             "fixed top-0 bottom-0 right-0 z-[1000]",
@@ -51,21 +53,65 @@ const Header = () => {
           </div>
 
           <nav className="self-center m-auto">
-            <ul className="flex flex-col items-start gap-4">
-              <li className="fondt-code font-normal text-nav text-3xl tracking-wide">
-                <NavLink onClick={handleLinkClick}>Home</NavLink>
+            <ul className="flex flex-col items-start gap-6">
+              <li>
+                <Link
+                  to="/"
+                  smooth={true}
+                  duration={800}
+                  className="relative fondt-code font-normal text-nav text-3xl tracking-wide before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-[var(--bg-border)] before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
+                  onClick={handleLinkClick}
+                >
+                  Home
+                </Link>
               </li>
-              <li className="fondt-code font-normal text-nav text-3xl tracking-wide">
-                <NavLink onClick={handleLinkClick}>About</NavLink>
+              <li>
+                <Link
+                  to="about"
+                  smooth={true}
+                  duration={800}
+                  offset={-100}
+                  className="relative fondt-code font-normal text-nav text-3xl tracking-wide before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-[var(--bg-border)] before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
+                  onClick={handleLinkClick}
+                >
+                  About
+                </Link>
               </li>
-              <li className="fondt-code font-normal text-nav text-3xl tracking-wide">
-                <NavLink onClick={handleLinkClick}>Skills</NavLink>
+              <li>
+                <Link
+                  to="skills"
+                  smooth={true}
+                  duration={800}
+                  offset={-100}
+                  className="relative fondt-code font-normal text-nav text-3xl tracking-wide before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-[var(--bg-border)] before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
+                  onClick={handleLinkClick}
+                >
+                  Skills
+                </Link>
               </li>
-              <li className="fondt-code font-normal text-nav text-3xl tracking-wide">
-                <NavLink onClick={handleLinkClick}>Portfolio</NavLink>
+              <li>
+                <Link
+                  to="portfolio"
+                  smooth={true}
+                  duration={800}
+                  offset={-100}
+                  className="relative fondt-code font-normal text-nav text-3xl tracking-wide before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-[var(--bg-border)] before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
+                  onClick={handleLinkClick}
+                >
+                  Portfolio
+                </Link>
               </li>
-              <li className="fondt-code font-normal text-nav text-3xl tracking-wide">
-                <NavLink onClick={handleLinkClick}>Experence</NavLink>
+              <li>
+                <Link
+                  to="experience"
+                  smooth={true}
+                  duration={800}
+                  offset={-100}
+                  className="relative fondt-code font-normal text-nav text-3xl tracking-wide before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-black before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
+                  onClick={handleLinkClick}
+                >
+                  Experience
+                </Link>
               </li>
             </ul>
           </nav>

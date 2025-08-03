@@ -3,7 +3,7 @@ import { GoCommandPalette } from "react-icons/go";
 
 const About = () => {
   return (
-    <section className="">
+    <section className="" id="about">
       <div className="py-[120px] mx-auto px-50 max-w-5x1">
         <div className="grid grid-row-3 relative">
           <span className="flex items-center gap-4 font-normal text-xl text-caption tracking-wider absolute top-[-30%] left-[-7rem]">

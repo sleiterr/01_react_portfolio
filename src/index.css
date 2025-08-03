@@ -41,6 +41,10 @@ html {
   color: var(--color-nav);
 }
 
+.bg-border {
+  background-color: var(--bg-border);
+}
+
 .text-number-overlay {
   color: var(--number-overlay);
 }

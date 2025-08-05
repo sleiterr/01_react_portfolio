@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-const BurgerMenu = ({ isOpen, toggleMenu }) => {
+const BurgerMenu = ({ isOpen, toggleMenu, scrolled }) => {
   //   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <StyledWrapper isOpen={isOpen}>
+    <StyledWrapper isOpen={isOpen} scrolled={scrolled}>
       <label className="burger" htmlFor="burger">
         <input
           type="checkbox"
@@ -41,12 +41,17 @@ const StyledWrapper = styled.div`
     position: absolute;
     height: 2px;
     width: 100%;
-    background: ${({ isOpen }) => (isOpen ? "black" : "white")};
+    background: ${({ isOpen, scrolled }) =>
+      isOpen
+        ? "var(--bg-border)"
+        : scrolled
+        ? "var(--bg-border)"
+        : "var(--default-nav)"};
     border-radius: 9px;
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
-    transition: 0.25s ease-in-out;
+    transition: 250ms ease-in-out;
   }
 
   .burger span:nth-of-type(1) {

@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { useScroll, useMotionValueEvent } from "framer-motion";
+
 import logo from "../../assets/logo/logo-white.svg";
+
 import NavLogo from "../../assets/logo/logo.svg";
 import { Link } from "react-scroll";
 import clsx from "clsx";
@@ -8,24 +11,55 @@ import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import { GoCommandPalette } from "react-icons/go";
 
 const Header = () => {
+  const { scrollY } = useScroll();
+  const [scrolled, setScrolled] = useState(false);
+
   const [menuOpen, setMenuOpen] = useState(false);
   const handleLinkClick = () => setMenuOpen(false);
 
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    console.log("Page scroll: ", latest);
+
+    if (latest > 0 && !scrolled) {
+      setScrolled(true);
+    } else if (latest == 0) {
+      setScrolled(false);
+    }
+  });
+
+  const defaultClasses =
+    "flex items-center justify-between inset-0 -z-1 border-b px-[30px]";
+  let navBarClasses = scrolled
+    ? `${defaultClasses} bg-white/75 backdrop-blur-lg`
+    : `${defaultClasses} bg-transparent`;
+
   return (
-    <header className="">
+    <header className="sticky inset-x-0 top-0 z-30 w-full transition-all">
       <nav
-        className="fixed flex items-center justify-between top-0 left-0 tign-0 z-30 w-full border-b bg-transparent px-[30px]"
+        className={navBarClasses}
         style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
       >
-        <div className="relative py-[1rem] shrink-0">
-          <img src={logo} alt="logo" className="w-[160px] h-auto logo-color" />
+        <div className="relative py-[1rem] shrink-0 cursor-pointer">
+          <Link to="/" smooth={true} duration={800}>
+            {!scrolled ? (
+              <img src={logo} alt="logo" className="w-[160px] h-auto" />
+            ) : (
+              <img src={NavLogo} alt="logo" className="w-[160px] h-auto" />
+            )}
+          </Link>
+
           <span
             className="absolute top-[15%] right-[-22px] h-[70%] w-[1px]"
-            style={{ backgroundColor: "rgba(255, 255, 255,0.2)" }}
+            style={{
+              backgroundColor: scrolled
+                ? "rgba(62, 62, 62,0.60)"
+                : "rgba(255, 255, 255,0.2)",
+            }}
           ></span>
         </div>
         <div className="relative z-[1100]">
           <BurgerMenu
+            scrolled={scrolled}
             isOpen={menuOpen}
             toggleMenu={() => setMenuOpen((prev) => !prev)}
           />
@@ -56,10 +90,10 @@ const Header = () => {
             <ul className="flex flex-col items-start gap-6">
               <li>
                 <Link
-                  to="/"
+                  to="hero"
                   smooth={true}
                   duration={800}
-                  className="relative fondt-code font-normal text-nav text-3xl tracking-wide before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-[var(--bg-border)] before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
+                  className="relative fondt-code font-normal text-nav text-3xl tracking-wide cursor-pointer before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-[var(--bg-border)] before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
                   onClick={handleLinkClick}
                 >
                   Home
@@ -71,7 +105,7 @@ const Header = () => {
                   smooth={true}
                   duration={800}
                   offset={-100}
-                  className="relative fondt-code font-normal text-nav text-3xl tracking-wide before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-[var(--bg-border)] before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
+                  className="relative fondt-code font-normal text-nav text-3xl tracking-wide cursor-pointer before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-[var(--bg-border)] before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
                   onClick={handleLinkClick}
                 >
                   About
@@ -83,7 +117,7 @@ const Header = () => {
                   smooth={true}
                   duration={800}
                   offset={-100}
-                  className="relative fondt-code font-normal text-nav text-3xl tracking-wide before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-[var(--bg-border)] before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
+                  className="relative fondt-code font-normal text-nav text-3xl tracking-wide cursor-pointer before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-[var(--bg-border)] before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
                   onClick={handleLinkClick}
                 >
                   Skills
@@ -95,7 +129,7 @@ const Header = () => {
                   smooth={true}
                   duration={800}
                   offset={-100}
-                  className="relative fondt-code font-normal text-nav text-3xl tracking-wide before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-[var(--bg-border)] before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
+                  className="relative fondt-code font-normal text-nav text-3xl tracking-wide cursor-pointer before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-[var(--bg-border)] before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
                   onClick={handleLinkClick}
                 >
                   Portfolio
@@ -107,7 +141,7 @@ const Header = () => {
                   smooth={true}
                   duration={800}
                   offset={-100}
-                  className="relative fondt-code font-normal text-nav text-3xl tracking-wide before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-black before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
+                  className="relative fondt-code font-normal text-nav text-3xl tracking-wide cursor-pointer before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-black before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
                   onClick={handleLinkClick}
                 >
                   Experience

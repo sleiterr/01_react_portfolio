@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import { FaGithub, FaLinkedin, FaRegCopyright } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
@@ -9,9 +10,14 @@ const Footer = () => {
     <footer className="px-8 py-6 bg-footer">
       <div className="flex items-center justify-between w-full">
         <div className="">
-          <a href="#hero">
+          <Link
+            smooth={true}
+            duration={800}
+            to="hero"
+            className="cursor-pointer"
+          >
             <img src={logo} alt="logo" className="w-40 h-full" />
-          </a>
+          </Link>
         </div>
 
         {/* footerContact */}

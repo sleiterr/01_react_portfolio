@@ -11,6 +11,7 @@
 
   --color-nav: #3e3e3e; /*nav-text*/
   --bg-border: #3e3e3e; /*bg-border*/
+  --default-nav: #fff; /*bg-border*/
 
   --accordion-text-active: #22c3df; /*accordion-text*/
   --accordion-text-default: #000; /*accordion-active*/

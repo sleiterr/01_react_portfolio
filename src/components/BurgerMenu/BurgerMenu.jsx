@@ -37,21 +37,23 @@ const StyledWrapper = styled.div`
   }
 
   .burger span {
-    display: block;
     position: absolute;
+    display: block;
+
     height: 2px;
+
     width: 100%;
     background: ${({ isOpen, scrolled }) =>
-      isOpen
-        ? "var(--bg-border)"
-        : scrolled
-        ? "var(--bg-border)"
-        : "var(--default-nav)"};
+      isOpen || scrolled ? "var(--bg-border)" : "var(--default-nav)"};
     border-radius: 9px;
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
     transition: 250ms ease-in-out;
+  }
+
+  .burger input:checked ~ span {
+    background: var(--bg-border);
   }
 
   .burger span:nth-of-type(1) {

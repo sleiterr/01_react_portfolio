@@ -25,7 +25,7 @@ const StyledWrapper = styled.div`
   .burger {
     position: relative;
     width: 50px;
-    height: 30px;
+    height: 25px;
     background: transparent;
     cursor: pointer;
     display: block;

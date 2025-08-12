@@ -38,9 +38,9 @@ const Portfolio = () => {
           <h2 className="font-code font-normal text-5xl text-heading-primary tracking-wider mb-6">
             My Projects
           </h2>
-          <div className="absolute right-0 before:content-[''] before:w-60 before:h-1 before:inline-block before:align-middle before:bg-gradient-to-r before:from-cyan-400 before:to-emerald-400" />
+          <div className="absolute right-34 before:content-[''] before:w-60 before:h-1 before:inline-block before:align-middle before:bg-gradient-to-r before:from-cyan-400 before:to-emerald-400" />
 
-          <p className="font-light text-4xl text-subheading tracking-wider py-4 text-right">
+          <p className="font-light text-4xl text-subheading tracking-wider py-8 text-right">
             Education projects.
           </p>
 

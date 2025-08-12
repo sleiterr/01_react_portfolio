@@ -3,7 +3,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import clsx from "clsx";
 import s from "./Experience.module.css";
 
-const Accordion = ({ accordion = [] }) => {
+const AccordExperience = ({ experience = [] }) => {
   const [clicked, setClicked] = useState(null);
 
   const handleToggle = (index) => {
@@ -11,7 +11,7 @@ const Accordion = ({ accordion = [] }) => {
   };
   return (
     <div className="">
-      {accordion.map(({ id, title, subtitle }, index) => {
+      {experience.map(({ id, title, subtitle }, index) => {
         const accordionIndex = (index + 1).toString().padStart(2, "0");
         const isActive = clicked === index;
 
@@ -78,4 +78,4 @@ const Accordion = ({ accordion = [] }) => {
   );
 };
 
-export default Accordion;
+export default AccordExperience;

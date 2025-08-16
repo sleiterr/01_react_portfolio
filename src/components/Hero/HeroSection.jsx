@@ -16,7 +16,7 @@ const HeroSection = () => {
           aspectRatio: "8 / 5",
         }}
       >
-        <div className="absolute top-[50%] left-[100px] flex items-start justify-center">
+        <div className="absolute inset-y-1/3 left-10 flex items-start justify-center">
           <div className="gtid:container flex flex-col items-start justify-center text-left">
             <div className="mb-10">
               <h1 className="font-code font-extrabold text-subheading text-7xl leading-[1.2em]">
@@ -39,7 +39,7 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="absolute end-25 bottom-15">
-          <Link
+          <a
             href="https://github.com/sleiterr"
             target="_blank"
             className="group relative flex gap-4 font-normal text-xl items-center cursor-pointer"
@@ -51,7 +51,7 @@ const HeroSection = () => {
             </p>
             <BsArrowLeft className="w-6 h-6 text-white transition-all duration-300 ease-in-out delay-200 group-hover:translate-x-1 group-hover:text-[#1ed1a8] rotate-180" />
             <span className="absolute left-0 -bottom-4 w-0 h-[2px] bg-[#1ed1a8] transition-all duration-300 ease-out group-hover:w-full"></span>
-          </Link>
+          </a>
         </div>
       </section>
     </>

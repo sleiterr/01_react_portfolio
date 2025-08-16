@@ -5,10 +5,15 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
 import logo from "../../assets/logo/logo-white.svg";
 
+import styled from "styled-components";
+
+// import s from "./Footer.module.css";
+// import clsx from "clsx";
+
 const Footer = () => {
   return (
-    <footer className="px-8 py-6 bg-footer">
-      <div className="flex items-center justify-between w-full">
+    <footer className="flex flex-col bg-footer border-t border-white">
+      <div className="flex items-center justify-between w-full py-6 px-8">
         <div className="">
           <Link
             smooth={true}
@@ -23,46 +28,101 @@ const Footer = () => {
         {/* footerContact */}
         <div className="flex flex-col items-center gap-2">
           <ul className="flex items-center justify-center gap-6">
-            <li className="flex items-center gap-2">
+            <li className="footer-item flex items-center gap-2">
               <AiOutlineMail className="text-white w-6 h-6" />
               <a
                 href="mailto:sleite4r@gmail.com"
-                className="font-normal text-lg tracking-wider text-content"
+                className="footer-link font-normal text-lg tracking-wider text-content"
               >
                 sleite4r@gmail.com
               </a>
             </li>
-            <li className="flex items-center justify-center gap-2">
+            <li className="footer-item flex items-center justify-center gap-2">
               <BsTelephone className="text-white w-6 h-6" />
               <a
                 href="tel:+45 53 77 01 76"
-                className="font-normal text-lg tracking-wider text-content"
+                className="footer-link font-normal text-lg tracking-wider text-content"
                 target="_blank"
               >
                 +45 53 77 01 76
               </a>
             </li>
           </ul>
-          <p className="flex items-center gap-4 font-normal text-xl text-content tracking-wider text-center">
-            Copyright <FaRegCopyright className="text-white" /> 2025 Oleg
-          </p>
         </div>
 
-        <ul className="flex items-end justify-center gap-6">
-          <li className="">
-            <a href="#" className="">
-              <FaGithub className="w-[46px] h-[46px] text-white" />
-            </a>
-          </li>
-          <li className="">
-            <a href="#" className="">
-              <FaLinkedin className="w-[46px] h-[46px] text-white" />
-            </a>
-          </li>
-        </ul>
+        <StyledWrapper>
+          <ul className="container">
+            <li className="cursor-pointer">
+              <a href className="icon icon-github">
+                <FaGithub className="w-[40px] h-[40px] text-white" />
+              </a>
+            </li>
+            <li className="cursor-pointer">
+              <a href className="icon icon-in">
+                <FaLinkedin className="w-[40px] h-[40px] text-white" />
+              </a>
+            </li>
+          </ul>
+        </StyledWrapper>
+      </div>
+      <div className="grid place-items-center py-2 bg-zinc-500/20 w-full">
+        <p className="flex items-center gap-4 font-normal text-xl text-gray-400/90 tracking-wider text-center">
+          Copyright <FaRegCopyright className="text-gray-400/90" /> 2025 Oleg
+        </p>
       </div>
     </footer>
   );
 };
 
 export default Footer;
+
+const StyledWrapper = styled.div`
+  .container {
+    display: flex;
+    column-gap: 28px;
+  }
+
+  .icon {
+    display: inline-flex;
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+    outline: 2px solid white;
+    border-radius: 50%;
+    transition-property: outline-offset, outline-color, background-color;
+    transition-duration: 0.25s;
+    color: white;
+  }
+
+  .icon:hover {
+    outline-offset: 4px;
+  }
+
+  .icon svg {
+    margin: auto;
+    width: 31px;
+  }
+
+  .icon-github:hover {
+    background-color: #555555;
+    outline-color: #555555;
+  }
+
+  .icon-in:hover {
+    background-color: #0a66c2;
+    outline-color: #0a66c2;
+  }
+
+  .icon:hover svg {
+    animation: shake 0.25s;
+  }
+
+  @keyframes shake {
+    10% {
+      transform: rotate(15deg);
+    }
+    20% {
+      transform: rotate(-15deg);
+    }
+  }
+`;

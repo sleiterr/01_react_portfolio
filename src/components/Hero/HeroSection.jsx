@@ -1,4 +1,8 @@
+import { Link } from "react-scroll";
 import heroBg from "../../assets/img/hero-design---Copy-1.jpg";
+import { FaGithub } from "react-icons/fa";
+// import { GoArrowRight } from "react-icons/go";
+import { BsArrowLeft } from "react-icons/bs";
 
 const HeroSection = () => {
   return (
@@ -7,7 +11,7 @@ const HeroSection = () => {
         className="relative w-full bg-cover bg-no-repeat bg-center "
         id="hero"
         style={{
-          backgroundImage: `url(${heroBg})`,  
+          backgroundImage: `url(${heroBg})`,
           backgroundPosition: "center center",
           aspectRatio: "8 / 5",
         }}
@@ -33,6 +37,21 @@ const HeroSection = () => {
               Download CV
             </button>
           </div>
+        </div>
+        <div className="absolute end-25 bottom-15">
+          <Link
+            href="https://github.com/sleiterr"
+            target="_blank"
+            className="group relative flex gap-4 font-normal text-xl items-center cursor-pointer"
+          >
+            <FaGithub className="text-white w-[42px] h-[42px] transition-colors duration-300 ease-out group-hover:text-[#1ed1a8]" />
+
+            <p className="relative font-code text-3xl text-white tracking-wide m-0 overflow-hidden transition-colors duration-300 ease-out group-hover:text-[#1ed1a8] ">
+              View GitHub
+            </p>
+            <BsArrowLeft className="w-6 h-6 text-white transition-all duration-300 ease-in-out delay-200 group-hover:translate-x-1 group-hover:text-[#1ed1a8] rotate-180" />
+            <span className="absolute left-0 -bottom-4 w-0 h-[2px] bg-[#1ed1a8] transition-all duration-300 ease-out group-hover:w-full"></span>
+          </Link>
         </div>
       </section>
     </>

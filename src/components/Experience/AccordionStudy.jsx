@@ -28,10 +28,10 @@ const AccordExperience = ({ educationData = [] }) => {
             <div className="relative">
               <IoIosArrowForward
                 className={clsx(
-                  "absolute right-0 -top-[2px] text-[45px] transition-transform duration-600 ease-in-out",
+                  "absolute right-0 -top-[2px] text-[45px] transition-transform duration-200 ease-in-out",
                   isActive
-                    ? "rotate-90 text-accordion-nr-active transition-colors duration-200 ease-in-out"
-                    : "text-accordion-nr-default duration-700 ease-in-out"
+                    ? "rotate-90 text-accordion-nr-active transition-colors duration-300 ease-in-out"
+                    : "text-accordion-nr-default duration-600 ease-in-out"
                 )}
               />
             </div>
@@ -41,8 +41,8 @@ const AccordExperience = ({ educationData = [] }) => {
                 className={clsx(
                   "font-code font-normal text-4xl tracking-wider",
                   isActive
-                    ? "text-accordion-nr-active transition-colors duration-200 ease-in-out"
-                    : "text-accordion-nr-default duration-700 ease-in-out"
+                    ? "text-accordion-nr-active transition-colors duration-300 ease-in-out"
+                    : "text-accordion-nr-default duration-600 ease-in-out"
                 )}
               >
                 {accordionIndex}
@@ -52,7 +52,7 @@ const AccordExperience = ({ educationData = [] }) => {
                   "font-code font-medium text-3xl",
                   isActive
                     ? "text-accordion-title-active transition-colors duration-300 ease-in-out"
-                    : "text-accordion-title-default duration-700 ease-in-out"
+                    : "text-accordion-title-default duration-600 ease-in-out"
                 )}
               >
                 {title}

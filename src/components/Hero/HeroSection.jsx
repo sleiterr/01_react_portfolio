@@ -7,7 +7,7 @@ const HeroSection = () => {
         className="relative w-full bg-cover bg-no-repeat bg-center "
         id="hero"
         style={{
-          backgroundImage: `url(${heroBg})`,
+          backgroundImage: `url(${heroBg})`,  
           backgroundPosition: "center center",
           aspectRatio: "8 / 5",
         }}

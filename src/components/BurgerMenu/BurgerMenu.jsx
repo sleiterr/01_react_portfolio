@@ -47,7 +47,7 @@ const StyledWrapper = styled.div`
       isOpen || scrolled ? "var(--bg-border)" : "var(--default-nav)"};
     border-radius: 9px;
     opacity: 1;
-    left: 0;
+    right: 0;
     transform: rotate(0deg);
     transition: 250ms ease-in-out;
   }
@@ -82,6 +82,9 @@ const StyledWrapper = styled.div`
   .burger input:checked ~ span:nth-of-type(2) {
     width: 0%;
     opacity: 0;
+  }
+  .burger span:nth-of-type(2) {
+    width: 75%;
   }
 
   .burger input:checked ~ span:nth-of-type(3) {

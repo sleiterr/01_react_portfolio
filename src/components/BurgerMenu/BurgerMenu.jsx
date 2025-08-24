@@ -58,6 +58,7 @@ const StyledWrapper = styled.div`
 
   .burger span:nth-of-type(1) {
     top: 0px;
+    // background: red;
     transform-origin: left center;
   }
 
@@ -84,7 +85,8 @@ const StyledWrapper = styled.div`
     opacity: 0;
   }
   .burger span:nth-of-type(2) {
-    width: 75%;
+    height: 3px;
+    width: 100%;
   }
 
   .burger input:checked ~ span:nth-of-type(3) {

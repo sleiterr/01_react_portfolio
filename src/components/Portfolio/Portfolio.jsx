@@ -1,3 +1,4 @@
+// Portfolio.jsx
 import React, { useState, useEffect } from "react"; // Adjust the path as necessary
 import { Link } from "react-router-dom";
 
@@ -33,18 +34,18 @@ const Portfolio = () => {
 
   return (
     <section className="" id="portfolio">
-      <div className="py-[120px] mx-auto px-50 max-w-5x1">
-        <div className="relative mb-20">
+      <div className="py-[8rem] mx-auto md:max-w-7xl">
+        <div className="relative mb-6">
           <h2 className="font-code font-normal text-5xl text-heading-primary tracking-wider mb-6">
             My Projects
           </h2>
-          <div className="absolute right-34 before:content-[''] before:w-60 before:h-1 before:inline-block before:align-middle before:bg-gradient-to-r before:from-cyan-400 before:to-emerald-400" />
+          <div className="absolute before:content-[''] left-10 before:w-30 before:h-px before:inline-block before:align-middle before:bg-gradient-to-r before:from-cyan-400 before:to-emerald-400" />
 
-          <p className="font-light text-4xl text-subheading tracking-wider py-8 text-right">
+          <p className="font-light text-base text-subheading tracking-wider py-4 ">
             Education projects.
           </p>
 
-          <div className="absolute bottom-0 right-0 after:content-[''] after:w-60 after:h-1 after:inline-block after:align-middle after:bg-gradient-to-r after:from-cyan-400 after:to-emerald-400" />
+          <div className="absolute left-0 bottom-0 after:content-[''] after:w-30 after:h-px after:inline-block after:align-middle after:bg-gradient-to-r after:from-cyan-400 after:to-emerald-400" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-0">
           {categoryProjects.map((item, index) => {

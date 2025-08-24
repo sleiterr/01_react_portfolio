@@ -39,8 +39,8 @@ const ProjectDetail = () => {
 
   return (
     <section className="relative">
-      <div className="pt-16">
-        <div className="grid grid-cols-2 items-center justify-center gap-4 py-[120px] px-50 mx-auto max-w-5x1">
+      <div className="py-[8rem] mx-auto md:max-w-7xl">
+        <div className="grid grid-cols-2 items-center justify-center gap-8">
           <div className="flex items-center justify-center">
             <img
               src={project.preview}

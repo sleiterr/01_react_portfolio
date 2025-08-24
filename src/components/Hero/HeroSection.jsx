@@ -19,21 +19,21 @@ const HeroSection = () => {
         <div className="absolute inset-y-1/3 left-10 flex items-start justify-center">
           <div className="gtid:container flex flex-col items-start justify-center text-left">
             <div className="mb-10">
-              <h1 className="font-code font-extrabold text-subheading text-7xl leading-[1.2em]">
+              <h1 className="font-code font-extrabold text-subheading text-6xl leading-[1.2em]">
                 Hi, I'm Oleg.
               </h1>
-              <h2 className="font-code font-extrabold text-subheading text-7xl">
+              <h2 className="font-code font-extrabold text-subheading text-6xl">
                 I am <span className="text-heading-accent">Web Developer</span>
               </h2>
             </div>
             <div className="w-[34rem]">
-              <p className="font-light text-2xl text-content tracking-wider leading-[1.4em]">
+              <p className="font-light text-xl text-content tracking-wider leading-[1.5]">
                 I am currently studying web development at Media College
                 Denmark, where I am building skills in both web development and
                 UI/UX design.
               </p>
             </div>
-            <button className="font-light text-xl tracking-wide rounded-md text-content py-5 px-16 bg-button-gradient mt-12">
+            <button className="font-normal text-lg tracking-wide rounded-md text-content py-4 px-14 bg-button-gradient mt-12">
               Download CV
             </button>
           </div>

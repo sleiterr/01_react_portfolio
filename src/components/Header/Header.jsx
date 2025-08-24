@@ -54,6 +54,7 @@ const Header = () => {
     };
   }, [menuOpen]);
 
+  // Log current location and isHome state
   useEffect(() => {
     console.log("location:", location.pathname, "isHome:", isHome);
   }, [location.pathname, isHome]);
@@ -63,7 +64,7 @@ const Header = () => {
   }, [scrolled]);
 
   const defaultClasses =
-    "flex items-center justify-between inset-0 border-b px-[30px]";
+    "flex items-center justify-between inset-0 border-b px-[1.5rem]";
 
   let navBarClasses =
     scrolled || !isHome
@@ -78,6 +79,7 @@ const Header = () => {
           "inset-x-0 top-0 z-[1000] w-full transition-all"
         )}
       >
+        {/* Overlay */}
         <div
           className={clsx(
             "fixed inset-0 backdrop-blur-sm bg-white/10  transition-opacity duration-300 h-full w-full z-[1000]",
@@ -93,9 +95,9 @@ const Header = () => {
           <div className="relative py-[1rem] shrink-0 cursor-pointer">
             <Link to="/" smooth={true} duration={800}>
               {!scrolled ? (
-                <img src={whiteLogo} alt="logo" className="w-[160px] h-auto" />
+                <img src={whiteLogo} alt="logo" className="w-[8rem] h-auto" />
               ) : (
-                <img src={blackLogo} alt="logo" className="w-[160px] h-auto" />
+                <img src={blackLogo} alt="logo" className="w-[8rem] h-auto" />
               )}
             </Link>
 

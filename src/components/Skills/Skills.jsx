@@ -23,7 +23,7 @@ const Skills = () => {
         </h2>
         <div className="relative min-h-[26rem]">
           {/* Frontend Stack */}
-          <div className="absolute translate-x-1/2 px-8 pt-4 pb-16 w-[31.2rem] h-auto rounded-xl bg-white/20 backdrop-blur-sm">
+          <div className="absolute translate-x-1/2 px-8 pt-4 pb-16 w-[31.2rem] h-auto rounded-xl bg-white/20 backdrop-blur-sm border-l-1 border-t-1 border-sky-500">
             <div className="">
               <h4 className="font-light text-content text-base tracking-wider mb-4">
                 Frontend Stack
@@ -39,7 +39,7 @@ const Skills = () => {
           </div>
 
           {/* CMS & Data Layer */}
-          <div className="absolute translate-y-32 left-[30rem] pt-4 pl-6 pb-8 w-[24.6rem] h-[9.2rem] rounded-xl  bg-white/20 backdrop-blur-sm z-1">
+          <div className="absolute translate-y-32 left-[30rem] pt-4 pl-6 pb-8 w-[24.6rem] h-[9.2rem] rounded-xl  bg-white/20 backdrop-blur-sm z-1 border-l-1 border-t-1 border-sky-500">
             <div className="">
               <h4 className="font-light text-content text-base tracking-wider mb-4">
                 CMS & Data Layer
@@ -56,7 +56,7 @@ const Skills = () => {
           </div>
 
           {/* Development Workflow */}
-          <div className="absolute pt-4 px-6 pb-8  w-[23.4rem] h-[8.1rem] rounded-xl bg-white/20 backdrop-blur-sm z-0 top-[15rem] translate-x-[12rem]">
+          <div className="absolute pt-4 px-6 pb-8  w-[23.4rem] h-[8.1rem] rounded-xl bg-white/20 backdrop-blur-sm z-0 top-[15rem] translate-x-[12rem] border-r-1 border-t-1 border-sky-500">
             <div className="">
               <h4 className="font-light text-content text-base tracking-wider mb-4">
                 Development Workflow
@@ -69,7 +69,7 @@ const Skills = () => {
           </div>
 
           {/* UI/UX Tools */}
-          <div className="absolute translate-y-56 right-[11rem] px-6 pt-4 pb-8 w-[23rem] h-[8rem] bg-white/20 backdrop-blur-sm z-2 rounded-xl">
+          <div className="absolute translate-y-56 right-[11rem] px-6 pt-4 pb-8 w-[23rem] h-[8rem] bg-white/20 backdrop-blur-sm z-2 rounded-xl border-r-1 border-t-1 border-sky-500">
             <div className="absolute">
               <h4 className="font-light text-content text-base tracking-wider mb-2">
                 UI/UX Tools

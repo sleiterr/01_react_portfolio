@@ -11,7 +11,7 @@ const About = () => {
             <GoCommandPalette className="w-10 h-10" />
             junior developer
           </span>
-          <h2 className="font-light text-5xl text-heading-primary tracking-wide mb-4">
+          <h2 className="font-code font-light text-5xl text-heading-primary tracking-wide mb-4">
             About Me
           </h2>
           <div className="grid grid-cols-2 gap-8">

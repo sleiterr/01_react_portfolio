@@ -22,7 +22,16 @@ const Header = () => {
   const { scrollY } = useScroll();
   const handleLinkClick = () => setMenuOpen(false);
 
-  console.log("pathname", location.pathname, "isHome", isHome);
+  const isProjectDetail = location.pathname
+    .toLowerCase()
+    .startsWith("/project-detail");
+  console.log(
+    "isProjectDetail",
+    isProjectDetail,
+    "pathname:",
+    location.pathname
+  );
+
   useEffect(() => {
     if (!isHome) {
       setScrolled(true);
@@ -66,16 +75,31 @@ const Header = () => {
   const defaultClasses =
     "flex items-center justify-between inset-0 border-b px-[1.5rem]";
 
-  let navBarClasses =
-    scrolled || !isHome
-      ? `${defaultClasses}  bg-white/75 backdrop-blur-lg`
-      : `${defaultClasses}  bg-transparent`;
+  // let navBarClasses =
+  //   scrolled || !isHome
+  //     ? `${defaultClasses}  bg-white/75 backdrop-blur-lg`
+  //     : `${defaultClasses}  bg-transparent`;
 
+  let navBarClasses;
+
+  if (isProjectDetail) {
+    navBarClasses = `${defaultClasses}  bg-white/75 backdrop-blur-lg`;
+  } else if (scrolled || !isHome) {
+    navBarClasses = `${defaultClasses}  bg-white/75 backdrop-blur-lg`;
+  } else {
+    navBarClasses = `${defaultClasses}  bg-transparent`;
+  }
+
+  console.log("pathname", location.pathname, "isHome", isHome);
   return (
     <>
       <header
         className={clsx(
-          isHome && !scrolled ? "absolute" : "fixed",
+          isProjectDetail
+            ? "fixed"
+            : isHome && !scrolled
+            ? "absolute"
+            : "fixed",
           "inset-x-0 top-0 z-[1000] w-full transition-all"
         )}
       >

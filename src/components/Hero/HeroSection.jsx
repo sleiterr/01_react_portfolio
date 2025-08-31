@@ -3,6 +3,7 @@ import heroBg from "../../assets/img/hero-design---Copy-1.jpg";
 import { FaGithub } from "react-icons/fa";
 // import { GoArrowRight } from "react-icons/go";
 import { BsArrowLeft } from "react-icons/bs";
+import GradientText from "../animation/GradientText";
 
 const HeroSection = () => {
   return (
@@ -22,8 +23,25 @@ const HeroSection = () => {
               <h1 className="font-code font-extrabold text-subheading text-6xl leading-[1.2em]">
                 Hi, I'm Oleg.
               </h1>
-              <h2 className="font-code font-extrabold text-subheading text-6xl">
-                I am <span className="text-heading-accent">Web Developer</span>
+              <h2 className="flex items-center gap-4 font-code font-extrabold text-subheading text-6xl">
+                I am
+                <GradientText
+                  colors={[
+                    "#40ffaa",
+                    "#4079ff",
+                    "#40ffaa",
+                    "#4079ff",
+                    "#40ffaa",
+                  ]}
+                  animationSpeed={6}
+                  showBorder={false}
+                  className=""
+                >
+                  Web Developer
+                </GradientText>
+                {/* <span className="text-heading-accent">
+                  Web Developer
+                </span> */}
               </h2>
             </div>
             <div className="w-[34rem]">

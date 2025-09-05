@@ -1,5 +1,6 @@
 import React from "react";
 import { GoCommandPalette } from "react-icons/go";
+import GradientText from "../animation/GradientText";
 
 const About = () => {
   return (
@@ -7,9 +8,16 @@ const About = () => {
       <div className="py-[8rem] mx-auto md:max-w-7xl">
         {/* <div className=""></div> */}
         <div className="relative">
-          <span className="absolute -top-[5rem] -left-[4rem] flex items-center gap-4 font-normal text-xl text-caption tracking-wider">
+          <span className="absolute -top-[5rem] -left-[4rem] flex items-center gap-4 font-medium text-2xl text-caption tracking-wider animate-fade-in-up">
             <GoCommandPalette className="w-10 h-10" />
-            junior developer
+            <GradientText
+              colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
+              animationSpeed={6}
+              showBorder={false}
+              className=""
+            >
+              Junior developer
+            </GradientText>
           </span>
           <h2 className="font-code font-light text-5xl text-heading-primary tracking-wide mb-4">
             About Me

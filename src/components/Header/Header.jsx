@@ -73,7 +73,7 @@ const Header = () => {
   }, [scrolled]);
 
   const defaultClasses =
-    "flex items-center justify-between inset-0 border-b px-[1.5rem]";
+    "flex items-center justify-between inset-0 border-b px-[1rem] md:px-[1.5rem]  md:max-w-7xl md:-min-w-full outline-1 outline-red-500";
 
   // let navBarClasses =
   //   scrolled || !isHome
@@ -116,12 +116,20 @@ const Header = () => {
           className={navBarClasses}
           style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
         >
-          <div className="relative py-[1rem] shrink-0 cursor-pointer">
+          <div className="relative py-[0.5rem] md:py-[1rem] shrink-0 cursor-pointer">
             <Link to="/" smooth={true} duration={800}>
               {!scrolled ? (
-                <img src={whiteLogo} alt="logo" className="w-[8rem] h-auto" />
+                <img
+                  src={whiteLogo}
+                  alt="logo"
+                  className="w-[5.6rem] md:w-[8rem] h-auto"
+                />
               ) : (
-                <img src={blackLogo} alt="logo" className="w-[8rem] h-auto" />
+                <img
+                  src={blackLogo}
+                  alt="logo"
+                  className="w-[5.6rem] md:w-[8rem] h-auto"
+                />
               )}
             </Link>
 
@@ -223,7 +231,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div className="fixed z-[1000] right-[30px] top-[32px]">
+      <div className="fixed z-[1000] right-12 md:right-[30px] top-[32px] outline-1 outline-red-500">
         <BurgerMenu
           scrolled={scrolled}
           isOpen={menuOpen}

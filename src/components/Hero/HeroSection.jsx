@@ -18,7 +18,7 @@ const HeroSection = () => {
         }}
       >
         <div className="absolute inset-y-1/2 md:inset-y-1/3 md:left-10 flex items-start justify-center">
-          <div className="flex flex-col items-start justify-center text-left">
+          <div className="px-4 md:px-0 flex flex-col items-start justify-center text-left">
             <div className="mb-4">
               <h1 className="font-code font-extrabold text-subheading text-4xl md:text-6xl leading-[1.2]">
                 Hi, I'm Oleg.
@@ -44,19 +44,19 @@ const HeroSection = () => {
                 </span> */}
               </h2>
             </div>
-            <div className="w-[34rem]">
+            <div className="w-full min-w-xs max-w-sm md:min-w-auto md:max-w-[34rem]">
               <p className="font-light text-base md:text-lg text-content tracking-wider leading-[1.5]">
                 I am currently studying web development at Media College
                 Denmark, where I am building skills in both web development and
                 UI/UX design.
               </p>
             </div>
-            <button className="font-normal text-lg tracking-wide rounded-md text-content py-2 px-8 bg-button-gradient mt-12">
+            <button className="font-normal text-lg tracking-wide rounded-md text-content py-2 px-12 md:py-2 md:px-8 bg-button-gradient mt-8 md:mt-12">
               Download CV
             </button>
           </div>
         </div>
-        <div className="absolute md:end-25 md:bottom-15">
+        <div className="absolute bottom-3 right-5 md:end-25 md:bottom-15">
           <a
             href="https://github.com/sleiterr"
             target="_blank"
@@ -67,7 +67,7 @@ const HeroSection = () => {
             <p className="relative font-code text-3xl text-white tracking-wide m-0 overflow-hidden transition-colors duration-300 ease-out group-hover:text-[#1ed1a8] ">
               View GitHub
             </p>
-            <BsArrowLeft className="w-6 h-6 text-white transition-all duration-300 ease-in-out delay-200 group-hover:translate-x-1 group-hover:text-[#1ed1a8] rotate-180" />
+            <BsArrowLeft className="hidden md:block w-6 h-6 text-white transition-all duration-300 ease-in-out delay-200 group-hover:translate-x-1 group-hover:text-[#1ed1a8] rotate-180" />
             <span className="absolute left-0 -bottom-4 w-0 h-[2px] bg-[#1ed1a8] transition-all duration-300 ease-out group-hover:w-full"></span>
           </a>
         </div>

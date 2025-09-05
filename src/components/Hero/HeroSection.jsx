@@ -9,21 +9,21 @@ const HeroSection = () => {
   return (
     <>
       <section
-        className="relative w-full bg-cover bg-no-repeat bg-center "
+        className="relative w-full min-w-[320px] md:w-full h-screen md:h-auto bg-cover bg-no-repeat bg-center md:aspect-[8/5]"
         id="hero"
         style={{
           backgroundImage: `url(${heroBg})`,
           backgroundPosition: "center center",
-          aspectRatio: "8 / 5",
+          // aspectRatio: "8 / 5",
         }}
       >
-        <div className="absolute inset-y-1/3 left-10 flex items-start justify-center">
-          <div className="gtid:container flex flex-col items-start justify-center text-left">
-            <div className="mb-10">
-              <h1 className="font-code font-extrabold text-subheading text-6xl leading-[1.2em]">
+        <div className="absolute inset-y-1/2 md:inset-y-1/3 md:left-10 flex items-start justify-center">
+          <div className="flex flex-col items-start justify-center text-left">
+            <div className="mb-4">
+              <h1 className="font-code font-extrabold text-subheading text-4xl md:text-6xl leading-[1.2]">
                 Hi, I'm Oleg.
               </h1>
-              <h2 className="flex items-center gap-4 font-code font-extrabold text-subheading text-6xl">
+              <h2 className="flex items-center gap-4 font-code font-extrabold text-subheading text-4xl md:text-6xl">
                 I am
                 <GradientText
                   colors={[
@@ -45,22 +45,22 @@ const HeroSection = () => {
               </h2>
             </div>
             <div className="w-[34rem]">
-              <p className="font-light text-xl text-content tracking-wider leading-[1.5]">
+              <p className="font-light text-base md:text-lg text-content tracking-wider leading-[1.5]">
                 I am currently studying web development at Media College
                 Denmark, where I am building skills in both web development and
                 UI/UX design.
               </p>
             </div>
-            <button className="font-normal text-lg tracking-wide rounded-md text-content py-4 px-14 bg-button-gradient mt-12">
+            <button className="font-normal text-lg tracking-wide rounded-md text-content py-2 px-8 bg-button-gradient mt-12">
               Download CV
             </button>
           </div>
         </div>
-        <div className="absolute end-25 bottom-15">
+        <div className="absolute md:end-25 md:bottom-15">
           <a
             href="https://github.com/sleiterr"
             target="_blank"
-            className="group relative flex gap-4 font-normal text-xl items-center cursor-pointer"
+            className="group relative flex gap-4 font-normal text-base md:text-xl items-center cursor-pointer"
           >
             <FaGithub className="text-white w-[42px] h-[42px] transition-colors duration-300 ease-out group-hover:text-[#1ed1a8]" />
 

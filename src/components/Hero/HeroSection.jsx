@@ -35,6 +35,7 @@ const HeroSection = () => {
                   ]}
                   animationSpeed={6}
                   showBorder={false}
+                  className="backdrop-blur-none"
                 >
                   Web Developer
                 </GradientText>

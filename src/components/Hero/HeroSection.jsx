@@ -17,13 +17,13 @@ const HeroSection = () => {
           // aspectRatio: "8 / 5",
         }}
       >
-        <div className="absolute inset-y-1/2 md:inset-y-1/3 md:left-10 flex items-start justify-center">
+        <div className="absolute translate-y-[8rem] md:inset-y-1/3 md:left-10 flex items-start justify-center">
           <div className="px-4 md:px-0 flex flex-col items-start justify-center text-left">
-            <div className="mb-4">
-              <h1 className="font-code font-extrabold text-subheading text-4xl md:text-6xl leading-[1.2]">
+            <div className="mb-4 w-full">
+              <h1 className="font-code font-extrabold text-subheading text-5xl md:text-6xl leading-[1.4] md:leading-[1.2]">
                 Hi, I'm Oleg.
               </h1>
-              <h2 className="flex items-center gap-4 font-code font-extrabold text-subheading text-4xl md:text-6xl">
+              <h2 className="flex-wrap md:flex items-center gap-2 md:gap-4 font-code font-extrabold text-subheading text-5xl md:text-6xl leading-[1.2]">
                 I am
                 <GradientText
                   colors={[
@@ -35,7 +35,7 @@ const HeroSection = () => {
                   ]}
                   animationSpeed={6}
                   showBorder={false}
-                  className=""
+                  className="backdrop-blur-none"
                 >
                   Web Developer
                 </GradientText>

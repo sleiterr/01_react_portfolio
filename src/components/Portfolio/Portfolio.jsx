@@ -34,20 +34,20 @@ const Portfolio = () => {
 
   return (
     <section className="" id="portfolio">
-      <div className="py-[8rem] mx-auto md:max-w-7xl">
+      <div className=" px-4 md:px-0 py-[8rem] mx-auto md:max-w-7xl">
         <div className="relative mb-6">
-          <h2 className="font-code font-normal text-5xl text-heading-primary tracking-wider mb-6">
+          <h2 className="font-code font-normal text-4xl md:text-5xl text-heading-primary tracking-wider mb-4 md:mb-6">
             My Projects
           </h2>
           <div className="absolute before:content-[''] left-10 before:w-30 before:h-px before:inline-block before:align-middle before:bg-gradient-to-r before:from-cyan-400 before:to-emerald-400" />
 
-          <p className="font-light text-base text-subheading tracking-wider py-4 ">
+          <p className="font-light text-base text-subheading tracking-wider py-4">
             Education projects.
           </p>
 
           <div className="absolute left-0 bottom-0 after:content-[''] after:w-30 after:h-px after:inline-block after:align-middle after:bg-gradient-to-r after:from-cyan-400 after:to-emerald-400" />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-0">
           {categoryProjects.map((item, index) => {
             const formattedIndex = (index + 1).toString().padStart(2, "0");
             console.log("Image", item.image[0]);

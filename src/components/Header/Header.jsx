@@ -119,17 +119,9 @@ const Header = () => {
           <div className="relative py-[0.5rem] md:py-[1rem] shrink-0 cursor-pointer">
             <Link to="/" smooth={true} duration={800}>
               {!scrolled ? (
-                <img
-                  src={whiteLogo}
-                  alt="logo"
-                  className="w-[5.6rem] md:w-[8rem] h-auto"
-                />
+                <img src={whiteLogo} alt="logo" className="w-[8rem] h-auto" />
               ) : (
-                <img
-                  src={blackLogo}
-                  alt="logo"
-                  className="w-[5.6rem] md:w-[8rem] h-auto"
-                />
+                <img src={blackLogo} alt="logo" className="w-[8rem] h-auto" />
               )}
             </Link>
 
@@ -146,7 +138,7 @@ const Header = () => {
         <div
           className={clsx(
             "fixed top-0 bottom-0 right-0 z-[1000]",
-            "w-[50rem] h-full",
+            "w-full h-auto md:w-[50rem] md:h-full",
             "bg-white/90 backdrop-blur-sm",
             "flex flex-col justify-start items-start",
             "pt-8 px-8 gap-10",
@@ -231,7 +223,7 @@ const Header = () => {
           </div>
         </div>
       </header>
-      <div className="fixed z-[1000] right-12 md:right-[30px] top-[32px] outline-1 outline-red-500">
+      <div className="fixed z-[1000] right-[30px] top-[1.2rem] md:top-[32px]">
         <BurgerMenu
           scrolled={scrolled}
           isOpen={menuOpen}

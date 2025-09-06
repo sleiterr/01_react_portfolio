@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     //  border-t border-white
     <footer className="flex flex-col items-center justify-center bg-footer">
-      <div className="flex items-center justify-between w-full py-6 px-8">
+      <div className="flex items-start flex-col gap-4 md:gap-0 md:flex-row md:items-center justify-between w-full py-6 px-8">
         <div className="">
           <Link
             smooth={true}
@@ -27,8 +27,8 @@ const Footer = () => {
         </div>
 
         {/* footerContact */}
-        <div className="flex flex-col items-center gap-2">
-          <ul className="flex items-center justify-center gap-6">
+        <div className="flex flex-col md:items-center gap-2">
+          <ul className="flex flex-col md:flex-row items-start md:items-center justify-center gap-6">
             <li className="footer-item flex items-center gap-2">
               <AiOutlineMail className="text-white w-6 h-6" />
               <a
@@ -67,7 +67,7 @@ const Footer = () => {
         </StyledWrapper>
       </div>
       {/* py-1 bg-slate-700 w-full */}
-      <div className="grid place-items-center py-2 border-t border-slate-500 w-1/3">
+      <div className="grid place-items-center py-2 border-t border-slate-500 md:w-1/3 px-8 md:px-0 w-full">
         <p className="flex items-center gap-4 font-light text-base text-zinc-300 tracking-wider text-center">
           Copyright <FaRegCopyright className="text-zinc-300" /> 2025 Oleg
         </p>

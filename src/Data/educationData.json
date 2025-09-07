@@ -1,8 +1,9 @@
 [
   {
     "id": 1,
-    "title": "Education Title 1",
-    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor pariatur fugit cumque maxime consequuntur consectetur, quaerat molestias porro maiores deserunt illum dolorum doloremque, quibusdam recusandae nisi asperiores id accusamus nobis.",
+    "title": "GoIT IT school",
+    "year": "2023-2024",
+    "subtitle": "is an online school where I gained my first hands-on experience in web development. During 10 months of training, I acquired my first practical hard skills in creating web content using HTML, CSS, and JavaScript to make web pages more interactive. I also learned the basics of the React library for user interface (UI) development.",
     "list": [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
       "Repellat hic omnis expedita consectetur esse minus soluta earum,",
@@ -12,8 +13,9 @@
   },
   {
     "id": 2,
-    "title": "Education Title 2",
-    "subtitle": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor pariatur fugit cumque maxime consequuntur consectetur, quaerat molestias porro maiores deserunt illum dolorum doloremque, quibusdam recusandae nisi asperiores id accusamus nobis.",
+    "title": "Media College Denmark",
+    "year": "2024-2026",
+    "subtitle": "to acquire and improve my skills in web development and design, I enrolled in college, where I am also expanding my knowledge in UX/UI design. During my studies, I focus on prototyping, wireframing, and creating designs in Figma, as well as designing logos in Illustrator. Additionally, i am mastering the use of Photoshop to enhance the graphic quality of images and create high-quality graphic design elements.",
     "list": [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
       "Repellat hic omnis expedita consectetur esse minus soluta earum,",

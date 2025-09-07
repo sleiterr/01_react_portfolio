@@ -11,7 +11,7 @@ const Portfolio = () => {
     const fetchProjects = async () => {
       try {
         // Simulate fetching data from an API or local JSON file
-        const res = await fetch("/public/data/projectsData.json"); // Adjust the path as necessary
+        const res = await fetch("/data/projectsData.json"); // Adjust the path as necessary
         const data = await res.json();
         setProjects(data);
       } catch (error) {
@@ -29,8 +29,18 @@ const Portfolio = () => {
   );
   console.log("Filtered projects:", categoryProjects);
 
-  if (loading) return <p>...Loading</p>;
-  if (error || !project) return <p>Product not found</p>;
+  if (loading)
+    return (
+      <p className="font-normal text-2xl text-red-600 text-center">
+        ...Loading
+      </p>
+    );
+  if (error || !project)
+    return (
+      <p className="font-normal text-2xl text-cyan-500 text-center">
+        Product not found !
+      </p>
+    );
 
   return (
     <section className="" id="portfolio">

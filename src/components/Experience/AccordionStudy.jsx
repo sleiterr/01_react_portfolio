@@ -28,7 +28,8 @@ const AccordExperience = ({ educationData = [] }) => {
             <div className="relative">
               <IoIosArrowForward
                 className={clsx(
-                  "absolute right-0 -top-[2px] text-[45px] transition-transform duration-200 ease-in-out",
+                  // 45px-Arrow size
+                  "absolute right-0 top-1 md:-top-[2px] text-[2rem] md:text-[2.8rem] transition-transform duration-200 ease-in-out",
                   isActive
                     ? "rotate-90 text-accordion-nr-active transition-colors duration-300 ease-in-out"
                     : "text-accordion-nr-default duration-600 ease-in-out"
@@ -36,10 +37,10 @@ const AccordExperience = ({ educationData = [] }) => {
               />
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 md:gap-4">
               <p
                 className={clsx(
-                  "font-code font-normal text-4xl tracking-wider",
+                  "font-code font-normal text-3xl md:text-4xl tracking-wider",
                   isActive
                     ? "text-accordion-nr-active transition-colors duration-300 ease-in-out"
                     : "text-accordion-nr-default duration-600 ease-in-out"
@@ -49,7 +50,7 @@ const AccordExperience = ({ educationData = [] }) => {
               </p>
               <h4
                 className={clsx(
-                  "font-code font-medium text-3xl",
+                  "font-code font-medium text-2xl md:text-3xl",
                   isActive
                     ? "text-accordion-title-active transition-colors duration-300 ease-in-out"
                     : "text-accordion-title-default duration-600 ease-in-out"

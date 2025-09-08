@@ -28,7 +28,7 @@ const Footer = () => {
 
         {/* footerContact */}
         <div className="flex flex-col md:items-center gap-2">
-          <ul className="flex flex-col md:flex-row items-start md:items-center justify-center gap-6">
+          <ul className="flex flex-col md:flex-row items-start md:items-center justify-center gap-4 md:gap-6">
             <li className="footer-item flex items-center gap-2">
               <AiOutlineMail className="text-white w-6 h-6" />
               <a
@@ -55,19 +55,19 @@ const Footer = () => {
           <ul className="container">
             <li className="cursor-pointer">
               <a href className="icon icon-github">
-                <FaGithub className="w-[40px] h-[40px] text-white" />
+                <FaGithub className="w-[32px] h-[32px] md:w-[40px] md:h-[40px] text-white" />
               </a>
             </li>
             <li className="cursor-pointer">
               <a href className="icon icon-in">
-                <FaLinkedin className="w-[40px] h-[40px] text-white" />
+                <FaLinkedin className="w-[32px] h-[32px] md:w-[40px] md:h-[40px] text-white" />
               </a>
             </li>
           </ul>
         </StyledWrapper>
       </div>
       {/* py-1 bg-slate-700 w-full */}
-      <div className="grid place-items-center py-2 border-t border-slate-500 md:w-1/3 px-8 md:px-0 w-full">
+      <div className="grid place-items-center py-4 md:py-2 border-t border-slate-500 md:w-1/3 px-8 md:px-0 w-full">
         <p className="flex items-center gap-4 font-light text-base text-zinc-300 tracking-wider text-center">
           Copyright <FaRegCopyright className="text-zinc-300" /> 2025 Oleg
         </p>

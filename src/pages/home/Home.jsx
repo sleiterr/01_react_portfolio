@@ -25,7 +25,7 @@ const Home = () => {
         >
           <Skillslop
             logos={techLogos}
-            speed={90}
+            speed={40}
             direction="left"
             logoHeight={40} //heght_icon
             gap={40} //width_icon
@@ -33,7 +33,7 @@ const Home = () => {
             pauseOnHover
             scaleOnHover
             fadeOut
-            fadeOutColor="#ffffff"
+            // fadeOutColor="#ffffff"
             ariaLabel="Technology partners"
           />
         </div>

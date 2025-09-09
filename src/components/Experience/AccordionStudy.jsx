@@ -25,6 +25,7 @@ const AccordExperience = ({ educationData = [] }) => {
             onClick={() => handleToggle(index)}
             key={id}
           >
+            {/* text-accordion-nr-default */}
             <div className="relative">
               <IoIosArrowForward
                 className={clsx(
@@ -32,7 +33,7 @@ const AccordExperience = ({ educationData = [] }) => {
                   "absolute right-0 top-1 md:-top-[2px] text-[2rem] md:text-[2.8rem] transition-transform duration-200 ease-in-out",
                   isActive
                     ? "rotate-90 text-accordion-nr-active transition-colors duration-300 ease-in-out"
-                    : "text-accordion-nr-default duration-600 ease-in-out"
+                    : "text-neutral-800 duration-600 ease-in-out"
                 )}
               />
             </div>
@@ -61,7 +62,7 @@ const AccordExperience = ({ educationData = [] }) => {
             </div>
 
             <div className={`${s.panel} ${isActive ? s.active : ""}`}>
-              <p className="text-base text-accordion tracking-wider leading-[1.6em] p-[24px]">
+              <p className="text-base text-accordion tracking-wider leading-[1.6em] p-0 py-4 md:p-6">
                 {subtitle}
               </p>
               {/* <ul className={s.accordionList}>

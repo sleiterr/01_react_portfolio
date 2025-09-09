@@ -73,7 +73,7 @@ const Header = () => {
   }, [scrolled]);
 
   const defaultClasses =
-    "flex items-center justify-between inset-0 border-b px-[1rem] md:px-[1.5rem]  md:max-w-7xl md:-min-w-full outline-1 outline-red-500";
+    "flex items-center justify-between inset-0 border-b-1 px-[1rem] md:px-[1.5rem] outline-1";
 
   // let navBarClasses =
   //   scrolled || !isHome
@@ -113,7 +113,7 @@ const Header = () => {
           onClick={() => setMenuOpen(false)}
         ></div>
         <nav
-          className={navBarClasses}
+          className={clsx(navBarClasses)}
           style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
         >
           <div className="relative py-[0.5rem] md:py-[1rem] shrink-0 cursor-pointer">
@@ -141,7 +141,7 @@ const Header = () => {
             "w-full h-auto md:w-[50rem] md:h-full",
             "bg-white/90 backdrop-blur-sm",
             "flex flex-col justify-start items-start",
-            "pt-8 px-8 gap-10",
+            "pt-4 px-4 md:pt-8 md:px-8 gap-10",
             "transition-all duration-300",
             {
               "opacity-0 -translate-y-5 pointer-events-none": !menuOpen,
@@ -151,7 +151,11 @@ const Header = () => {
           onClick={() => setMenuOpen(false)}
         >
           <div className="">
-            <img src={blackLogo} alt="logo" className="w-[160px] h-auto" />
+            <img
+              src={blackLogo}
+              alt="logo"
+              className="w-[8rem] md:w-[10rem] h-auto"
+            />
           </div>
 
           <nav className="self-center m-auto">
@@ -179,7 +183,7 @@ const Header = () => {
                   About
                 </Link>
               </li>
-              <li>
+              <li className="hidden md:block">
                 <Link
                   to="skills"
                   smooth={true}
@@ -217,7 +221,7 @@ const Header = () => {
               </li>
             </ul>
           </nav>
-          <div className="flex items-center gap-4 font-normal text-xl text-nav tracking-wider mb-4">
+          <div className="flex items-center gap-4 font-normal text-xl text-nav tracking-wider mb-8 md:mb-4">
             <GoCommandPalette className="w-10 h-10" />
             junior developer
           </div>

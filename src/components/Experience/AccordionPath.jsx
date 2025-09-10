@@ -19,7 +19,7 @@ const AccordExperience = ({ experience = [] }) => {
           <div
             className={clsx(
               s.accordion,
-              "bg-white relative cursor-pointer text-left border border-none transition-all duration-200 ease-in-out",
+              "bg-white relative cursor-pointer text-left border border-none transition-all duration-200 ease-in-out p-2 md:p-4",
               isActive ? s.active : ""
             )}
             onClick={() => handleToggle(index)}
@@ -49,7 +49,7 @@ const AccordExperience = ({ experience = [] }) => {
               </p>
               <h4
                 className={clsx(
-                  "font-code font-medium text-2xl md:text-3xl",
+                  "font-code font-medium text-lg md:text-3xl",
                   isActive
                     ? "text-accordion-title-active transition-colors duration-300 ease-in-out"
                     : "text-accordion-title-default duration-600 ease-in-out"

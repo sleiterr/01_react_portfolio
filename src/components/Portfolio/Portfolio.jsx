@@ -44,7 +44,7 @@ const Portfolio = () => {
 
   return (
     <section className="" id="portfolio">
-      <div className=" px-4 md:px-0 py-[8rem] mx-auto md:max-w-7xl">
+      <div className=" px-4 md:px-0 py-[3.7rem] md:py-[8rem] mx-auto md:max-w-7xl">
         <div className="relative mb-6">
           <h2 className="font-code font-normal text-4xl md:text-5xl text-heading-primary tracking-wider mb-4 md:mb-6">
             My Projects

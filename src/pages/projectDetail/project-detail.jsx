@@ -40,22 +40,22 @@ const ProjectDetail = () => {
 
   return (
     <section className="relative">
-      <div className="py-[8rem] mx-auto md:max-w-7xl">
-        <div className="grid grid-cols-2 items-center justify-center gap-8">
-          <div className="flex items-center justify-center">
+      <div className="px-4 md:px-0 py-[8rem] mx-auto md:max-w-7xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-12 md:gap-8">
+          <div className="flex items-center justify-center mt-4 md:mt-0">
             <img
               src={project.preview}
               alt="project image"
               className="w-[560px] h-auto border-t-1  border-r-1 border-sky-500 pt-2 pr-2"
             />
           </div>
-          <div className="flex flex-col items-start justify-center w-[590px]">
-            <div className="absolute end-62 top-30">
+          <div className="flex flex-col items-start justify-center md:w-[590px]">
+            <div className="absolute top-20 end-4 md:end-62 md:top-30">
               <ul className="flex items-center gap-8">
                 <li className="relative">
                   <Link
                     className={clsx(
-                      "flex items-center font-light tracking-wider text-content text-xl gap-2",
+                      "flex items-center font-light tracking-wider text-content text-2xl md:text-xl gap-2",
                       "before:content[''] before:absolute before:w-0 before:h-0.5 before:rounded-xs before:bg-white before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
                     )}
                     to="/"
@@ -66,7 +66,7 @@ const ProjectDetail = () => {
                 <li className="relative">
                   <Link
                     className={clsx(
-                      "flex items-center gap-2 font-light tracking-wider text-content text-xl",
+                      "flex items-center gap-2 font-light tracking-wider text-content text-2xl md:text-xl",
                       "after:absolute after:content-[''] hover:after:w-full after:h-0.5 after:bg-white after:rounded-xs after:-bottom-[.25rem] after:left-0 after:opacity-0 after:transition-all after:duration-300 hover:after:opacity-100"
                     )}
                     to="/#portfolio"
@@ -77,28 +77,28 @@ const ProjectDetail = () => {
               </ul>
             </div>
             <div className="flex flex-col gap-4 mb-[40px]">
-              <h2 className="font-code font-normal text-heading-primary text-5xl tracking-wide">
+              <h2 className="font-code font-normal text-heading-primary text-4xl md:text-5xl tracking-wide">
                 {project.title}
               </h2>
-              <p className="font-light text-xl text-content tracking-wide">
+              <p className="font-light text-lg md:text-xl text-content tracking-wide">
                 {project.caption}
               </p>
             </div>
 
             <ul className="relative w-full after:content[''] after:absolute after:top-0 after:left-0 after:w-full after:h-[1px] after:bg-white before:content[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[1px] before:bg-white flex flex-col gap-2 mb-10">
               <li className=" flex justify-between w-full py-4">
-                <p className="font-light text-xl text-content tracking-wide">
+                <p className="font-light text-lg md:text-xl text-content tracking-wide">
                   Year:
                 </p>
-                <p className="font-light text-xl text-content tracking-wide">
+                <p className="font-light text-lg md:text-xl text-content tracking-wide">
                   {project.date}
                 </p>
               </li>
               <li className="relative h-full after:content[''] after:absolute after:top-0 after:left-0 after:w-full after:h-[1px] after:bg-white flex justify-between py-4">
-                <p className="font-light text-xl text-content tracking-wide">
+                <p className="font-light text-lg md:text-xl text-content tracking-wide">
                   Role:
                 </p>
-                <p className="font-light text-xl text-content tracking-wide  text-right w-[320px] leading-8">
+                <p className="font-light text-lg md:text-xl text-content tracking-wide  text-right w-[320px] leading-8">
                   {project.role}
                 </p>
               </li>
@@ -107,7 +107,7 @@ const ProjectDetail = () => {
               <a
                 href={project.url}
                 target="_blank"
-                className="group relative flex items-center gap-2 font-normal text-xl text-content tracking-wider"
+                className="group relative flex items-center gap-2 font-normal text-lg md:text-xl text-content tracking-wider"
               >
                 <p className="m-0 overflow-hidden transition-colors duration-300 ease-out group-hover:text-[#1ed1a8]">
                   Live Page
@@ -122,7 +122,7 @@ const ProjectDetail = () => {
               <a
                 href={project.github}
                 target="_blank"
-                className="group relative flex items-center gap-4 font-light text-xl text-content tracking-wider"
+                className="group relative flex items-center gap-2 md:gap-4 font-light text-lg md:text-xl text-content tracking-wider"
               >
                 <p className="m-0 overflow-hidden transition-colors duration-300 ease-out group-hover:text-[#1ed1a8]">
                   View GitHub

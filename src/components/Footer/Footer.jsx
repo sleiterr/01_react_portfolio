@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     //  border-t border-white
     <footer className="flex flex-col items-center justify-center bg-footer">
-      <div className="flex items-start flex-col gap-4 md:gap-0 md:flex-row md:items-center justify-between w-full py-6 px-8">
+      <div className="flex items-start flex-col gap-8 md:gap-0 md:flex-row md:items-center justify-between w-full py-6 px-8">
         <div className="">
           <Link
             smooth={true}
@@ -28,7 +28,7 @@ const Footer = () => {
 
         {/* footerContact */}
         <div className="flex flex-col md:items-center gap-2">
-          <ul className="flex flex-col md:flex-row items-start md:items-center justify-center gap-4 md:gap-6">
+          <ul className="flex flex-col md:flex-row items-start md:items-center justify-center gap-2 md:gap-6">
             <li className="footer-item flex items-center gap-2">
               <AiOutlineMail className="text-white w-6 h-6" />
               <a

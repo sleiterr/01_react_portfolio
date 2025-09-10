@@ -42,7 +42,7 @@ const ProjectDetail = () => {
     <section className="relative">
       <div className="px-4 md:px-0 py-[8rem] mx-auto md:max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-12 md:gap-8">
-          <div className="flex items-center justify-center mt-4 md:mt-0">
+          <div className="flex items-center justify-center mt-2 md:mt-0">
             <img
               src={project.preview}
               alt="project image"
@@ -51,7 +51,7 @@ const ProjectDetail = () => {
           </div>
           <div className="flex flex-col items-start justify-center md:w-[590px]">
             <div className="absolute top-20 end-4 md:end-62 md:top-30">
-              <ul className="flex items-center gap-8">
+              <ul className="flex items-center gap-4 md:gap-8">
                 <li className="relative">
                   <Link
                     className={clsx(

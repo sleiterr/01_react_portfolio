@@ -70,5 +70,29 @@
     "category": "react",
     "image": ["/imgProjects/web_shop.jpg"],
     "preview": ["/imgProjects/web_shop-preview.jpg"]
+  },
+  {
+    "id": 7,
+    "title": "Frontend Practice: Military Drone Website",
+    "caption": "Future-Frontend project about military drones in the context of the war in Ukraine. Brutal black-and-white design with a pencil-drawn effect",
+    "url": "https://sleiterr.github.io/md_droner/",
+    "github": "https://github.com/sleiterr/md_droner",
+    "role": "Research, UI/UX design, and front-end web development",
+    "date": "18-09-2025",
+    "category": "html",
+    "image": ["/imgProjects/drones.jpg"],
+    "preview": ["/public/imgProjects/drones_preview.jpg"]
+  },
+  {
+    "id": 8,
+    "title": "Klog Energi",
+    "caption": "Full-stack practice: improving skills in Next.js and Tailwind CSS, working with routing and client components.",
+    "url": "https://klog-energi.vercel.app/",
+    "github": "https://github.com/sleiterr/klog-energi",
+    "role": "Frontend development with Next.js and Tailwind CSS",
+    "date": "08-08-2025",
+    "category": "Next.js",
+    "image": ["/imgProjects/Klog_Energi.jpg"],
+    "preview": ["/imgProjects/Klog_Energi-preview.jpg"]
   }
 ]

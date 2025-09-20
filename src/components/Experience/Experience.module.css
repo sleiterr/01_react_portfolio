@@ -14,10 +14,6 @@
   margin-bottom: 50px;
 }
 
-@media screen425px {
-  
-}
-
 .accordion::before {
   content: "";
   position: absolute;
@@ -35,21 +31,6 @@
 
 /*! ACCORDION-LIST */
 
-/* .accordionList {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 12px;
-
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-
-  letter-spacing: 0.04em;
-  line-height: 1.2em;
-  color: #868e96;
-  margin-bottom: 24px;
-} */
 
 .accordion .panel {
   max-height: 0;
@@ -71,7 +52,3 @@
   overflow: hidden;
   margin-left: 20px;
 }
-/* 
-.accordion.active .iconCheveron {
-  transform: rotate(90deg);
-} */

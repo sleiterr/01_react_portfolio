@@ -19,7 +19,7 @@ const AccordExperience = ({ educationData = [] }) => {
           <div
             className={clsx(
               s.accordion,
-              "bg-white relative cursor-pointer text-left border border-none transition-all duration-200 ease-in-out p-2 md:p-4",
+              "bg-white relative cursor-pointer text-left border border-none transition-all duration-200 ease-in-out py-3 px-4 md:p-4",
               isActive ? s.active : ""
             )}
             onClick={() => handleToggle(index)}

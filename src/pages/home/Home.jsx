@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroSection from "../../components/Hero/HeroSection";
 import About from "../../components/About/About";
 import Skills from "../../components/Skills/Skills";
@@ -14,6 +14,7 @@ import { techLogos } from "../../Data/techLogos";
 // } from "react-icons/si";
 
 const Home = () => {
+  const [currentPage, setCurrentpage] = useState(1);
   const heroRef = React.useRef(null);
   return (
     <>
@@ -39,7 +40,7 @@ const Home = () => {
         </div>
         <About />
         <Skills />
-        <Portfolio />
+        <Portfolio currentPage={currentPage} setCurrentpage={setCurrentpage} />
         <Experience />
       </main>
     </>

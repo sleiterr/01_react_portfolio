@@ -73,7 +73,7 @@ const Header = () => {
   }, [scrolled]);
 
   const defaultClasses =
-    "flex items-center justify-between inset-0 border-b-1 px-[1rem] md:px-[1.5rem] outline-1";
+    "flex items-center justify-between inset-0 border-b-1 px-[1rem] md:px-[1.5rem]";
 
   // let navBarClasses =
   //   scrolled || !isHome

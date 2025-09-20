@@ -1,11 +1,32 @@
 // Portfolio.jsx
 import React, { useState, useEffect } from "react"; // Adjust the path as necessary
+import Pagination from "../Pagination/Pagination";
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion as Motion } from "motion/react";
 
-const Portfolio = () => {
+const Portfolio = ({ currentPage, setCurrentpage }) => {
   const [project, setProjects] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+
+  const [direction, setDirection] = useState(1);
+
+  const itemsPerPage = 3;
+
+  const containerVariants = {
+    hidden: () => ({}),
+    show: {
+      transition: {
+        staggerChildren: 0.15, // затримка між картками
+      },
+    },
+    exit: {},
+  };
+
+  const cardVariants = {
+    hidden: (dir) => ({ opacity: 0, x: 30 * dir }),
+    show: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+  };
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -24,10 +45,23 @@ const Portfolio = () => {
     fetchProjects();
   }, []);
 
-  const categoryProjects = project?.filter((item) =>
-    ["html", "javascript", "react"].includes(item.category)
+  const categoryProjects = (project ?? []).filter((item) =>
+    ["html", "javascript", "react", "Next.js"].includes(item.category)
   );
+
   console.log("Filtered projects:", categoryProjects);
+
+  const totalPage = Math.ceil(categoryProjects.length / itemsPerPage);
+  const pageItems = categoryProjects.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  useEffect(() => {
+    if (currentPage > totalPage) {
+      setCurrentpage(1);
+    }
+  }, [currentPage, setCurrentpage, totalPage]);
 
   if (loading)
     return (
@@ -57,35 +91,61 @@ const Portfolio = () => {
 
           <div className="absolute left-0 bottom-0 after:content-[''] after:w-30 after:h-px after:inline-block after:align-middle after:bg-gradient-to-r after:from-cyan-400 after:to-emerald-400" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-0">
-          {categoryProjects.map((item, index) => {
-            const formattedIndex = (index + 1).toString().padStart(2, "0");
-            console.log("Image", item.image[0]);
-            return (
-              <div key={item.id}>
-                <Link
-                  className="relative w-full"
-                  to={`/project-detail/${item.id}`}
-                >
-                  <img
-                    src={item.image[0]}
-                    alt={item.caption}
-                    width={500}
-                    height={850}
-                    className="w-full h-auto object-cover object-center"
-                  />
-                  <div className="absolute inset-0 bg-black/80 opacity-0 hover:opacity-100 transition duration-500 ease-in-out flex flex-col items-center justify-center text-white text-center m-4">
-                    <p className="absolute font-normal text-7xl  right-4 top-4 text-number-overlay tracking-wider">
-                      {formattedIndex}
-                    </p>
-                    <h3 className="absolute font-code font-medium text-3xl tracking-wider text-center">
-                      {item.title}
-                    </h3>
-                  </div>
-                </Link>
-              </div>
-            );
-          })}
+        <div className="relative overflow-hidden w-full h-[720px]">
+          <AnimatePresence mode="wait" custom={direction}>
+            {/* className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6" */}
+            <Motion.div
+              key={currentPage}
+              variants={containerVariants}
+              initial="hidden"
+              animate="show"
+              exit="exit"
+              custom={direction}
+              className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6"
+            >
+              {pageItems.map((item, index) => {
+                const realIndex = (currentPage - 1) * itemsPerPage + index + 1;
+                const formattedIndex = realIndex.toString().padStart(2, "0");
+
+                console.log("Image", item.image[0]);
+
+                return (
+                  <Motion.div
+                    key={item.id}
+                    variants={cardVariants}
+                    custom={direction}
+                  >
+                    <Link
+                      className="relative w-full"
+                      to={`/project-detail/${item.id}`}
+                    >
+                      <img
+                        src={item.image[0]}
+                        alt={item.caption}
+                        width={500}
+                        height={850}
+                        className="w-full h-auto object-cover object-center"
+                      />
+                      <div className="absolute inset-0 bg-black/80 opacity-0 hover:opacity-100 transition duration-500 ease-in-out flex flex-col items-center justify-center text-white text-center m-4">
+                        <p className="absolute font-normal text-7xl  right-4 top-4 text-number-overlay tracking-wider">
+                          {formattedIndex}
+                        </p>
+                        <h3 className="absolute font-code font-medium text-3xl tracking-wider text-center">
+                          {item.title}
+                        </h3>
+                      </div>
+                    </Link>
+                  </Motion.div>
+                );
+              })}
+            </Motion.div>
+          </AnimatePresence>
+          <Pagination
+            currentPage={currentPage}
+            totalPage={totalPage}
+            setCurrentpage={setCurrentpage}
+            setDirection={setDirection}
+          />
         </div>
       </div>
     </section>

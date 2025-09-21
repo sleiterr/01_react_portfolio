@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "../../components/Header/Header";
 import HeroSection from "../../components/Hero/HeroSection";
 import About from "../../components/About/About";
 import Skills from "../../components/Skills/Skills";
@@ -18,6 +19,7 @@ const Home = () => {
   const heroRef = React.useRef(null);
   return (
     <>
+      <Header />
       <main>
         <HeroSection heroRef={heroRef} />
         <div

@@ -1,3 +1,4 @@
+// index.js
 import react from "../icon_skills/React.svg";
 import tailwind from "../icon_skills/Tailwind.svg";
 import js from "../icon_skills/Java_Script.svg";

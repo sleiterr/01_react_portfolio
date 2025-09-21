@@ -1,3 +1,4 @@
+// techLogos.js
 import {
   react,
   tailwind,
@@ -15,62 +16,86 @@ import {
 
 export const techLogos = [
   {
+    id: 1,
     src: vercel,
+    category: "Workflow",
     title: "Vercel",
     href: "https://vercel.com/home",
   },
   {
+    id: 2,
     src: react,
+    category: "Frontend",
     title: "React",
     href: "https://react.dev",
   },
   {
+    id: 3,
     src: tailwind,
+    category: "Frontend",
     title: "Tailwind CSS",
     href: "https://tailwindcss.com",
   },
   {
+    id: 4,
     src: js,
+    category: "Frontend",
     title: "JavaScript",
     href: "https://javascript.info/",
   },
   {
+    id: 5,
     src: html,
+    category: "Frontend",
     title: "HTML",
     href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
   },
   {
+    id: 6,
     src: css,
+    category: "Frontend",
     title: "CSS",
     href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   {
+    id: 7,
     src: sanity,
+    category: "cms",
     title: "Sanity",
     href: "https://www.sanity.io/",
   },
   {
+    id: 8,
     src: wordPress,
+    category: "cms",
     title: "wordPress",
     href: "https://wordpress.org/",
   },
   {
+    id: 9,
     src: gitHub,
+    category: "Workflow",
     title: "gitHub",
     href: "https://github.com/",
   },
   {
+    id: 10,
     src: figma,
+    category: "ui-ux",
     title: "figma",
     href: "https://www.figma.com/",
   },
   {
+    id: 11,
     src: ph,
+    category: "ui-ux",
     title: "Photoshop",
     href: "https://www.adobe.com/products/photoshop.html",
   },
   {
+    id: 12,
     src: ai,
+    category: "ui-ux",
     title: "illustrator",
     href: "https://www.adobe.com/products/illustrator.html",
   },

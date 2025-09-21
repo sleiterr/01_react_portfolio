@@ -22,6 +22,7 @@ const Skills = () => {
           My Skills
         </h2>
         <div className="relative min-h-[26rem]">
+          
           {/* Frontend Stack */}
           <div className="absolute translate-x-1/2 px-8 pt-4 pb-16 w-[31.2rem] h-auto rounded-xl bg-white/20 backdrop-blur-sm border-l-1 border-t-1 border-sky-500">
             <div className="">

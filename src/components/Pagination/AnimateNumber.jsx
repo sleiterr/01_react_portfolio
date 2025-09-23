@@ -10,7 +10,7 @@ const AnimatedNumber = ({ value }) => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -20, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="font-medium text-2xl text-white"
+          className=""
         >
           {value}
         </Motion.span>

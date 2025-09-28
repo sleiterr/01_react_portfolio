@@ -12,6 +12,7 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
+  // const [category, setCategory] = useState("all");
   const [direction, setDirection] = useState(1);
 
   const itemsPerPage = 2;
@@ -22,7 +23,8 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
         // Simulate fetching data from an API or local JSON file
         const res = await fetch("/data/projectsData.json"); // Adjust the path as necessary
         const data = await res.json();
-        setProjects(data);
+
+        setProjects(data.projects);
       } catch (error) {
         setError("Failed to load projects", error);
       } finally {
@@ -32,6 +34,11 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
 
     fetchProjects();
   }, []);
+
+  // useEffect(() => {
+
+  //   );
+  // }, []);
 
   const categoryProjects = (project ?? []).filter((item) =>
     ["html", "javascript", "react", "Next.js"].includes(item.category)

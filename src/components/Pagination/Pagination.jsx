@@ -1,5 +1,6 @@
 import React from "react";
-import { SlArrowRight } from "react-icons/sl";
+import { RxDoubleArrowLeft } from "react-icons/rx";
+// import { SlArrowRight } from "react-icons/sl";
 import AnimatedNumber from "./AnimateNumber";
 
 const Pagination = ({
@@ -23,32 +24,63 @@ const Pagination = ({
   };
 
   return (
-    <div className="flex items-center justify-center gap-2 mt-12">
-      <button
-        className="flex items-center gap-2 bg-white px-8 py-2 rounded-sm cursor-pointer"
-        onClick={prev}
-        disabled={currentPage === 1}
-      >
-        <SlArrowRight className="rotate-180 " /> Prev
-      </button>
+    <div className="flex items-center justify-between mt-12 mx-4">
+      <FilterItemms
+        currentPage={currentPage}
+        totalPage={totalPage}
+        prev={prev}
+      />
       <span className="flex items-center md:hidden">
         <AnimatedNumber value={currentPage} />
       </span>
-      <span className="font-medium text-2xl text-white md:hidden">
+      <span className="font-medium text-2xl text-content md:hidden">
         of {totalPage}
       </span>
-      <span className="font-medium text-2xl text-white md:hidden">
+      <span className="font-medium text-2xl text-content md:hidden">
         {totalPage}
       </span>
-      <button
-        className="flex items-center gap-2 bg-white px-8 py-2 rounded-sm cursor-pointer"
-        onClick={next}
-        disabled={currentPage === totalPage}
-      >
-        Next <SlArrowRight className="" />
-      </button>
+      <FilterItemms
+        currentPage={currentPage}
+        totalPage={totalPage}
+        next={next}
+      />
     </div>
   );
 };
 
 export default Pagination;
+
+const FilterItemms = ({ prev, currentPage, next, totalPage }) => {
+  if (prev) {
+    return (
+      <div className="relative group">
+        <p className="absolute -top-3 left-[3.8rem] font-normal text-base text-white z-10 group-hover:text-cyan-400 transition-colors duration-300">
+          Prev
+        </p>
+        <button
+          className="relative flex items-center gap-2 bg-transparante px-16 py-3 rounded-sm cursor-pointer border-1 border-white text-content z-0 [clip-path:polygon(0_0,27%_0,27%_7%,73%_7%,75%_0,100%_0,100%_85%,100%_100%,85%_100%,15%_100%,0_100%,0_85%)] group-hover:border-cyan-400  transition-all duration-300"
+          onClick={prev}
+          disabled={currentPage === 1}
+        >
+          <RxDoubleArrowLeft className="group-hover:text-cyan-400 transition-colors duration-300" />
+        </button>
+      </div>
+    );
+  }
+  if (next) {
+    return (
+      <div className="relative group">
+        <p className="absolute -top-3 right-[3.3rem] font-normal text-base text-white z-10 group-hover:text-cyan-400 transition-colors duration-300">
+          Next
+        </p>
+        <button
+          className="relative flex items-center gap-2 bg-transparante px-16 py-3 rounded-sm cursor-pointer border-1 border-white text-content z-0 [clip-path:polygon(0_0,27%_0,27%_7%,76%_7%,76%_0,100%_0,100%_85%,100%_100%,85%_100%,15%_100%,0_100%,0_85%)] group-hover:border-cyan-400  transition-all duration-300"
+          onClick={next}
+          disabled={currentPage === totalPage}
+        >
+          <RxDoubleArrowLeft className="rotate-180 group-hover:text-cyan-400 transition-colors duration-300" />
+        </button>
+      </div>
+    );
+  }
+};

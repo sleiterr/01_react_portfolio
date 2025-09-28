@@ -14,7 +14,7 @@ const FilterCard = ({
 }) => {
   return (
     <>
-      <div className="col-span-1 h-full bg-black/40 rounded-xl border-r-1 border-t-1 border-sky-500 hidden md:block p-4">
+      <div className="col-span-1 h-full bg-black/40 rounded-xl border-r-1 border-t-1 border-cyan-400 hidden md:block py-6 px-4">
         <div className="flex flex-col justify-between h-full">
           <div className="">
             <FilterCaunter

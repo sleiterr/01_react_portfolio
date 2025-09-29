@@ -54,12 +54,12 @@ const Footer = () => {
         <StyledWrapper>
           <ul className="container">
             <li className="cursor-pointer">
-              <a href className="icon icon-github">
+              <a href="#" className="icon icon-github">
                 <FaGithub className="w-[32px] h-[32px] md:w-[40px] md:h-[40px] text-white" />
               </a>
             </li>
             <li className="cursor-pointer">
-              <a href className="icon icon-in">
+              <a href="#" className="icon icon-in">
                 <FaLinkedin className="w-[32px] h-[32px] md:w-[40px] md:h-[40px] text-white" />
               </a>
             </li>

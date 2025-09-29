@@ -83,9 +83,9 @@ const Header = () => {
   let navBarClasses;
 
   if (isProjectDetail) {
-    navBarClasses = `${defaultClasses}  bg-white/75 backdrop-blur-lg`;
+    navBarClasses = `${defaultClasses}  bg-white/90 backdrop-blur-sm`;
   } else if (scrolled || !isHome) {
-    navBarClasses = `${defaultClasses}  bg-white/75 backdrop-blur-lg`;
+    navBarClasses = `${defaultClasses}  bg-white/90 backdrop-blur-sm`;
   } else {
     navBarClasses = `${defaultClasses}  bg-transparent`;
   }

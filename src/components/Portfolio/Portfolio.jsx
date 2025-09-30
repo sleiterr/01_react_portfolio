@@ -8,11 +8,11 @@ import FilterCard from "./FilterCard";
 import { containerVariants, cardVariants } from "../animation/Portfolio.js";
 
 const Portfolio = ({ currentPage, setCurrentpage }) => {
-  const [project, setProjects] = useState(null);
+  const [project, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // const [category, setCategory] = useState("all");
+  const [selectCategory, setSelectCategory] = useState("all");
   const [direction, setDirection] = useState(1);
 
   const itemsPerPage = 2;
@@ -35,13 +35,15 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
     fetchProjects();
   }, []);
 
-  // useEffect(() => {
+  const categories = ["all", ...new Set(project.map((p) => p.category))];
 
-  //   );
-  // }, []);
+  function resetFilters() {
+    setSelectCategory("all");
+    setCurrentpage(1);
+  }
 
-  const categoryProjects = (project ?? []).filter((item) =>
-    ["html", "javascript", "react", "Next.js"].includes(item.category)
+  const categoryProjects = (project ?? []).filter(
+    (p) => selectCategory === "all" || p.category === selectCategory
   );
 
   console.log("Filtered projects:", categoryProjects);
@@ -92,6 +94,9 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
         <div className="grid grid-cols-3 gap-4 md:gap-6">
           {/* FilterCard */}
           <FilterCard
+            resetFilters={resetFilters}
+            categories={categories}
+            setSelectCategory={setSelectCategory}
             currentPage={currentPage}
             totalPage={totalPage}
             setCurrentpage={setCurrentpage}

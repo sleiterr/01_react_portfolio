@@ -11,7 +11,12 @@ const FilterCard = ({
   setCurrentpage,
   totalPage,
   setDirection,
+  setSelectCategory,
 }) => {
+  const handleCategory = (value) => {
+    setSelectCategory(value);
+    setCurrentpage(1);
+  };
   return (
     <>
       <div className="col-span-1 h-full bg-black/40 rounded-xl border-r-1 border-t-1 border-cyan-400 hidden md:block py-6 px-4">
@@ -25,21 +30,49 @@ const FilterCard = ({
           </div>
           <div className="flex justify-center">
             <ul className="flex flex-col items-start gap-4">
-              <li className="flex items-center justify-center gap-4">
-                <ImHtmlFive2 className="text-3xl text-white inline-block" />
-                <p className="text-2xl text-white">html</p>
+              <li className="">
+                <button
+                  className="flex items-center justify-center gap-4"
+                  onClick={() => handleCategory("all")}
+                >
+                  <p className="text-2xl text-white">All</p>
+                </button>
               </li>
-              <li className="flex items-center justify-center gap-4">
-                <AiOutlineJavaScript className="text-3xl text-white inline-block" />
-                <p className="text-2xl text-white">Java Script</p>
+              <li className="">
+                <button
+                  className="flex items-center justify-center gap-4"
+                  onClick={() => handleCategory("html")}
+                >
+                  <ImHtmlFive2 className="text-3xl text-white inline-block" />
+                  <p className="text-2xl text-white">html</p>
+                </button>
               </li>
-              <li className="flex items-center justify-center gap-4">
-                <FaReact className="text-3xl text-white inline-block" />
-                <p className="text-2xl text-white">React</p>
+              <li className="">
+                <button
+                  className="flex items-center justify-center gap-4"
+                  onClick={() => handleCategory("javascript")}
+                >
+                  <AiOutlineJavaScript className="text-3xl text-white inline-block" />
+                  <p className="text-2xl text-white">Java Script</p>
+                </button>
               </li>
-              <li className="flex items-center justify-center gap-4">
-                <TbBrandNextjs className="text-3xl text-white inline-block" />
-                <p className="text-2xl text-white">Next.js</p>
+              <li className="">
+                <button
+                  className="flex items-center justify-center gap-4"
+                  onClick={() => handleCategory("react")}
+                >
+                  <FaReact className="text-3xl text-white inline-block" />
+                  <p className="text-2xl text-white">React</p>
+                </button>
+              </li>
+              <li className="">
+                <button
+                  className="flex items-center justify-center gap-4"
+                  onClick={() => handleCategory("Next.js")}
+                >
+                  <TbBrandNextjs className="text-3xl text-white inline-block" />
+                  <p className="text-2xl text-white">Next.js</p>
+                </button>
               </li>
             </ul>
           </div>

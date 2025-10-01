@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 import heroBg from "../../assets/img/hero-design---Copy-1.jpg";
+import { ButtHero } from "./ButtHero";
 import { FaGithub } from "react-icons/fa";
 // import { GoArrowRight } from "react-icons/go";
 import { BsArrowLeft } from "react-icons/bs";
@@ -51,9 +52,8 @@ const HeroSection = () => {
                 UI/UX design.
               </p>
             </div>
-            <button className="font-normal text-lg tracking-wide rounded-md text-content py-2 px-12 md:py-2 md:px-8 bg-button-gradient mt-8 md:mt-12">
-              Download CV
-            </button>
+
+            <ButtHero />
           </div>
         </div>
         <div className="absolute bottom-3 right-5 md:end-25 md:bottom-15">

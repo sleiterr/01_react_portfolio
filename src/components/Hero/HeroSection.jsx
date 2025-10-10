@@ -2,7 +2,16 @@ import { Link } from "react-scroll";
 import heroBg from "../../assets/img/hero-design---Copy-1.jpg";
 import { ButtHero } from "./ButtHero";
 import { GitLinks } from "./GitLinks";
-import GradientText from "../animation/GradientText";
+import { GradientHeader } from "./GradientHeader";
+
+const heroTextDoc = [
+  {
+    id: 1,
+    text: "I am currently studying web development at Media College Denmark, where I am building skills in both web development and UI/UX design.",
+    className:
+      "font-light text-base md:text-lg text-content tracking-wider leading-[1.5]",
+  },
+];
 
 const HeroSection = () => {
   return (
@@ -24,33 +33,13 @@ const HeroSection = () => {
               </h1>
               <h2 className="flex-wrap md:flex items-center gap-2 md:gap-4 font-code font-extrabold text-subheading text-5xl md:text-6xl leading-[1.2]">
                 I am
-                <GradientText
-                  colors={[
-                    "#40ffaa",
-                    "#4079ff",
-                    "#40ffaa",
-                    "#4079ff",
-                    "#40ffaa",
-                  ]}
-                  animationSpeed={6}
-                  showBorder={false}
-                  className="backdrop-blur-none"
-                >
-                  Web Developer
-                </GradientText>
-                {/* <span className="text-heading-accent">
-                  Web Developer
-                </span> */}
+                <GradientHeader />
               </h2>
             </div>
-            <div className="w-full min-w-xs max-w-sm md:min-w-auto md:max-w-[34rem]">
-              <p className="font-light text-base md:text-lg text-content tracking-wider leading-[1.5]">
-                I am currently studying web development at Media College
-                Denmark, where I am building skills in both web development and
-                UI/UX design.
-              </p>
-            </div>
+            {/* Gradient */}
+            <HeroItem />
 
+            {/* Btt */}
             <ButtHero />
           </div>
         </div>
@@ -61,3 +50,15 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+const HeroItem = () => {
+  return (
+    <div className="w-full min-w-xs max-w-sm md:min-w-auto md:max-w-[34rem]">
+      {heroTextDoc.map((p) => (
+        <p key={p.id} className={p.className}>
+          {p.text}
+        </p>
+      ))}
+    </div>
+  );
+};

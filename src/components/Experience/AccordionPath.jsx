@@ -63,13 +63,6 @@ const AccordExperience = ({ experience = [] }) => {
               <p className="text-base text-accordion tracking-wider leading-[1.6em] py-4 md:p-6">
                 {subtitle}
               </p>
-              {/* <ul className={s.accordionList}>
-                {list.map((li, i) => (
-                  <li key={i} className={s.accordionItem}>
-                    {li}
-                  </li>
-                ))}
-              </ul> */}
             </div>
           </div>
         );

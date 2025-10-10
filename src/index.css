@@ -50,6 +50,7 @@ html {
   color: var(--color-subheading);
 }
 
+/*! text-content */
 .text-content {
   color: var(--color-text);
 }
@@ -57,7 +58,7 @@ html {
 .text-logo {
   color: var(--color-logo);
 }
-
+/*!nav-text*/
 .text-nav {
   color: var(--color-nav);
 }
@@ -65,43 +66,43 @@ html {
 .bg-border {
   background-color: var(--bg-border);
 }
-
+/*!number-overlay*/
 .text-number-overlay {
   color: var(--number-overlay);
 }
-
+/*!about-caption*/
 .text-caption {
   color: var(--color-caption);
 }
-
+/*!accordion-text-desc*/
 .text-accordion {
   color: var(--text-accordion-desc);
 }
-
+/*!accordion-text*/
 .text-accordion-title-active {
   color: var(--accordion-text-active);
 }
-
+/*!accordion-active*/
 .text-accordion-title-default {
   color: var(--accordion-text-default);
 }
-
+/*!accordion-active*/
 .text-accordion-nr-active {
   color: var(--accordion-nr-active);
 }
-
+/*!accordion-nr*/
 .text-accordion-nr-default {
   color: var(--accordion-nr-default);
 }
-
+/*! color-link*/
 .text-link {
   color: var(--color-link);
 }
-
+/*!logo-footer*/
 .text-logo-footer {
   color: var(--logo-footer);
 }
 
 .text-logo-text {
-  color: var(--logo-text);
+  color: var(--logo-text);/*!logo-text*/
 }

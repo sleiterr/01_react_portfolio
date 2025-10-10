@@ -114,6 +114,7 @@ const ProjectDetail = () => {
               <a
                 href={project.url}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="group relative flex items-center gap-2 font-normal text-lg md:text-xl text-content tracking-wider"
               >
                 <p className="m-0 overflow-hidden transition-colors duration-300 ease-out group-hover:text-[#1ed1a8]">
@@ -129,6 +130,7 @@ const ProjectDetail = () => {
               <a
                 href={project.github}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="group relative flex items-center gap-2 md:gap-4 font-light text-lg md:text-xl text-content tracking-wider"
               >
                 <p className="m-0 overflow-hidden transition-colors duration-300 ease-out group-hover:text-[#1ed1a8]">

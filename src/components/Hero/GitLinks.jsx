@@ -10,6 +10,7 @@ export const GitLinks = () => {
         <a
           href="https://github.com/sleiterr"
           target="_blank"
+          rel="noopener noreferrer"
           className="group relative flex gap-4 font-normal text-base md:text-xl items-center cursor-pointer"
         >
           <FaGithub className="text-white w-[42px] h-[42px] transition-colors duration-300 ease-out group-hover:text-[#1ed1a8]" />

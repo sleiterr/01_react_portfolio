@@ -6,7 +6,7 @@ import { BsArrowLeft } from "react-icons/bs";
 export const GitLinks = () => {
   return (
     <>
-      <div className="absolute bottom-3 right-5 md:end-25 md:bottom-15">
+      <div className="absolute bottom-3 right-5 sm:bottom-12 md:end-25 md:bottom-15">
         <a
           href="https://github.com/sleiterr"
           target="_blank"

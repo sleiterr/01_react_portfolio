@@ -9,7 +9,7 @@ const heroTextDoc = [
     id: 1,
     text: "I am currently studying web development at Media College Denmark, where I am building skills in both web development and UI/UX design.",
     className:
-      "font-light text-base md:text-lg text-content tracking-wider leading-[1.5]",
+      "font-light text-base sm:text-xl md:text-lg text-content tracking-wider leading-[1.5]",
   },
 ];
 
@@ -25,13 +25,13 @@ const HeroSection = () => {
           // aspectRatio: "8 / 5",
         }}
       >
-        <div className="absolute translate-y-1/2 md:inset-y-1/3 md:left-10 flex items-start justify-center">
+        <div className="absolute translate-y-1/2 sm:top-[9rem] sm:left-6 md:inset-y-1/3 md:left-10 flex items-start justify-center">
           <div className="px-4 md:px-0 flex flex-col items-start justify-center text-left">
             <div className="mb-4 w-full">
-              <h1 className="font-code font-extrabold text-subheading text-5xl md:text-6xl leading-[1.4] md:leading-[1.2]">
+              <h1 className="font-code font-extrabold text-subheading text-5xl sm:text-6xl md:text-6xl leading-[1.4] md:leading-[1.2]">
                 Hi, I'm Oleg.
               </h1>
-              <h2 className="flex-wrap md:flex items-center gap-2 md:gap-4 font-code font-extrabold text-subheading text-5xl md:text-6xl leading-[1.2]">
+              <h2 className="flex-wrap md:flex items-center gap-2 md:gap-4 font-code font-extrabold text-subheading text-5xl sm:text-6xl md:text-6xl leading-[1.2]">
                 I am
                 <GradientHeader />
               </h2>
@@ -53,7 +53,7 @@ export default HeroSection;
 
 const HeroItem = () => {
   return (
-    <div className="w-full min-w-xs max-w-sm md:min-w-auto md:max-w-[34rem]">
+    <div className="w-full min-w-xs max-w-sm md:min-w-auto sm:max-w-[32rem] md:max-w-[34rem]">
       {heroTextDoc.map((p) => (
         <p key={p.id} className={p.className}>
           {p.text}

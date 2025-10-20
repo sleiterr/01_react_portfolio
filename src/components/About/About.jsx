@@ -7,7 +7,7 @@ const About = () => {
       <div className="px-4 py-[8rem] mx-auto md:max-w-7xl">
         <div className="relative">
           <SpanAbout />
-          <h2 className="font-code font-light text-4xl md:text-5xl text-heading-primary tracking-wide mb-4">
+          <h2 className="font-code font-light text-4xl sm:text-5xl md:text-5xl text-heading-primary tracking-wide mb-4">
             About Me
           </h2>
           <div className="grid grid-row-2 md:grid-cols-2 gap-8">
@@ -44,7 +44,7 @@ const AboutItms = ({ children }) => {
       {React.Children.map(children, (child, index) => (
         <p
           key={index}
-          className="font-light text-content text-base md:text-lg tracking-wide md:tracking-wider leading-[1.6]"
+          className="font-light text-content text-base sm:text-xl md:text-lg tracking-wide sm:tracking-wider md:tracking-wider leading-[1.6]"
         >
           {child}
         </p>

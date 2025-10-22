@@ -6,7 +6,7 @@ import { Design } from "./Design";
 
 const Skills = () => {
   return (
-    <section className="hidden md:block" id="skills">
+    <section className="hidden lg:block" id="skills">
       <div className="py-[8rem] mx-auto md:max-w-7xl">
         <h2 className="font-code font-normal text-5xl text-heading-primary tracking-wide mb-15">
           My Skills

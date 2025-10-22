@@ -1,5 +1,6 @@
 import React from "react";
 import { SpanAbout } from "./SpanAbout";
+import clsx from "clsx";
 
 const About = () => {
   return (
@@ -10,7 +11,7 @@ const About = () => {
           <h2 className="font-code font-light text-4xl sm:text-5xl md:text-5xl text-heading-primary tracking-wide mb-4">
             About Me
           </h2>
-          <div className="grid grid-row-2 md:grid-cols-2 gap-8">
+          <div className="grid grid-row-2 lg:grid-cols-2 gap-8">
             <AboutItms>
               I am a beginner web developer. I live and study in Denmark. I
               speak Ukrainian, Danish and English. I am currently studying at
@@ -44,7 +45,11 @@ const AboutItms = ({ children }) => {
       {React.Children.map(children, (child, index) => (
         <p
           key={index}
-          className="font-light text-content text-base sm:text-xl md:text-lg tracking-wide sm:tracking-wider md:tracking-wider leading-[1.6]"
+          className={clsx(
+            "font-light text-content text-base leading-[1.6] tracking-wide",
+            "sm:text-xl md:text-lg sm:tracking-wider ",
+            "md:tracking-wider"
+          )}
         >
           {child}
         </p>

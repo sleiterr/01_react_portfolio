@@ -23,7 +23,7 @@ const contactData = [
 
 export const ContactFooter = () => {
   return (
-    <ul className="flex flex-col md:flex-row items-start md:items-center justify-center gap-2 md:gap-6">
+    <ul className="flex flex-col items-start lg:flex-row lg:items-center justify-center gap-2 lg:gap-6">
       {contactData.map((item) => (
         <li key={item.id} className={item.className}>
           {item.icon}

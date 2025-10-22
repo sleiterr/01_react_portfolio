@@ -1,4 +1,5 @@
 import React from "react";
+import clsx from "clsx";
 import { RxDoubleArrowLeft } from "react-icons/rx";
 // import { SlArrowRight } from "react-icons/sl";
 import AnimatedNumber from "./AnimateNumber";
@@ -58,7 +59,11 @@ const FilterItemms = ({ prev, currentPage, next, totalPage }) => {
           Prev
         </p>
         <button
-          className="relative flex items-center gap-2 bg-transparante px-16 py-3 rounded-sm cursor-pointer border-1 border-white text-content z-0 [clip-path:polygon(0_0,27%_0,27%_7%,73%_7%,75%_0,100%_0,100%_85%,100%_100%,85%_100%,15%_100%,0_100%,0_85%)] group-hover:border-cyan-400  transition-all duration-300"
+          className={clsx(
+            "relative flex items-center gap-2 bg-transparante px-16 py-3 rounded-sm cursor-pointer border-1 border-white text-content z-0",
+            "group-hover:border-cyan-400  transition-all duration-300",
+            "[clip-path:polygon(0_0,27%_0,27%_7%,73%_7%,75%_0,100%_0,100%_85%,100%_100%,85%_100%,15%_100%,0_100%,0_85%)]"
+          )}
           onClick={prev}
           disabled={currentPage === 1}
         >
@@ -74,7 +79,11 @@ const FilterItemms = ({ prev, currentPage, next, totalPage }) => {
           Next
         </p>
         <button
-          className="relative flex items-center gap-2 bg-transparante px-16 py-3 rounded-sm cursor-pointer border-1 border-white text-content z-0 [clip-path:polygon(0_0,27%_0,27%_7%,76%_7%,76%_0,100%_0,100%_85%,100%_100%,85%_100%,15%_100%,0_100%,0_85%)] group-hover:border-cyan-400  transition-all duration-300"
+          className={clsx(
+            "relative flex items-center gap-2 bg-transparante px-16 py-3 rounded-sm cursor-pointer border-1 border-white text-content z-0",
+            "group-hover:border-cyan-400  transition-all duration-300",
+            "[clip-path:polygon(0_0,27%_0,27%_7%,76%_7%,76%_0,100%_0,100%_85%,100%_100%,85%_100%,15%_100%,0_100%,0_85%)]"
+          )}
           onClick={next}
           disabled={currentPage === totalPage}
         >

@@ -1,5 +1,6 @@
 import { Link } from "react-scroll";
 import heroBg from "../../assets/img/hero-design---Copy-1.jpg";
+import clsx from "clsx";
 import { ButtHero } from "./ButtHero";
 import { GitLinks } from "./GitLinks";
 import { GradientHeader } from "./GradientHeader";
@@ -17,7 +18,7 @@ const HeroSection = () => {
   return (
     <>
       <section
-        className="relative w-full min-w-[320px] md:w-full h-screen md:h-auto bg-cover bg-no-repeat bg-center md:aspect-[8/5]"
+        className="relative w-full min-w-[320px] h-screen lg:h-auto bg-cover bg-no-repeat bg-center md:aspect-[8/5]"
         id="hero"
         style={{
           backgroundImage: `url(${heroBg})`,
@@ -25,7 +26,13 @@ const HeroSection = () => {
           // aspectRatio: "8 / 5",
         }}
       >
-        <div className="absolute translate-y-1/2 sm:top-[9rem] sm:left-6 md:inset-y-1/3 md:left-10 flex items-start justify-center">
+        <div
+          className={clsx(
+            "absolute translate-y-1/2 lg:inset-y-1/3 flex items-start justify-center lg:left-10",
+            "sm:top-[9rem] sm:left-6",
+            "md:top-[22rem] md:left-12"
+          )}
+        >
           <div className="px-4 md:px-0 flex flex-col items-start justify-center text-left">
             <div className="mb-4 w-full">
               <h1 className="font-code font-extrabold text-subheading text-5xl sm:text-6xl md:text-6xl leading-[1.4] md:leading-[1.2]">

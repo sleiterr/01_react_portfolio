@@ -1,5 +1,6 @@
 // Portfolio.jsx
 import React, { useState, useEffect } from "react"; // Adjust the path as necessary
+import clsx from "clsx";
 import Pagination from "../Pagination/Pagination";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion as Motion } from "motion/react";
@@ -78,7 +79,7 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
 
   return (
     <section className="" id="portfolio">
-      <div className=" px-4 md:px-0 py-[3.7rem] md:py-[8rem] mx-auto md:max-w-7xl">
+      <div className="px-4 md:px-4 lg:px-0 py-[3.7rem] md:py-[8rem] mx-auto md:max-w-7xl">
         <div className="relative mb-6">
           <h2 className="font-code font-normal text-4xl md:text-5xl text-heading-primary tracking-wider mb-4 md:mb-6">
             My Projects
@@ -91,7 +92,13 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
 
           <div className="absolute left-0 bottom-0 after:content-[''] after:w-30 after:h-px after:inline-block after:align-middle after:bg-gradient-to-r after:from-cyan-400 after:to-emerald-400" />
         </div>
-        <div className="grid grid-cols-3 gap-4 md:gap-6">
+        <div
+          className={clsx(
+            "grid",
+            "md:grid-rows-2 md:gap-6",
+            "lg:grid-cols-3 lg:gap-4 lg:grid-rows-none"
+          )}
+        >
           {/* FilterCard */}
           <FilterCard
             resetFilters={resetFilters}

@@ -1,4 +1,5 @@
 import React from "react";
+import clsx from "clsx";
 import Pagination from "../Pagination/Pagination";
 import { BttFilter } from "./BttFilter";
 import { FilterCaunter } from "./FilterCaunter";
@@ -16,8 +17,15 @@ const FilterCard = ({
   };
   return (
     <>
-      <div className="col-span-1 h-full bg-black/40 rounded-xl border-r-1 border-t-1 border-cyan-400 hidden md:block py-6 px-4">
+      <div
+        className={clsx(
+          " bg-black/40 rounded-xl border-r-1 border-t-1 border-cyan-400 py-6 px-4 h-auto",
+          "md:col-span-2 lg:col-span-1 hidden md:block"
+        )}
+      >
+        {/* Check min height */}
         <div className="flex flex-col justify-between h-full">
+          
           <div className="">
             <FilterCaunter
               currentPage={currentPage}
@@ -25,9 +33,11 @@ const FilterCard = ({
               className="text-white text-xl hidden md:flex flex-col items-end justify-center"
             />
           </div>
+
           <div className="flex justify-center">
             <BttFilter handleCategory={handleCategory} />
           </div>
+
           <div className="">
             <Pagination
               currentPage={currentPage}

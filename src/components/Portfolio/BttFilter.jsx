@@ -40,7 +40,7 @@ const itemsFilterBttn = [
 
 export const BttFilter = ({ handleCategory }) => {
   return (
-    <ul className="flex flex-col items-start gap-4">
+    <ul className="flex lg:flex-col lg:items-start gap-4">
       {itemsFilterBttn.map(({ id, category, text, icon }) => {
         return (
           <li key={id}>

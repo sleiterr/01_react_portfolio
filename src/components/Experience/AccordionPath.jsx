@@ -19,7 +19,9 @@ const AccordExperience = ({ experience = [] }) => {
           <div
             className={clsx(
               s.accordion,
-              "bg-white relative cursor-pointer text-left border border-none transition-all duration-200 ease-in-out py-3 px-4 md:p-4",
+              "bg-white relative cursor-pointer text-left border border-none transition-all duration-200 ease-in-out py-3 px-4 lg:p-4",
+              "max-w-full md:max-w-3xl md:w-full",
+
               isActive ? s.active : ""
             )}
             onClick={() => handleToggle(index)}
@@ -39,7 +41,7 @@ const AccordExperience = ({ experience = [] }) => {
             <div className="flex items-center gap-2 md:gap-4">
               <p
                 className={clsx(
-                  "font-code font-normal text-3xl md:text-4xl tracking-wider",
+                  "font-code font-normal text-3xl sm:text-4xl md:text-4xl tracking-wider",
                   isActive
                     ? "text-accordion-nr-active transition-colors duration-300 ease-in-out"
                     : "text-accordion-nr-default duration-600 ease-in-out"
@@ -49,7 +51,7 @@ const AccordExperience = ({ experience = [] }) => {
               </p>
               <h4
                 className={clsx(
-                  "font-code font-medium text-lg md:text-3xl",
+                  "font-code font-medium text-lg sm:text-3xl md:text-3xl",
                   isActive
                     ? "text-accordion-title-active transition-colors duration-300 ease-in-out"
                     : "text-accordion-title-default duration-600 ease-in-out"

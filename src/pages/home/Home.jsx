@@ -23,7 +23,7 @@ const Home = () => {
       <main>
         <HeroSection heroRef={heroRef} />
         <div
-          className="block md:hidden"
+          className="block lg:hidden"
           style={{ height: "100px", position: "relative", overflow: "hidden" }}
         >
           <Skillslop

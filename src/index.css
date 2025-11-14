@@ -65,7 +65,7 @@ html {
 
 .bg-border {
   background-color: var(--bg-border);
-}
+} 
 /*!number-overlay*/
 .text-number-overlay {
   color: var(--number-overlay);
@@ -86,10 +86,12 @@ html {
 .text-accordion-title-default {
   color: var(--accordion-text-default);
 }
+
 /*!accordion-active*/
 .text-accordion-nr-active {
   color: var(--accordion-nr-active);
 }
+
 /*!accordion-nr*/
 .text-accordion-nr-default {
   color: var(--accordion-nr-default);
@@ -104,5 +106,5 @@ html {
 }
 
 .text-logo-text {
-  color: var(--logo-text);/*!logo-text*/
+  color: var(--logo-text); /*!logo-text*/
 }

@@ -25,13 +25,13 @@ const itemsFilterBttn = [
     category: "javascript",
   },
   {
-    id: 1,
+    id: 4,
     text: "React",
     icon: <FaReact className="text-3xl text-white inline-block" />,
     category: "react",
   },
   {
-    id: 1,
+    id: 5,
     text: "Next.js",
     icon: <TbBrandNextjs className="text-3xl text-white inline-block" />,
     category: "Next.js",

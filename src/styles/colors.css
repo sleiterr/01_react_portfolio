@@ -17,9 +17,10 @@
   --accordion-text-default: #000; /*!accordion-active*/
 
   --accordion-nr-active: #22c3df; /*!accordion-active*/
-  --accordion-nr-default: rgba(60, 60, 67, 0.502); /*!accordion-nr*/
 
-  --text-accordion-desc: #343a40; /*!accordion-text-desc*/
+  --accordion-nr-default: #3c3c3c; /*!accordion-nr*/
+  /* #343a40 */
+  --text-accordion-desc: #fff; /*!accordion-text-desc*/
 
   --color-link: #3182ce; /*! color-link*/
   --logo-footer: rgba(255, 255, 255, 0.6); /*!logo-footer*/

@@ -19,8 +19,10 @@ const AccordExperience = ({ educationData = [] }) => {
           <div
             className={clsx(
               s.accordion,
-              "bg-white relative cursor-pointer text-left border border-none transition-all duration-200 ease-in-out py-3 px-4 lg:p-4",
+              "bg-black/40 relative cursor-pointer text-left border border-none transition-all duration-200 ease-in-out",
+              "py-3 px-4 lg:p-4 mb-8",
               "max-w-full md:max-w-3xl md:w-full",
+              "shadow-lg shadow-cyan-500/30",
 
               isActive ? s.active : ""
             )}
@@ -35,7 +37,7 @@ const AccordExperience = ({ educationData = [] }) => {
                   "absolute right-0 top-1 md:-top-[2px] text-[2rem] md:text-[2.8rem] transition-transform duration-200 ease-in-out",
                   isActive
                     ? "rotate-90 text-accordion-nr-active transition-colors duration-300 ease-in-out"
-                    : "text-neutral-800 duration-600 ease-in-out"
+                    : "text-white duration-600 ease-in-out"
                 )}
               />
             </div>
@@ -56,24 +58,22 @@ const AccordExperience = ({ educationData = [] }) => {
                   "font-code font-medium text-lg sm:text-3xl md:text-3xl",
                   isActive
                     ? "text-accordion-title-active transition-colors duration-300 ease-in-out"
-                    : "text-accordion-title-default duration-600 ease-in-out"
+                    : "text-white duration-600 ease-in-out"
                 )}
               >
                 {title}
               </h4>
             </div>
 
-            <div className={`${s.panel} ${isActive ? s.active : ""}`}>
-              <p className="text-base text-accordion tracking-wider leading-[1.6em] p-0 py-4 md:p-6">
+            <div
+              className={clsx(
+                "max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-out ml-5 bg-transparent",
+                isActive && "max-h-[500px] opacity-100"
+              )}
+            >
+              <p className="font-light text-base text-accordion tracking-wider leading-[1.6em] p-0 py-4 md:p-6">
                 {subtitle}
               </p>
-              {/* <ul className={s.accordionList}>
-                {list.map((li, i) => (
-                  <li key={i} className={s.accordionItem}>
-                    {li}
-                  </li>
-                ))}
-              </ul> */}
             </div>
           </div>
         );

@@ -19,18 +19,28 @@ const FilterCard = ({
     <>
       <div
         className={clsx(
-          " bg-black/40 rounded-xl border-r-1 border-t-1 border-cyan-400 py-6 px-4 h-auto",
-          "md:col-span-2 lg:col-span-1 hidden md:block"
+          " bg-black/40 rounded-xl border-r-1 border-t-1 border-cyan-400 h-auto",
+          "lg:py-6 lg:px-4",
+          "md:rows-span-1 lg:col-span-1",
+          "md:h-24",
+          "lg:min-h-[520px] lg:h-auto"
         )}
       >
         {/* Check min height */}
-        <div className="flex flex-col justify-between h-full">
-          
+        <div
+          className={clsx(
+            "flex flex-col justify-center lg:justify-between h-full",
+            ""
+          )}
+        >
           <div className="">
             <FilterCaunter
               currentPage={currentPage}
               totalPage={totalPage}
-              className="text-white text-xl hidden md:flex flex-col items-end justify-center"
+              className={clsx(
+                "text-white text-xl",
+                " hidden lg:flex flex-col items-end justify-center"
+              )}
             />
           </div>
 
@@ -38,7 +48,7 @@ const FilterCard = ({
             <BttFilter handleCategory={handleCategory} />
           </div>
 
-          <div className="">
+          <div className="md:hidden lg:block">
             <Pagination
               currentPage={currentPage}
               totalPage={totalPage}

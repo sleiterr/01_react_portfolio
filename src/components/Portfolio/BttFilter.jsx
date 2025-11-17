@@ -4,6 +4,7 @@ import { AiOutlineJavaScript } from "react-icons/ai";
 import { FaReact } from "react-icons/fa";
 import { TbBrandNextjs } from "react-icons/tb";
 import { BiCategoryAlt } from "react-icons/bi";
+import clsx from "clsx";
 
 const itemsFilterBttn = [
   {
@@ -40,12 +41,14 @@ const itemsFilterBttn = [
 
 export const BttFilter = ({ handleCategory }) => {
   return (
-    <ul className="flex lg:flex-col lg:items-start gap-4">
+    <ul
+      className={clsx("flex lg:flex-col lg:items-start lg:gap-4", "md:gap-8")}
+    >
       {itemsFilterBttn.map(({ id, category, text, icon }) => {
         return (
           <li key={id}>
             <button
-              className="flex items-center justify-center gap-4 cursor-pointer"
+              className="flex items-center justify-center gap-2 lg:gap-4 cursor-pointer"
               onClick={() => handleCategory(category)}
             >
               {icon}

@@ -78,9 +78,9 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
   }
 
   return (
-    <section className="" id="portfolio">
+    <section className="hidden md:block" id="portfolio">
       <div className="px-4 md:px-4 lg:px-0 py-[3.7rem] md:py-[8rem] mx-auto md:max-w-7xl">
-        <div className="relative mb-6">
+        <div className="relative md:mb-12 lg:mb-6">
           <h2 className="font-code font-normal text-4xl md:text-5xl text-heading-primary tracking-wider mb-4 md:mb-6">
             My Projects
           </h2>
@@ -95,7 +95,7 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
         <div
           className={clsx(
             "grid",
-            "md:grid-rows-2 md:gap-6",
+            "md:grid-cols-1 md:gap-y-6",
             "lg:grid-cols-3 lg:gap-4 lg:grid-rows-none"
           )}
         >
@@ -110,7 +110,7 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
             setDirection={setDirection}
           />
 
-          <div className="col-span-2">
+          <div className="col-span-2 lg:sticky top-24">
             <AnimatePresence mode="wait" custom={direction}>
               {/* className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6" */}
               <Motion.div
@@ -139,10 +139,11 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
                         className="relative w-full"
                         to={`/project-detail/${item.id}`}
                       >
+                        {/* use object-center if images have different sizes */}
                         <img
                           src={item.image[0]}
                           alt={item.caption}
-                          className="w-full h-auto object-cover object-center rounded-xl"
+                          className="w-full h-auto object-cover rounded-xl aspect-[360/520]"
                         />
                         <div className="absolute inset-0 bg-black/80 rounded-xl opacity-0 hover:opacity-100 transition duration-500 ease-in-out flex flex-col items-center justify-center text-white text-center m-4">
                           <p className="absolute font-normal text-7xl  right-4 top-4 text-number-overlay tracking-wider">
@@ -159,7 +160,7 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
               </Motion.div>
             </AnimatePresence>
           </div>
-          <div className="flex md:hidden">
+          <div className="md:block lg:hidden">
             <Pagination
               currentPage={currentPage}
               totalPage={totalPage}

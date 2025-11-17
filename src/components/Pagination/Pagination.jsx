@@ -25,21 +25,37 @@ const Pagination = ({
   };
 
   return (
-    <div className="flex items-center justify-between mt-12 mx-4">
+    <div
+      className={clsx(
+        "flex items-center",
+        "lg:justify-between lg:mt-12 lg:mx-4 lg:gap-0",
+        "md:justify-center md:gap-12 md:py-4"
+      )}
+    >
       <FilterItemms
         currentPage={currentPage}
         totalPage={totalPage}
         prev={prev}
       />
-      <span className="flex items-center md:hidden">
-        <AnimatedNumber value={currentPage} />
-      </span>
-      <span className="font-medium text-2xl text-content md:hidden">
-        of {totalPage}
-      </span>
-      <span className="font-medium text-2xl text-content md:hidden">
-        {totalPage}
-      </span>
+      <div className="flex items-center gap-2">
+        <span
+          className={clsx(
+            "flex items-center",
+            "font-medium text-2xl text-content lg:hidden"
+          )}
+        >
+          <AnimatedNumber value={currentPage} />
+        </span>
+        <span
+          className={clsx(
+            "flex items-center gap-2",
+            "font-medium text-2xl text-content lg:hidden"
+          )}
+        >
+          of <p>{totalPage}</p>
+        </span>
+      </div>
+
       <FilterItemms
         currentPage={currentPage}
         totalPage={totalPage}

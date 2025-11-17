@@ -30,8 +30,9 @@ const HeroSection = () => {
           className={clsx(
             "absolute translate-y-1/2 flex items-start justify-center",
             "top-[6rem] left-6",
-            "lg:left-10 lg:inset-y-1/3",
-            "md:top-[22rem] md:left-12"
+            "lg:left-10 lg:bottom-60",
+            "md:top-1/6 md:left-12",
+            "sm:-top-2 sm:left-12"
           )}
         >
           <div className="px-4 md:px-0 flex flex-col items-start justify-center text-left">

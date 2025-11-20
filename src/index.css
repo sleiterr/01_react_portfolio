@@ -42,6 +42,10 @@ html {
   color: var(--color-heading-primary);
 }
 
+.text-heading-span {
+  color: var(--color-hero-gradient);
+}
+
 .text-heading-accent {
   color: var(--color-heading-accent);
 }
@@ -65,7 +69,7 @@ html {
 
 .bg-border {
   background-color: var(--bg-border);
-} 
+}
 /*!number-overlay*/
 .text-number-overlay {
   color: var(--number-overlay);

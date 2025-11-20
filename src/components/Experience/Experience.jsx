@@ -7,6 +7,11 @@ import AccordionStudy from "./AccordionStudy";
 import experienceData from "../../Data/experienceData.json";
 import educationData from "../../Data/educationData.json";
 import clsx from "clsx";
+import SplitText from "../animation/SplitText";
+
+const handleAnimationComplete = () => {
+  console.log("All letters have animated!");
+};
 
 const Experience = () => {
   return (
@@ -20,41 +25,77 @@ const Experience = () => {
           )}
         >
           <div className="">
-            <h2
+            <div
               className={clsx(
-                "flex items-center justify-start gap-4 mb-4 md:mb-10",
-                "font-code text-heading-primary text-4xl md:text-5xl tracking-wide"
+                "flex items-center justify-center gap-4",
+                "mb-4 md:mb-6"
               )}
             >
-              <div
+              <GiGraduateCap className="lg:w-14 lg:h-14 md:w-10 md:h-10 text-white" />
+              <SplitText
+                tag="h2"
+                text="My Projects"
                 className={clsx(
-                  "relative flex items-center justify-center border-2 border-white rounded-full",
-                  "lg:w-22 lg:h-22 md:w-18 md:h-18"
+                  "flex items-center justify-start gap-4",
+                  "font-code font-bold text-heading-primary text-4xl md:text-6xl tracking-wide w-full text-left leading-[1.2]"
                 )}
-              >
-                <GiGraduateCap className="lg:w-14 lg:h-14 md:w-10 md:h-10 text-white" />
-              </div>
+                delay={120}
+                duration={0.6}
+                ease="power3.out"
+                splitType="chars"
+                from={{ opacity: 0, y: 40 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin="-100px"
+                textAlign="left"
+                onLetterAnimationComplete={handleAnimationComplete}
+              />
+            </div>
+            {/* <h2
+              className={clsx(
+                "flex items-center justify-start gap-4 mb-4 md:mb-10",
+                "font-code font-bold text-heading-primary text-4xl md:text-6xl tracking-wide"
+              )}
+            >
               Education
-            </h2>
+            </h2> */}
             <AccordionStudy educationData={educationData} />
           </div>
           <div className="">
-            <h2
+            <div
               className={clsx(
-                "flex items-center justify-start gap-4 mb-4 md:mb-10",
-                "font-code text-heading-primary text-4xl md:text-5xl tracking-wide"
+                "flex items-center justify-center gap-4",
+                "mb-4 md:mb-6"
               )}
             >
-              <div
+              <FaAward className="lg:w-12 lg:h-12 md:w-10 md:h-10 text-white" />
+              <SplitText
+                tag="h2"
+                text=" Experience"
                 className={clsx(
-                  "relative flex items-center justify-center border-2 border-white rounded-full",
-                  "lg:w-22 lg:h-22 md:w-18 md:h-18"
+                  "flex items-center justify-start gap-4",
+                  "font-code font-bold text-heading-primary text-4xl md:text-6xl tracking-wide  w-full text-left leading-[1.2]"
                 )}
-              >
-                <FaAward className="lg:w-12 lg:h-12 md:w-10 md:h-10 text-white" />
-              </div>
+                delay={250}
+                duration={0.6}
+                ease="power3.out"
+                splitType="chars"
+                from={{ opacity: 0, y: 40 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin="-100px"
+                textAlign="left"
+                onLetterAnimationComplete={handleAnimationComplete}
+              />
+            </div>
+            {/* <h2
+              className={clsx(
+                "flex items-center justify-start gap-4 mb-4 md:mb-10",
+                "font-code font-bold text-heading-primary text-4xl md:text-6xl tracking-wide"
+              )}
+            >
               Experience
-            </h2>
+            </h2> */}
             <AccordionPath experience={experienceData} />
           </div>
         </div>
@@ -63,3 +104,5 @@ const Experience = () => {
   );
 };
 export default Experience;
+
+// border-2 border-white rounded-full

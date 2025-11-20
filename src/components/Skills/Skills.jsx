@@ -3,14 +3,34 @@ import { FrontEnd } from "./FrontEnd";
 import { Cms } from "./Cms";
 import { WorkFlow } from "./Workflow";
 import { Design } from "./Design";
+import SplitText from "../animation/SplitText";
+
+const handleAnimationComplete = () => {
+  console.log("All letters have animated!");
+};
 
 const Skills = () => {
   return (
     <section className="hidden lg:block" id="skills">
       <div className="py-[8rem] mx-auto md:max-w-7xl">
-        <h2 className="font-code font-normal text-5xl text-heading-primary tracking-wide mb-15">
+        <SplitText
+          tag="h2"
+          text="My Skills"
+          className="font-code font-bold text-6xl text-heading-primary tracking-wide mb-15 w-full leading-[1.2]"
+          delay={100}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="right"
+          onLetterAnimationComplete={handleAnimationComplete}
+        />
+        {/* <h2 className="font-code font-bold text-6xl text-heading-primary tracking-wide mb-15 text-right">
           My Skills
-        </h2>
+        </h2> */}
         <div className="relative min-h-[26rem]">
           {/* Frontend Stack */}
           <div className="absolute translate-x-1/2 px-8 pt-4 pb-16 w-[31.2rem] h-auto rounded-xl bg-white/20 backdrop-blur-sm border-l-1 border-t-1 border-sky-500">

@@ -4,6 +4,8 @@ import clsx from "clsx";
 import { ButtHero } from "./ButtHero";
 import { GitLinks } from "./GitLinks";
 import { GradientHeader } from "./GradientHeader";
+import BlurText from "../animation/BlurText";
+import SplitText from "../animation/SplitText";
 
 const heroTextDoc = [
   {
@@ -13,6 +15,10 @@ const heroTextDoc = [
       "font-light text-base sm:text-xl md:text-lg text-content tracking-wider leading-[1.5]",
   },
 ];
+
+const handleAnimationComplete = () => {
+  console.log("All letters have animated!");
+};
 
 const HeroSection = () => {
   return (
@@ -37,16 +43,31 @@ const HeroSection = () => {
         >
           <div className="px-4 md:px-0 flex flex-col items-start justify-center text-left">
             <div className="mb-4 w-full">
-              <h1 className="font-code font-extrabold text-subheading text-5xl sm:text-6xl md:text-6xl leading-[1.4] md:leading-[1.2]">
+              <SplitText
+                tag="h1"
+                text="Hi, I'm Oleg."
+                className="font-code font-extrabold text-subheading text-5xl sm:text-6xl md:text-6xl leading-[1.4] md:leading-[1.2]"
+                delay={100}
+                duration={0.6}
+                ease="power3.out"
+                splitType="chars"
+                from={{ opacity: 0, y: 40 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin="-100px"
+                textAlign="center"
+                onLetterAnimationComplete={handleAnimationComplete}
+              />
+              {/* <h1 className="font-code font-extrabold text-subheading text-5xl sm:text-6xl md:text-6xl leading-[1.4] md:leading-[1.2]">
                 Hi, I'm Oleg.
-              </h1>
+              </h1> */}
               <h2 className="flex-wrap md:flex items-center gap-2 md:gap-4 font-code font-extrabold text-subheading text-5xl sm:text-6xl md:text-6xl leading-[1.2]">
                 I am
                 <GradientHeader />
               </h2>
             </div>
             {/* Gradient */}
-            <HeroItem />
+            <HeroItem duration={0.8} delay={0} />
 
             {/* Btt */}
             <ButtHero />
@@ -60,13 +81,13 @@ const HeroSection = () => {
 
 export default HeroSection;
 
-const HeroItem = () => {
+const HeroItem = ({ duration }) => {
   return (
     <div className="w-full min-w-xs max-w-sm md:min-w-auto sm:max-w-[32rem] md:max-w-[34rem]">
       {heroTextDoc.map((p) => (
-        <p key={p.id} className={p.className}>
+        <BlurText as="p" duration={duration} key={p.id} className={p.className}>
           {p.text}
-        </p>
+        </BlurText>
       ))}
     </div>
   );

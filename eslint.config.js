@@ -22,10 +22,10 @@ export default [
     },
     rules: {
       "react/prop-types": 0,
-      "no-unused-vars": "warn",
+      // "no-unused-vars": "warn",
       ...js.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-      "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]" }],
+      "no-unused-vars": ["error", { varsIgnorePattern: "^[A-Z_]|motion" }],
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true },

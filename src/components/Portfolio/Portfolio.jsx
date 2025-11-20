@@ -5,8 +5,13 @@ import Pagination from "../Pagination/Pagination";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion as Motion } from "motion/react";
 import FilterCard from "./FilterCard";
+import SplitText from "../animation/SplitText";
 
 import { containerVariants, cardVariants } from "../animation/Portfolio.js";
+
+const handleAnimationComplete = () => {
+  console.log("All letters have animated!");
+};
 
 const Portfolio = ({ currentPage, setCurrentpage }) => {
   const [project, setProjects] = useState([]);
@@ -81,9 +86,24 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
     <section className="hidden md:block" id="portfolio">
       <div className="px-4 md:px-4 lg:px-0 py-[3.7rem] md:py-[8rem] mx-auto md:max-w-7xl">
         <div className="relative md:mb-12 lg:mb-6">
-          <h2 className="font-code font-normal text-4xl md:text-5xl text-heading-primary tracking-wider mb-4 md:mb-6">
+          <SplitText
+            tag="h2"
+            text="My Projects"
+            className="font-code font-bold text-4xl tracking-wide md:text-6xl text-heading-primary mb-4 md:mb-6 leading-[1.2]"
+            delay={100}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            threshold={0.1}
+            rootMargin="-100px"
+            textAlign="right"
+            onLetterAnimationComplete={handleAnimationComplete}
+          />
+          {/* <h2 className="font-code font-bold text-4xl tracking-wide md:text-6xl text-heading-primary mb-4 md:mb-6">
             My Projects
-          </h2>
+          </h2> */}
           <div className="absolute before:content-[''] left-10 before:w-30 before:h-px before:inline-block before:align-middle before:bg-gradient-to-r before:from-cyan-400 before:to-emerald-400" />
 
           <p className="font-light text-base text-subheading tracking-wider py-4">

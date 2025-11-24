@@ -12,7 +12,7 @@ const heroTextDoc = [
     id: 1,
     text: "I am currently studying web development at Media College Denmark, where I am building skills in both web development and UI/UX design.",
     className:
-      "font-light text-base sm:text-xl md:text-lg text-content tracking-wider leading-[1.5]",
+      "font-light text-base sm:text-xl md:text-lg text-content leading-[1.5]",
   },
 ];
 
@@ -38,7 +38,7 @@ const HeroSection = () => {
             "top-[6rem] left-6",
             "lg:left-10 lg:bottom-60",
             "md:top-1/6 md:left-12",
-            "sm:-top-2 sm:left-12"
+            "sm:top-4 sm:left-12"
           )}
         >
           <div className="px-4 md:px-0 flex flex-col items-start justify-center text-left">
@@ -46,9 +46,9 @@ const HeroSection = () => {
               <SplitText
                 tag="h1"
                 text="Hi, I'm Oleg."
-                className="font-code font-extrabold text-subheading text-5xl sm:text-6xl md:text-6xl leading-[1.4] md:leading-[1.2]"
+                className="font-code font-extrabold text-subheading text-4xl sm:text-6xl md:text-6xl leading-[1.4] md:leading-[1.2]"
                 delay={100}
-                duration={0.6}
+                duration={0.4}
                 ease="power3.out"
                 splitType="chars"
                 from={{ opacity: 0, y: 40 }}
@@ -61,7 +61,12 @@ const HeroSection = () => {
               {/* <h1 className="font-code font-extrabold text-subheading text-5xl sm:text-6xl md:text-6xl leading-[1.4] md:leading-[1.2]">
                 Hi, I'm Oleg.
               </h1> */}
-              <h2 className="flex-wrap md:flex items-center gap-2 md:gap-4 font-code font-extrabold text-subheading text-5xl sm:text-6xl md:text-6xl leading-[1.2]">
+              <h2
+                className={clsx(
+                  "flex-wrap md:flex items-center gap-1 md:gap-4",
+                  "font-code font-extrabold text-subheading text-4xl sm:text-6xl md:text-6xl"
+                )}
+              >
                 I am
                 <GradientHeader />
               </h2>

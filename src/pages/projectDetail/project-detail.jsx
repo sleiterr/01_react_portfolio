@@ -1,11 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
-import { MdCollections } from "react-icons/md";
+import { useParams } from "react-router-dom";
 
 // import { Link as ScrollLink } from "react-scroll";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+import SplitText from "../../components/animation/SplitText";
+import FadeContent from "../../components/animation/FadeContent";
+import ProjectNav from "./ProjectNav";
 import clsx from "clsx";
+
+const handleAnimationComplete = () => {
+  console.log("All letters have animated!");
+};
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -46,47 +52,57 @@ const ProjectDetail = () => {
     );
 
   return (
-    <section className="relative">
-      <div className="px-4 md:px-0 py-[8rem] mx-auto md:max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-12 md:gap-8">
+    <section className="">
+      <ProjectNav />
+      <div className="px-4 md:px-0 lg:px-6 py-[8rem] mx-auto md:max-w-7xl">
+        <div
+          className={clsx(
+            "grid grid-cols-1 items-center justify-center gap-12",
+            "md:grid-cols-1 md:gap-12",
+            "lg:grid-cols-2 lg:gap-8"
+          )}
+        >
           <div className="flex items-center justify-center mt-2 md:mt-0">
-            <img
-              src={project.preview}
-              alt="project image"
-              className="w-[560px] h-auto border-t-1  border-r-1 border-sky-500 pt-2 pr-2"
-            />
+            <FadeContent
+              blur={true}
+              duration={1000}
+              easing="ease-out"
+              initialOpacity={0}
+            >
+              <img
+                src={project.preview}
+                alt="project image"
+                className="w-[560px] h-auto border-t-1  border-r-1 border-sky-500 pt-2 pr-2"
+              />
+            </FadeContent>
           </div>
-          <div className="flex flex-col items-start justify-center md:w-[590px]">
-            <div className="absolute top-20 end-4 md:end-62 md:top-30">
-              <ul className="flex items-center gap-4 md:gap-8">
-                <li className="relative">
-                  <Link
-                    className={clsx(
-                      "flex items-center font-light tracking-wider text-content text-2xl md:text-xl gap-2",
-                      "before:content-[''] before:absolute before:w-0 before:h-0.5 before:rounded-xs before:bg-white before:bottom-[-.25rem] before:left-0 before:transition-all before:duration-300 hover:before:w-full"
-                    )}
-                    to="/"
-                  >
-                    Home <IoIosArrowRoundForward />
-                  </Link>
-                </li>
-                <li className="relative">
-                  <Link
-                    className={clsx(
-                      "flex items-center gap-2 font-light tracking-wider text-content text-2xl md:text-xl",
-                      "after:absolute after:content-[''] hover:after:w-full after:h-0.5 after:bg-white after:rounded-xs after:-bottom-[.25rem] after:left-0 after:opacity-0 after:transition-all after:duration-300 hover:after:opacity-100"
-                    )}
-                    to=""
-                  >
-                    Portfolio <MdCollections />
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          <div
+            className={clsx(
+              "flex flex-col items-start justify-center",
+              "justify-self-center w-full",
+              "px-4 md:px-4 max-w-3xl lg:max-w-2xl"
+            )}
+          >
+            {/* max-w-[clamp(600px,50vw,780px)] */}
             <div className="flex flex-col gap-4 mb-[40px]">
-              <h2 className="font-code font-normal text-heading-primary text-4xl md:text-5xl tracking-wide">
+              <SplitText
+                tag="h2"
+                text={project.title}
+                className="font-code font-normal text-heading-primary text-4xl md:text-5xl tracking-wide leading-[1.2]"
+                delay={100}
+                duration={0.4}
+                ease="power3.out"
+                splitType="chars"
+                from={{ opacity: 0, y: 40 }}
+                to={{ opacity: 1, y: 0 }}
+                threshold={0.1}
+                rootMargin="-100px"
+                textAlign="left"
+                onLetterAnimationComplete={handleAnimationComplete}
+              />
+              {/* <h2 className="font-code font-normal text-heading-primary text-4xl md:text-5xl tracking-wide">
                 {project.title}
-              </h2>
+              </h2> */}
               <p className="font-light text-lg md:text-xl text-content tracking-wide">
                 {project.caption}
               </p>

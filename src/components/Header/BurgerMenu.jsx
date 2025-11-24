@@ -5,7 +5,7 @@ const BurgerMenu = ({ isOpen, toggleMenu, scrolled }) => {
   //   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <StyledWrapper isOpen={isOpen} scrolled={scrolled}>
+    <StyledWrapper $isOpen={isOpen} $scrolled={scrolled}>
       <label className="burger" htmlFor="burger">
         <input
           type="checkbox"
@@ -43,8 +43,8 @@ const StyledWrapper = styled.div`
     height: 2px;
 
     width: 100%;
-    background: ${({ isOpen, scrolled }) =>
-      isOpen || scrolled ? "var(--bg-border)" : "var(--default-nav)"};
+    background: ${({ $isOpen, $scrolled }) =>
+      $isOpen || $scrolled ? "var(--bg-border)" : "var(--default-nav)"};
     border-radius: 9px;
     opacity: 1;
     right: 0;

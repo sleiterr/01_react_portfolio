@@ -31,15 +31,20 @@ const Experience = () => {
                 "mb-4 md:mb-6"
               )}
             >
-              <GiGraduateCap className="lg:w-14 lg:h-14 md:w-10 md:h-10 text-white" />
+              <GiGraduateCap
+                className={clsx(
+                  "lg:w-14 lg:h-14 md:w-10 md:h-10 text-white",
+                  "w-12 h-12"
+                )}
+              />
               <SplitText
                 tag="h2"
-                text="My Projects"
+                text="Education"
                 className={clsx(
                   "flex items-center justify-start gap-4",
-                  "font-code font-bold text-heading-primary text-4xl md:text-6xl tracking-wide w-full text-left leading-[1.2]"
+                  "font-code font-bold text-heading-primary text-4xl md:text-6xl w-full text-left leading-[1.2]"
                 )}
-                delay={120}
+                delay={100}
                 duration={0.6}
                 ease="power3.out"
                 splitType="chars"
@@ -68,15 +73,20 @@ const Experience = () => {
                 "mb-4 md:mb-6"
               )}
             >
-              <FaAward className="lg:w-12 lg:h-12 md:w-10 md:h-10 text-white" />
+              <FaAward
+                className={clsx(
+                  "lg:w-12 lg:h-12 md:w-10 md:h-10 text-white",
+                  "w-12 h-12"
+                )}
+              />
               <SplitText
                 tag="h2"
                 text=" Experience"
                 className={clsx(
                   "flex items-center justify-start gap-4",
-                  "font-code font-bold text-heading-primary text-4xl md:text-6xl tracking-wide  w-full text-left leading-[1.2]"
+                  "font-code font-bold text-heading-primary text-4xl md:text-6xl w-full text-left leading-[1.2]"
                 )}
-                delay={250}
+                delay={140}
                 duration={0.6}
                 ease="power3.out"
                 splitType="chars"

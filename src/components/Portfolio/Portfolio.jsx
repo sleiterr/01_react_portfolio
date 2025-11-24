@@ -89,9 +89,12 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
           <SplitText
             tag="h2"
             text="My Projects"
-            className="font-code font-bold text-4xl tracking-wide md:text-6xl text-heading-primary mb-4 md:mb-6 leading-[1.2]"
+            className={clsx(
+              "font-code font-bold text-4xl md:text-6xl text-heading-primary leading-[1.2]",
+              "mb-4 md:mb-6"
+            )}
             delay={100}
-            duration={0.6}
+            duration={0.4}
             ease="power3.out"
             splitType="chars"
             from={{ opacity: 0, y: 40 }}

@@ -17,9 +17,9 @@ const About = () => {
           <SplitText
             tag="h2"
             text="About Me"
-            className="font-code font-bold text-6xl sm:text-5xl md:text-6xl text-heading-primary tracking-wide mb-4 w-full"
+            className="font-code font-bold text-5xl md:text-6xl text-heading-primary tracking-wide mb-4 w-full"
             delay={100}
-            duration={0.6}
+            duration={0.4}
             ease="power3.out"
             splitType="chars"
             from={{ opacity: 0, y: 40 }}

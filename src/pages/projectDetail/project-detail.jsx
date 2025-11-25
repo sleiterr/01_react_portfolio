@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
+import { BeatLoader } from "react-spinners";
 // import { Link as ScrollLink } from "react-scroll";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
@@ -20,8 +21,10 @@ const ProjectDetail = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
+    setLoading(true);
     const fetchProject = async () => {
       try {
+        await new Promise((resolve) => setTimeout(resolve, 600));
         // Simulate fetching data from an API or local JSON file
         const res = await fetch("/data/projectsData.json"); // Adjust the path as necessary
         const data = await res.json();
@@ -43,7 +46,13 @@ const ProjectDetail = () => {
     fetchProject();
   }, [id]);
 
-  if (loading) return <p>...Loading</p>;
+  if (loading)
+    return (
+      <div className="fixed inset-0 flex items-center justify-center bg-stone-900 z-50">
+        <BeatLoader color="#1ed1a8" size={30} />
+      </div>
+    );
+
   if (error || !project)
     return (
       <p className="font-normal text-2xl text-white text-center">

@@ -4,8 +4,12 @@ import clsx from "clsx";
 export const ButtHero = () => {
   return (
     <div>
-      <button
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="/documents/Oleg_Troian_CV_EN.pdf"
         className={clsx(
+          "inline-block",
           "font-light text-lg tracking-wide rounded-md text-content py-3 px-12 bg-button-gradient mt-8",
           "py-4 px-12",
           "md:py-4 md:px-12 md:text-2xl",
@@ -16,7 +20,7 @@ export const ButtHero = () => {
         )}
       >
         Download Resume
-      </button>
+      </a>
     </div>
   );
 };

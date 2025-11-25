@@ -10,31 +10,66 @@ const itemsFilterBttn = [
   {
     id: 1,
     text: "All",
-    icon: <BiCategoryAlt className="text-3xl text-white inline-block" />,
+    icon: (
+      <BiCategoryAlt
+        className={clsx(
+          "text-3xl text-white inline-block",
+          "transition-all duration-300 ease-in-out delay-200 group-hover:translate-x-1 group-hover:text-[#1ed1a8]"
+        )}
+      />
+    ),
     category: "all",
   },
   {
     id: 2,
     text: "Html",
-    icon: <ImHtmlFive2 className="text-3xl text-white inline-block" />,
+    icon: (
+      <ImHtmlFive2
+        className={clsx(
+          "text-3xl text-white inline-block",
+          "transition-all duration-300 ease-in-out delay-200 group-hover:translate-x-1 group-hover:text-[#1ed1a8]"
+        )}
+      />
+    ),
     category: "html",
   },
   {
     id: 3,
     text: "Java Script",
-    icon: <AiOutlineJavaScript className="text-3xl text-white inline-block" />,
+    icon: (
+      <AiOutlineJavaScript
+        className={clsx(
+          "text-3xl text-white inline-block",
+          "transition-all duration-300 ease-in-out delay-200 group-hover:translate-x-1 group-hover:text-[#1ed1a8]"
+        )}
+      />
+    ),
     category: "javascript",
   },
   {
     id: 4,
     text: "React",
-    icon: <FaReact className="text-3xl text-white inline-block" />,
+    icon: (
+      <FaReact
+        className={clsx(
+          "text-3xl text-white inline-block",
+          "transition-all duration-300 ease-in-out delay-200 group-hover:translate-x-1 group-hover:text-[#1ed1a8]"
+        )}
+      />
+    ),
     category: "react",
   },
   {
     id: 5,
     text: "Next.js",
-    icon: <TbBrandNextjs className="text-3xl text-white inline-block" />,
+    icon: (
+      <TbBrandNextjs
+        className={clsx(
+          "text-3xl text-white inline-block",
+          "transition-all duration-300 ease-in-out delay-200 group-hover:translate-x-1 group-hover:text-cyan-400"
+        )}
+      />
+    ),
     category: "Next.js",
   },
 ];
@@ -48,11 +83,18 @@ export const BttFilter = ({ handleCategory }) => {
         return (
           <li key={id}>
             <button
-              className="flex items-center justify-center gap-2 lg:gap-4 cursor-pointer"
+              className="group relative flex items-center justify-center gap-2 lg:gap-4 cursor-pointer"
               onClick={() => handleCategory(category)}
             >
               {icon}
-              <p className="text-2xl text-white">{text}</p>
+              <p
+                className={clsx(
+                  "text-2xl text-white",
+                  "overflow-hidden transition-colors duration-300 ease-out group-hover:text-cyan-400"
+                )}
+              >
+                {text}
+              </p>
             </button>
           </li>
         );

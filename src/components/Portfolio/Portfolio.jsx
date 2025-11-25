@@ -84,7 +84,7 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
 
   return (
     <section className="hidden md:block" id="portfolio">
-      <div className="px-4 md:px-4 lg:px-0 py-[3.7rem] md:py-[8rem] mx-auto md:max-w-7xl">
+      <div className="px-4 md:px-4 py-[3.7rem] md:py-[8rem] mx-auto md:max-w-7xl">
         <div className="relative md:mb-12 lg:mb-6">
           <SplitText
             tag="h2"
@@ -166,10 +166,21 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
                         <img
                           src={item.image[0]}
                           alt={item.caption}
-                          className="w-full h-auto object-cover rounded-xl aspect-[360/520]"
+                          className="w-full h-auto object-cover rounded-xl md:aspect-[360/520] lg:min-h-[520px] lg:h-auto"
                         />
-                        <div className="absolute inset-0 bg-black/80 rounded-xl opacity-0 hover:opacity-100 transition duration-500 ease-in-out flex flex-col items-center justify-center text-white text-center m-4">
-                          <p className="absolute font-normal text-7xl  right-4 top-4 text-number-overlay tracking-wider">
+                        <div
+                          className={clsx(
+                            "flex flex-col items-center justify-center text-white text-center m-4",
+                            "absolute inset-0 bg-black/80 rounded-xl opacity-0",
+                            "hover:opacity-100 transition duration-500 ease-in-out"
+                          )}
+                        >
+                          <p
+                            className={clsx(
+                              "font-normal text-7xl text-number-overlay tracking-wider",
+                              "absolute right-4 top-4"
+                            )}
+                          >
                             {formattedIndex}
                           </p>
                           <h3 className="absolute font-code font-medium text-3xl tracking-wider text-center">

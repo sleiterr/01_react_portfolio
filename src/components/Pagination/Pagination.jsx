@@ -28,7 +28,7 @@ const Pagination = ({
     <div
       className={clsx(
         "flex items-center",
-        "lg:justify-between lg:mt-12 lg:mx-4 lg:gap-0",
+        "lg:justify-between lg:mt-12 lg:gap-0",
         "md:justify-center md:gap-12 md:py-4"
       )}
     >
@@ -76,7 +76,7 @@ const FilterItemms = ({ prev, currentPage, next, totalPage }) => {
         </p>
         <button
           className={clsx(
-            "relative flex items-center gap-2 bg-transparante px-16 py-3 rounded-sm cursor-pointer border-1 border-white text-content z-0",
+            "relative flex items-center gap-2 bg-transparent px-16 py-3 rounded-sm cursor-pointer border-1 border-white text-content z-0",
             "group-hover:border-cyan-400  transition-all duration-300",
             "[clip-path:polygon(0_0,27%_0,27%_7%,73%_7%,75%_0,100%_0,100%_85%,100%_100%,85%_100%,15%_100%,0_100%,0_85%)]"
           )}

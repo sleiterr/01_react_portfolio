@@ -37,6 +37,7 @@ const Experience = () => {
                   "w-12 h-12"
                 )}
               />
+
               <SplitText
                 tag="h2"
                 text="Education"

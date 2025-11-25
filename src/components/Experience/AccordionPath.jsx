@@ -73,6 +73,18 @@ const AccordExperience = ({ experience = [] }) => {
             >
               <p className="font-light text-base text-accordion tracking-wider leading-[1.6em] p-0 py-4 md:p-6">
                 {subtitle}
+                {id === 3 && (
+                  <>
+                    <a
+                      href="/documents/reference_superego.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-normal text-cyan-400 underline hover:text-blue-500 transition-colors duration-300 ml-2"
+                    >
+                      View Reference
+                    </a>
+                  </>
+                )}
               </p>
             </div>
           </div>

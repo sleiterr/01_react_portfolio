@@ -11,7 +11,7 @@ import ProjectDetail from "./pages/projectDetail/project-detail";
 function App() {
   return (
     <>
-      <main className="bg-projects-gradient">
+      <main className="bg-projects-gradient min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project-detail/:id" element={<ProjectDetail />} />

@@ -36,7 +36,7 @@ const AccordExperience = ({ experience = [] }) => {
                   // 45px-Arrow size
                   "absolute right-0 top-1 md:-top-[2px] text-[2rem] md:text-[2.8rem] transition-transform duration-200 ease-in-out",
                   isActive
-                    ? "rotate-90 text-accordion-nr-active transition-colors duration-300 ease-in-out"
+                    ? "rotate-90 text-cyan-400 transition-colors duration-300 ease-in-out"
                     : "text-white duration-600 ease-in-out"
                 )}
               />
@@ -47,8 +47,8 @@ const AccordExperience = ({ experience = [] }) => {
                 className={clsx(
                   "font-code font-normal text-3xl sm:text-4xl md:text-4xl tracking-wider",
                   isActive
-                    ? "text-accordion-nr-active transition-colors duration-300 ease-in-out"
-                    : "text-accordion-nr-default duration-600 ease-in-out"
+                    ? "text-cyan-400 transition-colors duration-300 ease-in-out"
+                    : "text-gray-600 duration-600 ease-in-out"
                 )}
               >
                 {accordionIndex}
@@ -57,7 +57,7 @@ const AccordExperience = ({ experience = [] }) => {
                 className={clsx(
                   "font-code font-medium text-lg sm:text-3xl md:text-3xl",
                   isActive
-                    ? "text-accordion-title-active transition-colors duration-300 ease-in-out"
+                    ? "text-cyan-400 transition-colors duration-300 ease-in-out"
                     : "text-white duration-600 ease-in-out"
                 )}
               >

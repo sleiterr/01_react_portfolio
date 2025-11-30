@@ -17,7 +17,7 @@ const Skills = () => {
         <SplitText
           tag="h2"
           text="My Skills"
-          className="font-code font-bold text-6xl text-heading-primary mb-15 w-full leading-[1.2]"
+          className="font-code font-bold text-6xl text-primary mb-15 w-full leading-[1.2]"
           delay={100}
           duration={0.4}
           ease="power3.out"
@@ -29,9 +29,7 @@ const Skills = () => {
           textAlign="right"
           onLetterAnimationComplete={handleAnimationComplete}
         />
-        {/* <h2 className="font-code font-bold text-6xl text-heading-primary tracking-wide mb-15 text-right">
-          My Skills
-        </h2> */}
+
         <div className="relative min-h-[26rem]">
           {/* Frontend Stack */}
           <div

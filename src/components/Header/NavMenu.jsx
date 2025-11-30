@@ -12,7 +12,7 @@ const NavMenu = ({ handleLinkClick }) => {
           duration={800}
           className={clsx(
             "fondt-code font-normal text-nav text-3xl tracking-wide",
-            "relative before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-[var(--bg-border)] before:bottom-[-.25rem] before:left-0 before:transition-all",
+            "relative before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-border before:bottom-[-.25rem] before:left-0 before:transition-all",
             "cursor-pointer before:duration-300 hover:before:w-full"
           )}
           onClick={handleLinkClick}
@@ -28,7 +28,7 @@ const NavMenu = ({ handleLinkClick }) => {
           offset={-100}
           className={clsx(
             "fondt-code font-normal text-nav text-3xl tracking-wide",
-            "relative before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-[var(--bg-border)] before:bottom-[-.25rem] before:left-0 before:transition-all",
+            "relative before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-border before:bottom-[-.25rem] before:left-0 before:transition-all",
             "cursor-pointer before:duration-300 hover:before:w-full"
           )}
           onClick={handleLinkClick}
@@ -44,7 +44,7 @@ const NavMenu = ({ handleLinkClick }) => {
           offset={-100}
           className={clsx(
             "fondt-code font-normal text-nav text-3xl tracking-wide",
-            "relative before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-[var(--bg-border)] before:bottom-[-.25rem] before:left-0 before:transition-all",
+            "relative before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-border before:bottom-[-.25rem] before:left-0 before:transition-all",
             "cursor-pointer before:duration-300 hover:before:w-full"
           )}
           onClick={handleLinkClick}
@@ -60,7 +60,7 @@ const NavMenu = ({ handleLinkClick }) => {
           offset={-100}
           className={clsx(
             "fondt-code font-normal text-nav text-3xl tracking-wide",
-            "relative before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-[var(--bg-border)] before:bottom-[-.25rem] before:left-0 before:transition-all",
+            "relative before:content[''] before:absolute before:w-0 before:h-[2px] before:rounded-xs before:bg-border before:bottom-[-.25rem] before:left-0 before:transition-all",
             "cursor-pointer before:duration-300 hover:before:w-full"
           )}
           onClick={handleLinkClick}

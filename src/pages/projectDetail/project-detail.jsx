@@ -97,7 +97,7 @@ const ProjectDetail = () => {
               <SplitText
                 tag="h2"
                 text={project.title}
-                className="font-code font-normal text-heading-primary text-4xl md:text-5xl tracking-wide leading-[1.2]"
+                className="font-code font-normal text-primary text-4xl md:text-5xl tracking-wide leading-[1.2]"
                 delay={100}
                 duration={0.4}
                 ease="power3.out"
@@ -109,9 +109,7 @@ const ProjectDetail = () => {
                 textAlign="left"
                 onLetterAnimationComplete={handleAnimationComplete}
               />
-              {/* <h2 className="font-code font-normal text-heading-primary text-4xl md:text-5xl tracking-wide">
-                {project.title}
-              </h2> */}
+
               <p className="font-light text-lg md:text-xl text-content tracking-wide">
                 {project.caption}
               </p>

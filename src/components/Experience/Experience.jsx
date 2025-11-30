@@ -43,7 +43,7 @@ const Experience = () => {
                 text="Education"
                 className={clsx(
                   "flex items-center justify-start gap-4",
-                  "font-code font-bold text-heading-primary text-4xl md:text-6xl w-full text-left leading-[1.2]"
+                  "font-code font-bold text-primary text-4xl md:text-6xl w-full text-left leading-[1.2]"
                 )}
                 delay={100}
                 duration={0.6}
@@ -57,14 +57,7 @@ const Experience = () => {
                 onLetterAnimationComplete={handleAnimationComplete}
               />
             </div>
-            {/* <h2
-              className={clsx(
-                "flex items-center justify-start gap-4 mb-4 md:mb-10",
-                "font-code font-bold text-heading-primary text-4xl md:text-6xl tracking-wide"
-              )}
-            >
-              Education
-            </h2> */}
+
             <AccordionStudy educationData={educationData} />
           </div>
           <div className="">
@@ -85,7 +78,7 @@ const Experience = () => {
                 text=" Experience"
                 className={clsx(
                   "flex items-center justify-start gap-4",
-                  "font-code font-bold text-heading-primary text-4xl md:text-6xl w-full text-left leading-[1.2]"
+                  "font-code font-bold text-primary text-4xl md:text-6xl w-full text-left leading-[1.2]"
                 )}
                 delay={140}
                 duration={0.6}
@@ -99,14 +92,7 @@ const Experience = () => {
                 onLetterAnimationComplete={handleAnimationComplete}
               />
             </div>
-            {/* <h2
-              className={clsx(
-                "flex items-center justify-start gap-4 mb-4 md:mb-10",
-                "font-code font-bold text-heading-primary text-4xl md:text-6xl tracking-wide"
-              )}
-            >
-              Experience
-            </h2> */}
+
             <AccordionPath experience={experienceData} />
           </div>
         </div>

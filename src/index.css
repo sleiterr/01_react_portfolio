@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"); */
 
 @import "tailwindcss";
 @import "tailwindcss/utilities";
 
-@import "./styles/colors.css";
+/* @import "./styles/colors.css"; */
 @import "./styles/gradients.css";
 @import "./styles/gradients-section.css";
 @import "./styles/breakpoints.css";
@@ -18,6 +18,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  font-family: var(--font-poppins);
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -30,85 +34,36 @@ body {
   }
 }
 
+@theme {
+  --color-primary: #fff;
+  --color-heading-accent: #22c3df;
+
+  --color-subheading: #fff;
+  --color-content: #fff; /*!content */
+
+  --color-number-overlay: #cecece; /*!number-overlay*/
+  --color-caption: #1ed1a8; /*!about-caption*/
+
+  --color-nav: ; /*!nav-text*/
+  --bg-burger: #3e3e3e; /*! bg-burger*/
+  --color-border: #3e3e3e; /*! pseudo-element for nav element */
+
+  --default-nav: #fff;
+
+  --color-accordion: #fff; /*!accordion-text-desc*/
+  --accordion-text-default: #000; /*!accordion-active*/
+
+  --accordion-nr-active: #22c3df;
+}
+
 .animate-gradient {
   animation: gradient 8s linear infinite;
-}
-
-html {
-  font-family: var(--font-poppins);
-}
-
-.text-heading-primary {
-  color: var(--color-heading-primary);
-}
-
-.text-heading-span {
-  color: var(--color-hero-gradient);
 }
 
 .text-heading-accent {
   color: var(--color-heading-accent);
 }
 
-.text-subheading {
-  color: var(--color-subheading);
-}
-
-/*! text-content */
-.text-content {
-  color: var(--color-text);
-}
-
-.text-logo {
-  color: var(--color-logo);
-}
-/*!nav-text*/
-.text-nav {
-  color: var(--color-nav);
-}
-
-.bg-border {
-  background-color: var(--bg-border);
-}
-/*!number-overlay*/
-.text-number-overlay {
-  color: var(--number-overlay);
-}
-/*!about-caption*/
-.text-caption {
-  color: var(--color-caption);
-}
-/*!accordion-text-desc*/
-.text-accordion {
-  color: var(--text-accordion-desc);
-}
-/*!accordion-text*/
-.text-accordion-title-active {
-  color: var(--accordion-text-active);
-}
-/*!accordion-active*/
-.text-accordion-title-default {
-  color: var(--accordion-text-default);
-}
-
-/*!accordion-active*/
-.text-accordion-nr-active {
-  color: var(--accordion-nr-active);
-}
-
-/*!accordion-nr*/
-.text-accordion-nr-default {
-  color: var(--accordion-nr-default);
-}
-/*! color-link*/
-.text-link {
-  color: var(--color-link);
-}
-/*!logo-footer*/
-.text-logo-footer {
-  color: var(--logo-footer);
-}
-
-.text-logo-text {
-  color: var(--logo-text); /*!logo-text*/
+.bg-burger {
+  background-color: var(--bg-burger);
 }

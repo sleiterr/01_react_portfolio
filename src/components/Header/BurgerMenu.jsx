@@ -44,7 +44,7 @@ const StyledWrapper = styled.div`
 
     width: 100%;
     background: ${({ $isOpen, $scrolled }) =>
-      $isOpen || $scrolled ? "var(--bg-border)" : "var(--default-nav)"};
+      $isOpen || $scrolled ? "var(--bg-burger)" : "var(--default-nav)"};
     border-radius: 9px;
     opacity: 1;
     right: 0;
@@ -53,7 +53,7 @@ const StyledWrapper = styled.div`
   }
 
   .burger input:checked ~ span {
-    background: var(--bg-border);
+    background: var(--bg-burger);
   }
 
   .burger span:nth-of-type(1) {

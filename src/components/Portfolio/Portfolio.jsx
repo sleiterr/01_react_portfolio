@@ -48,7 +48,7 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
     setCurrentpage(1);
   }
 
-  const categoryProjects = (project ?? []).filter(
+  const categoryProjects = [...project].filter(
     (p) => selectCategory === "all" || p.category === selectCategory
   );
 
@@ -90,7 +90,7 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
             tag="h2"
             text="My Projects"
             className={clsx(
-              "font-code font-bold text-4xl md:text-6xl text-heading-primary leading-[1.2]",
+              "font-code font-bold text-4xl md:text-6xl text-primary leading-[1.2]",
               "mb-4 md:mb-6"
             )}
             delay={100}
@@ -104,9 +104,7 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
             textAlign="right"
             onLetterAnimationComplete={handleAnimationComplete}
           />
-          {/* <h2 className="font-code font-bold text-4xl tracking-wide md:text-6xl text-heading-primary mb-4 md:mb-6">
-            My Projects
-          </h2> */}
+
           <div className="absolute before:content-[''] left-10 before:w-30 before:h-px before:inline-block before:align-middle before:bg-gradient-to-r before:from-cyan-400 before:to-emerald-400" />
 
           <p className="font-light text-base text-subheading tracking-wider py-4">
@@ -137,7 +135,7 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
             <AnimatePresence mode="wait" custom={direction}>
               {/* className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6" */}
               <Motion.div
-                key={currentPage}
+                key={`${selectCategory}-${currentPage}`}
                 variants={containerVariants}
                 initial="hidden"
                 animate="show"

@@ -10,7 +10,7 @@ import SplitText from "../animation/SplitText";
 const heroTextDoc = [
   {
     id: 1,
-    text: "I am currently studying web development at Media College Denmark, where I am building skills in both web development and UI/UX design.",
+    text: "I am a Junior Full Stack Developer & UX/UI Designer, excited to bring my skills to real-world projects while constantly growing as a developer.",
     className:
       "font-light text-base sm:text-xl md:text-lg text-content leading-[1.5]",
   },
@@ -58,9 +58,7 @@ const HeroSection = () => {
                 textAlign="center"
                 onLetterAnimationComplete={handleAnimationComplete}
               />
-              {/* <h1 className="font-code font-extrabold text-subheading text-5xl sm:text-6xl md:text-6xl leading-[1.4] md:leading-[1.2]">
-                Hi, I'm Oleg.
-              </h1> */}
+
               <h2
                 className={clsx(
                   "flex-wrap md:flex items-center gap-1 md:gap-4",

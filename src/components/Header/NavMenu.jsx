@@ -52,7 +52,7 @@ const NavMenu = ({ handleLinkClick }) => {
           Skills
         </Link>
       </li>
-      <li>
+      <li className="hidden md:block">
         <Link
           to="portfolio"
           smooth={true}

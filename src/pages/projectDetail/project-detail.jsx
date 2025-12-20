@@ -110,7 +110,7 @@ const ProjectDetail = () => {
                 onLetterAnimationComplete={handleAnimationComplete}
               />
 
-              <p className="font-light text-lg md:text-xl text-content tracking-wide">
+              <p className="font-light text-lg md:text-lg text-content tracking-wide">
                 {project.caption}
               </p>
             </div>

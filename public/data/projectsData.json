@@ -74,6 +74,18 @@
     },
     {
       "id": 7,
+      "title": "Gites Glamping.",
+      "caption": "A mobile-first full-stack web application for a glamping business, featuring stays, activities, guest reviews, and booking inquiries powered by a custom API.",
+      "url": "https://md-glamping-semestr-project.vercel.app/",
+      "github": "https://github.com/sleiterr/md-glamping_semestrProject",
+      "role": "Full Stack Developer",
+      "date": "03-11-2025",
+      "category": "react",
+      "image": ["/imgProjects/gites-glamping.gif"],
+      "preview": ["/imgProjects/gites-glamping-preview.gif"]
+    },
+    {
+      "id": 8,
       "title": "Frontend Practice: Military Drone Website",
       "caption": "Future-Frontend project about military drones in the context of the war in Ukraine. Brutal black-and-white design with a pencil-drawn effect",
       "url": "https://sleiterr.github.io/md_droner/",
@@ -85,7 +97,7 @@
       "preview": ["/public/imgProjects/drones_preview.jpg"]
     },
     {
-      "id": 8,
+      "id": 9,
       "title": "Klog Energi",
       "caption": "Full-stack practice: improving skills in Next.js and Tailwind CSS, working with routing and client components.",
       "url": "https://klog-energi.vercel.app/",

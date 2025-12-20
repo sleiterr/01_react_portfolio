@@ -2,8 +2,9 @@
   {
     "id": 1,
     "title": "GoIT IT school",
-    "year": "2023-2024",
-    "subtitle": " was my first team project organic vegetables where I gained experience working in a team using GitHub and GitBash. During this project, I developed my first soft skills, which gave me a better understanding of teamwork and working with a global repository.",
+    "projectName": "Organic Vegetables",
+    "projectUrl": "https://escape23.github.io/ovochi-group/",
+    "subtitle": "Was my first team project organic vegetables where I gained experience working in a team using GitHub and GitBash. During this project, I developed my first soft skills, which gave me a better understanding of teamwork and working with a global repository.",
     "list": [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
       "Repellat hic omnis expedita consectetur esse minus soluta earum,",
@@ -11,18 +12,7 @@
       "velit eius illo quia molestiae atque natus, laudantium numquam"
     ]
   },
-  {
-    "id": 2,
-    "title": "Media College Denmark",
-    "year": "2024-2026",
-    "subtitle": "to acquire and improve my skills in web development and design, I enrolled in college, where I am also expanding my knowledge in UX/UI design. During my studies, I focus on prototyping, wireframing, and creating designs in Figma, as well as designing logos in Illustrator. Additionally, i am mastering the use of Photoshop to enhance the graphic quality of images and create high-quality graphic design elements.",
-    "list": [
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-      "Repellat hic omnis expedita consectetur esse minus soluta earum,",
-      "velit eius illo quia molestiae atque natus, laudantium numquam",
-      "velit eius illo quia molestiae atque natus, laudantium numquam"
-    ]
-  },
+
   {
     "id": 3,
     "title": "My internship",

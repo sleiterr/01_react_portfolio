@@ -11,7 +11,7 @@ const AccordExperience = ({ educationData = [] }) => {
   };
   return (
     <div className="">
-      {educationData.map(({ id, title, subtitle }, index) => {
+      {educationData.map(({ id, title, subtitle, year }, index) => {
         const accordionIndex = (index + 1).toString().padStart(2, "0");
         const isActive = clicked === index;
 
@@ -71,7 +71,10 @@ const AccordExperience = ({ educationData = [] }) => {
                 isActive && "max-h-[500px] opacity-100"
               )}
             >
-              <p className="font-light text-base text-accordion tracking-wider leading-[1.6em] p-0 py-4 md:p-6">
+              <p className="font-light text-base text-accordion tracking-wide leading-[1.6em] p-0 py-4 md:p-6">
+                <span className="font-normal text-lg text-green-400 pr-2">
+                  {year}
+                </span>
                 {subtitle}
               </p>
             </div>

@@ -32,22 +32,23 @@ const About = () => {
 
           <div className="grid grid-row-2 lg:grid-cols-2 gap-8">
             <AboutItms duration={0.8} delay={0}>
-              I am a beginner web developer. I live and study in Denmark. I
-              speak Ukrainian, Danish and English. I am currently studying at
-              Viborg Media College, where Iam gaining practical web development
-              skills and learning the principles andmethods of web design. In
-              particular, I am studying visual composition, colorschemes,
-              typography and creating intuitive interfaces that improve
-              userinteraction with the product.
+              I am a Junior Full Stack Developer based in Denmark, fluent in
+              Ukrainian, Danish, and English. I have completed my studies at
+              Viborg Media College, where I gained both practical and
+              theoretical skills in full stack web development and UX/UI design.
+              To further develop my UX/UI skills, I continuously improve my
+              sense of visual composition, color schemes, and typography,
+              creating intuitive interfaces that enhance user interaction with
+              digital products.
             </AboutItms>
             <AboutItms duration={0.8} delay={300}>
-              Why web development ? This field is one of the most
-              customer-oriented and project-oriented, where you can enjoy
-              creating something new. Yes, it is not an easy field of activity,
-              but it provides great and unlimited opportunities for skill
-              development. The most important thing in this field is practical
-              experience in coding and working with clients, which allows you to
-              better understand the user experience.
+              I am seeking my first commercial experience as a Junior Web
+              Developer, with a strong interest in developing both technical and
+              soft skills while contributing to team-based projects. I am also
+              eager to improve my workflow with GitHub in a collaborative
+              environment, including working with repositories, pull requests,
+              and code reviews. My primary focus is on further developing my
+              skills in React, Tailwind CSS, and Next.js.
             </AboutItms>
           </div>
         </div>
@@ -70,7 +71,7 @@ const AboutItms = ({ children, duration = 1, delay }) => {
           className={clsx(
             "font-light text-content text-base leading-[1.6] tracking-wide",
             "sm:text-xl md:text-lg sm:tracking-wider ",
-            "md:tracking-wider"
+            "md:tracking-[0.11em]"
           )}
         >
           {child}

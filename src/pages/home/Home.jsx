@@ -6,7 +6,7 @@ import Skills from "../../components/Skills/Skills";
 import Experience from "../../components/Experience/Experience";
 import Portfolio from "../../components/Portfolio/Portfolio";
 import Skillslop from "../../components/Skillslop/SkillTicker";
-import { techLogos } from "../../Data/techLogos";
+import { techLogos } from "../../utils/techLogos";
 // import {
 //   SiReact,
 //   SiNextdotjs,

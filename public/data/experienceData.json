@@ -1,0 +1,30 @@
+{
+  "experienceData": [
+    {
+      "id": 1,
+      "title": "GoIT IT school",
+      "projectName": "Organic Vegetables",
+      "projectUrl": "https://escape23.github.io/ovochi-group/",
+      "subtitle": "Was my first team project organic vegetables where I gained experience working in a team using GitHub and GitBash. During this project, I developed my first soft skills, which gave me a better understanding of teamwork and working with a global repository.",
+      "list": [
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+        "Repellat hic omnis expedita consectetur esse minus soluta earum,",
+        "velit eius illo quia molestiae atque natus, laudantium numquam",
+        "velit eius illo quia molestiae atque natus, laudantium numquam"
+      ]
+    },
+
+    {
+      "id": 2,
+      "title": "My internship",
+      "year": "Duration: 6 weeks",
+      "subtitle": "Superego Holstebro was my first experience in the IT field specifically in production. It is an excellent place where I gained not only practical knowledge but also great enjoyment from the work. During my internship, I became familiar with modern CMS platforms, learned frameworks such as TailwindCSS and Next.js, and developed a new perspective on UI/UX design. Working with the CMS Sanity allowed me to dive into the world of TypeScript for the first time. I would like to especially highlight the team I worked with: thanks to their support and expertise, I received a strong motivation for further learning and growth in the IT field.",
+      "list": [
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+        "Repellat hic omnis expedita consectetur esse minus soluta earum,",
+        "velit eius illo quia molestiae atque natus, laudantium numquam",
+        "velit eius illo quia molestiae atque natus, laudantium numquam"
+      ]
+    }
+  ]
+}

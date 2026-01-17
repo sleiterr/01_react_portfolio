@@ -1,0 +1,28 @@
+{
+  "educationData": [
+    {
+      "id": 1,
+      "title": "GoIT IT school",
+      "year": "2023-2024",
+      "subtitle": "Is an online school where I gained my first hands-on experience in web development. During 10 months of training, I acquired my first practical hard skills in creating web content using HTML, CSS, and JavaScript to make web pages more interactive. I also learned the basics of the React library for user interface (UI) development.",
+      "list": [
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+        "Repellat hic omnis expedita consectetur esse minus soluta earum,",
+        "velit eius illo quia molestiae atque natus, laudantium numquam",
+        "velit eius illo quia molestiae atque natus, laudantium numquam"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Media College Denmark",
+      "year": "2024-2026",
+      "subtitle": "Media College – I gained strong practical skills as a Full Stack Developer. Frontend: Experience working with React, Next.js, and Tailwind CSS, with a primary focus on React. Backend: Basic knowledge of JavaScript, Express.js, and MongoDB. Design: UI/UX design, working with Figma, Photoshop, and Illustrator; I developed an interest in UI/UX after creating my first portfolio. I continue to develop my frontend skills while simultaneously improving my backend knowledge and design capabilities.",
+      "list": [
+        "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+        "Repellat hic omnis expedita consectetur esse minus soluta earum,",
+        "velit eius illo quia molestiae atque natus, laudantium numquam",
+        "velit eius illo quia molestiae atque natus, laudantium numquam"
+      ]
+    }
+  ]
+}

@@ -28,7 +28,7 @@ const Header = () => {
     "isProjectDetail",
     isProjectDetail,
     "pathname:",
-    location.pathname
+    location.pathname,
   );
 
   useEffect(() => {
@@ -92,16 +92,16 @@ const Header = () => {
           isProjectDetail
             ? "fixed"
             : isHome && !scrolled
-            ? "absolute"
-            : "fixed",
-          "inset-x-0 top-0 z-[1000] w-full transition-all"
+              ? "absolute"
+              : "fixed",
+          "inset-x-0 top-0 z-[1000] w-full transition-all",
         )}
       >
         {/* Overlay */}
         <div
           className={clsx(
             "fixed inset-0 backdrop-blur-sm bg-white/10  transition-opacity duration-300 h-full w-full z-[1000]",
-            menuOpen ? "opacity-300" : "opacity-0 pointer-events-none"
+            menuOpen ? "opacity-300" : "opacity-0 pointer-events-none",
           )}
           // Close menu when overlay is clicked
           onClick={() => setMenuOpen(false)}
@@ -111,7 +111,7 @@ const Header = () => {
           style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
         >
           <div className="relative py-[0.5rem] md:py-[1rem] shrink-0 cursor-pointer">
-            <Link to="/" smooth={true} duration={800}>
+            <Link to="hero" smooth={true} duration={800}>
               {!scrolled ? (
                 <img src={whiteLogo} alt="logo" className="w-[8rem] h-auto" />
               ) : (
@@ -140,7 +140,7 @@ const Header = () => {
             {
               "opacity-0 translate-x-full pointer-events-none": !menuOpen,
               "opacity-100 translate-y-0 pointer-events-auto": menuOpen,
-            }
+            },
           )}
           onClick={() => setMenuOpen(false)}
         >

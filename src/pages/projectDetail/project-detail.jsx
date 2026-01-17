@@ -5,6 +5,8 @@ import { BeatLoader } from "react-spinners";
 // import { Link as ScrollLink } from "react-scroll";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
+
+import BlurText from "../../components/animation/BlurText";
 import SplitText from "../../components/animation/SplitText";
 import FadeContent from "../../components/animation/FadeContent";
 import ProjectNav from "./ProjectNav";
@@ -29,7 +31,7 @@ const ProjectDetail = () => {
         const res = await fetch("/data/projectsData.json"); // Adjust the path as necessary
         const data = await res.json();
         const foundProject = data.projects.find(
-          (item) => item.id === parseInt(id)
+          (item) => item.id === parseInt(id),
         );
 
         setProject(foundProject);
@@ -68,7 +70,7 @@ const ProjectDetail = () => {
           className={clsx(
             "grid grid-cols-1 items-center justify-center gap-12",
             "md:grid-cols-1 md:gap-12",
-            "lg:grid-cols-2 lg:gap-8"
+            "lg:grid-cols-2 lg:gap-8",
           )}
         >
           <div className="flex items-center justify-center mt-2 md:mt-0">
@@ -89,7 +91,7 @@ const ProjectDetail = () => {
             className={clsx(
               "flex flex-col items-start justify-center",
               "justify-self-center w-full",
-              "px-4 md:px-4 max-w-3xl lg:max-w-2xl"
+              "px-4 md:px-4 max-w-3xl lg:max-w-2xl",
             )}
           >
             {/* max-w-[clamp(600px,50vw,780px)] */}
@@ -110,9 +112,18 @@ const ProjectDetail = () => {
                 onLetterAnimationComplete={handleAnimationComplete}
               />
 
-              <p className="font-light text-lg md:text-lg text-content tracking-wide">
+              <BlurText
+                as="p"
+                duration={0.6}
+                delay={1200}
+                direction="bottom"
+                className={clsx(
+                  "font-light text-lg md:text-lg text-content",
+                  "tracking-wide leading-[1.6]",
+                )}
+              >
                 {project.caption}
-              </p>
+              </BlurText>
             </div>
 
             <ul className="relative w-full after:content[''] after:absolute after:top-0 after:left-0 after:w-full after:h-[1px] after:bg-white before:content[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-[1px] before:bg-white flex flex-col gap-2 mb-10">
@@ -128,7 +139,7 @@ const ProjectDetail = () => {
                 <p className="font-light text-lg md:text-xl text-content tracking-wide">
                   Role:
                 </p>
-                <p className="font-light text-lg md:text-xl text-content tracking-wide  text-right w-[320px] leading-8">
+                <p className="font-light text-lg md:text-xl text-content tracking-wide  text-right w-[460px] leading-8">
                   {project.role}
                 </p>
               </li>
@@ -146,7 +157,7 @@ const ProjectDetail = () => {
                 <IoIosArrowRoundForward
                   className={clsx(
                     "w-[2rem] h-[2rem]",
-                    " text-white transition-all duration-300 ease-in-out delay-200 group-hover:translate-x-1 group-hover:text-[#1ed1a8]"
+                    " text-white transition-all duration-300 ease-in-out delay-200 group-hover:translate-x-1 group-hover:text-[#1ed1a8]",
                   )}
                 />
               </a>
@@ -162,7 +173,7 @@ const ProjectDetail = () => {
                 <FaGithub
                   className={clsx(
                     "w-[2.1rem] h-full",
-                    "text-white transition-all duration-300 ease-in-out delay-200 group-hover:translate-x-1 group-hover:text-[#1ed1a8]"
+                    "text-white transition-all duration-300 ease-in-out delay-200 group-hover:translate-x-1 group-hover:text-[#1ed1a8]",
                   )}
                 />
               </a>

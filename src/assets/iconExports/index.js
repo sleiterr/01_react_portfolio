@@ -9,6 +9,8 @@ import wordPress from "../icon_skills/WordPress.svg";
 /*  */
 import vercel from "../icon_skills/Vercel.svg";
 import gitHub from "../icon_skills/git_hub.svg";
+import mongodb from "../icon_skills/mongodb.svg";
+import postman from "../icon_skills/postman.svg";
 import figma from "../icon_skills/Figma.svg";
 import ph from "../icon_skills/Ph.svg";
 import ai from "../icon_skills/Adobe_Illustrator.svg";
@@ -23,6 +25,8 @@ export {
   wordPress,
   vercel,
   gitHub,
+  mongodb,
+  postman,
   figma,
   ph,
   ai,

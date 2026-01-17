@@ -38,15 +38,15 @@
     },
     {
       "id": 4,
-      "title": "Paw Hub.",
-      "caption": "A platform for pet lovers to connect, share, and care.",
-      "url": "#",
-      "github": "https://github.com/WebH125-1/PetPlaydateApp",
-      "role": "UI/UX, logo design, JavaScript development",
-      "date": "06-03-2025",
+      "title": "Image Search.",
+      "caption": "A responsive front-end application for searching and viewing images using the Pixabay API. Implemented live search, image gallery with pagination, and interactive notifications for a smooth user experience.",
+      "url": "https://sleiterr.github.io/goit-js-hw-12/",
+      "github": "https://github.com/sleiterr/goit-js-hw-12",
+      "role": "Front-end development with JavaScript, API integration using Axios, async/await for HTTP requests.",
+      "date": "31-05-2024",
       "category": "javascript",
-      "image": ["/imgProjects/paw_hub.jpg"],
-      "preview": ["/imgProjects/paw_hub-preview.jpg"]
+      "image": ["/imgProjects/search_box.gif"],
+      "preview": ["/imgProjects/searchBx_view.gif"]
     },
     {
       "id": 5,
@@ -86,7 +86,7 @@
     },
     {
       "id": 8,
-      "title": "Frontend Practice: Military Drone Website",
+      "title": "Frontend Practice: Military Drone Website.",
       "caption": "Future-Frontend project about military drones in the context of the war in Ukraine. Brutal black-and-white design with a pencil-drawn effect",
       "url": "https://sleiterr.github.io/md_droner/",
       "github": "https://github.com/sleiterr/md_droner",
@@ -98,7 +98,7 @@
     },
     {
       "id": 9,
-      "title": "Klog Energi",
+      "title": "Klog Energi.",
       "caption": "Full-stack practice: improving skills in Next.js and Tailwind CSS, working with routing and client components.",
       "url": "https://klog-energi.vercel.app/",
       "github": "https://github.com/sleiterr/klog-energi",
@@ -110,7 +110,7 @@
     },
     {
       "id": 10,
-      "title": "Tru Scape",
+      "title": "Tru Scape.",
       "caption": "A Next.js CRM admin dashboard for managing companies and business data with searchable tables, interactive navigation, and responsive interfaces.",
       "url": "https://crm-companies-one.vercel.app/",
       "github": "https://github.com/sleiterr/CRM_companies",

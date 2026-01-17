@@ -24,10 +24,16 @@ const BlurText = ({
           observer.unobserve(ref.current);
         }
       },
-      { threshold, rootMargin }
+      { threshold, rootMargin },
     );
 
     observer.observe(ref.current);
+
+    if (ref.current.getBoundingClientRect().top < window.innerHeight) {
+      setInView(true);
+      observer.unobserve(ref.current);
+    }
+
     return () => observer.disconnect();
   }, []);
 

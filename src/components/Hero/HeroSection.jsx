@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import heroBg from "../../assets/img/hero-design---Copy-1.jpg";
+import heroBg from "../../assets/img/hero_img.jpg";
 import clsx from "clsx";
 import { ButtHero } from "./ButtHero";
 import { GitLinks } from "./GitLinks";
@@ -38,7 +38,7 @@ const HeroSection = () => {
             "top-[6rem] left-6",
             "lg:left-10 lg:bottom-60",
             "md:top-1/6 md:left-12",
-            "sm:top-4 sm:left-12"
+            "sm:top-4 sm:left-12",
           )}
         >
           <div className="px-4 md:px-0 flex flex-col items-start justify-center text-left">
@@ -62,7 +62,7 @@ const HeroSection = () => {
               <h2
                 className={clsx(
                   "flex-wrap md:flex items-center gap-1 md:gap-4",
-                  "font-code font-extrabold text-subheading text-4xl sm:text-6xl md:text-6xl"
+                  "font-code font-extrabold text-subheading text-4xl sm:text-6xl md:text-6xl",
                 )}
               >
                 I am

@@ -35,7 +35,7 @@ const Skills = () => {
           <div
             className={clsx(
               "absolute translate-x-1/2 px-8 pt-4 pb-16 w-[31.2rem] h-auto",
-              "rounded-xl bg-white/20 backdrop-blur-sm border-l-1 border-t-1 border-sky-500"
+              "rounded-xl bg-white/20 backdrop-blur-sm border-l-1 border-t-1 border-sky-500",
             )}
           >
             <FrontEnd />
@@ -45,7 +45,7 @@ const Skills = () => {
           <div
             className={clsx(
               "absolute translate-y-32 left-[30rem] pt-4 pl-6 pb-8 w-[24.6rem] h-[9.2rem]",
-              "rounded-xl  bg-white/20 backdrop-blur-sm z-1 border-l-1 border-t-1 border-sky-500"
+              "rounded-xl  bg-white/20 backdrop-blur-sm z-1 border-l-1 border-t-1 border-sky-500",
             )}
           >
             <Cms />
@@ -54,8 +54,8 @@ const Skills = () => {
           {/* Development Workflow */}
           <div
             className={clsx(
-              "absolute pt-4 px-6 pb-8  w-[23.4rem] h-[8.1rem]",
-              "rounded-xl bg-white/20 backdrop-blur-sm z-0 top-[15rem] translate-x-[12rem] border-r-1 border-t-1 border-sky-500"
+              "absolute pt-4 px-6 pb-8  w-[28rem] h-[9rem]",
+              "rounded-xl bg-white/20 backdrop-blur-sm z-0 top-[15rem] translate-x-[12rem] border-r-1 border-t-1 border-sky-500",
             )}
           >
             <WorkFlow />
@@ -65,7 +65,7 @@ const Skills = () => {
           <div
             className={clsx(
               "absolute translate-y-58  left-1/2 translate-x-[6rem] px-6 pt-4 pb-8 w-[23rem] h-[8rem]",
-              "bg-white/20 backdrop-blur-sm z-2 rounded-xl border-r-1 border-t-1 border-sky-500"
+              "bg-white/20 backdrop-blur-sm z-2 rounded-xl border-r-1 border-t-1 border-sky-500",
             )}
           >
             <Design />

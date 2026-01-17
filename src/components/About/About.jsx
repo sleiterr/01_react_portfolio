@@ -18,8 +18,8 @@ const About = () => {
             tag="h2"
             text="About Me"
             className="font-code font-bold text-5xl md:text-6xl text-primary tracking-wide mb-4 w-full"
-            delay={100}
-            duration={0.4}
+            delay={40}
+            duration={0.6}
             ease="power3.out"
             splitType="chars"
             from={{ opacity: 0, y: 40 }}
@@ -31,7 +31,7 @@ const About = () => {
           />
 
           <div className="grid grid-row-2 lg:grid-cols-2 gap-8">
-            <AboutItms duration={0.8} delay={0}>
+            <AboutItms duration={0.6} delay={350}>
               I am a Junior Full Stack Developer based in Denmark, fluent in
               Ukrainian, Danish, and English. I have completed my studies at
               Viborg Media College, where I gained both practical and
@@ -41,7 +41,7 @@ const About = () => {
               creating intuitive interfaces that enhance user interaction with
               digital products.
             </AboutItms>
-            <AboutItms duration={0.8} delay={300}>
+            <AboutItms duration={0.8} delay={350}>
               I am seeking my first commercial experience as a Junior Web
               Developer, with a strong interest in developing both technical and
               soft skills while contributing to team-based projects. I am also
@@ -69,9 +69,10 @@ const AboutItms = ({ children, duration = 1, delay }) => {
           duration={duration}
           delay={delay}
           className={clsx(
-            "font-light text-content text-base leading-[1.6] tracking-wide",
-            "sm:text-xl md:text-lg sm:tracking-wider ",
-            "md:tracking-[0.11em]"
+            "font-light text-content text-base leading-[1.6] tracking-normal",
+            "sm:text-lg sm:leading-[1.65]",
+            "md:text-lg md:leading-[1.65] md:tracking-[0.02em]",
+            "lg:text-xl lg:leading-[1.7]",
           )}
         >
           {child}

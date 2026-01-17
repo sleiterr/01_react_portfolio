@@ -78,7 +78,7 @@ const AccordionStudy = ({ educationPosts = [] }) => {
                 {subtitle}
                 {id === 1 && (
                   <a
-                    href="/public/Doc/certificate.pdf"
+                    href="/Doc/certificate.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-normal text-cyan-400 underline hover:text-blue-500 transition-colors duration-300 ml-2"

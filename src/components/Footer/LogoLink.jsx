@@ -1,0 +1,33 @@
+import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { scroller } from "react-scroll";
+import logo from "../../assets/logo/logo-white.svg";
+
+const LogoLink = ({ scrollTarget = "hero" }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (location.pathname === "/") {
+      scroller.scrollTo(scrollTarget, {
+        smooth: true,
+        duration: 800,
+      });
+    } else {
+      navigate("/");
+    }
+  };
+
+  return (
+    <>
+      <img
+        src={logo}
+        alt="logo"
+        onClick={handleClick}
+        className="w-40 h-full cursor-pointer"
+      />
+    </>
+  );
+};
+
+export default LogoLink;

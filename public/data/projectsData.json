@@ -94,7 +94,7 @@
       "date": "18-09-2025",
       "category": "html",
       "image": ["/imgProjects/drones.jpg"],
-      "preview": ["/imgProjects/drones_preview.jpg"]
+      "preview": ["/public/imgProjects/drones_preview.jpg"]
     },
     {
       "id": 9,

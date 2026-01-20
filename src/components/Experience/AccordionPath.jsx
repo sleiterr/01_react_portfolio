@@ -91,7 +91,7 @@ const AccordExperience = ({ experiencePosts = [] }) => {
                     </a>
                   )}
                   {parts[1]}
-                  {id === 2 && (
+                  {id === 1 && (
                     <a
                       href="/Doc/reference_superego.pdf"
                       target="_blank"

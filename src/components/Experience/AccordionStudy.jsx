@@ -76,7 +76,7 @@ const AccordionStudy = ({ educationPosts = [] }) => {
                   {year}
                 </span>
                 {subtitle}
-                {id === 1 && (
+                {id === 2 && (
                   <a
                     href="/Doc/certificate.pdf"
                     target="_blank"

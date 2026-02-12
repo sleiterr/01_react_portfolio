@@ -64,7 +64,7 @@
 
 ## About The Project
 
-[![Portfolio Preview][product-screenshot]](https://github.com/github_username/portfolio)
+[![Portfolio Preview][product-screenshot]](https://olegtr.netlify.app/)
 
 This is a single-page portfolio with animated sections, project detail routing, and data-driven content loaded from JSON files. It is designed for fast iteration: update data in `public/data/` or `src/Data/`, and the UI updates without touching component logic.
 

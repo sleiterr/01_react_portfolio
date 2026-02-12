@@ -1,5 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaSquareUpwork } from "react-icons/fa6";
 import styled from "styled-components";
 
 const wrapperData = [
@@ -17,6 +18,14 @@ const wrapperData = [
     className: "icon icon-in",
     icon: (
       <FaLinkedin className="w-[32px] h-[32px] md:w-[40px] md:h-[40px]text-white" />
+    ),
+  },
+  {
+    id: 3,
+    href: "https://www.upwork.com/freelancers/~01ad4dfb96e6282764?mp_source=share",
+    className: "icon icon-upwork",
+    icon: (
+      <FaSquareUpwork className="w-[32px] h-[32px] md:w-[40px] md:h-[40px]text-white" />
     ),
   },
 ];
@@ -77,6 +86,11 @@ const StyledWrapper = styled.div`
   .icon-in:hover {
     background-color: #0a66c2;
     outline-color: #0a66c2;
+  }
+
+  .icon-upwork:hover {
+    background-color: #14a800;
+    outline-color: #14a800;
   }
 
   .icon:hover svg {

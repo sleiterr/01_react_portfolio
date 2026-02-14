@@ -41,23 +41,32 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
     fetchProjects();
   }, []);
 
+  // Create a list of unique categories from the project data
   const categories = ["all", ...new Set(project.map((p) => p.category))];
 
+  // function to reset filters
   function resetFilters() {
     setSelectCategory("all");
     setCurrentpage(1);
   }
 
+  // Filter projects based on the selected category
   const categoryProjects = [...project].filter(
-    (p) => selectCategory === "all" || p.category === selectCategory
+    (p) => selectCategory === "all" || p.category === selectCategory,
   );
 
   console.log("Filtered projects:", categoryProjects);
 
+  // Match.ceil to calculate total pages based on the number of filtered projects and items per page
+  // cateoryProjects.length is the total number of projects after filtering by category
+  // itrmsPerPage is the number of projects we want to display on each page
   const totalPage = Math.ceil(categoryProjects.length / itemsPerPage);
+
+  // Calculate the projects to display on the current page
+  // slice uses the currentPage and itemsPerPage to determine which projects to show
   const pageItems = categoryProjects.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
+    (currentPage - 1) * itemsPerPage, // Calculate the starting index for the current page
+    currentPage * itemsPerPage, // Calculate the ending index for the current page
   );
 
   useEffect(() => {
@@ -91,7 +100,7 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
             text="My Projects"
             className={clsx(
               "font-code font-bold text-4xl md:text-6xl text-primary leading-[1.2]",
-              "mb-4 md:mb-6"
+              "mb-4 md:mb-6",
             )}
             delay={100}
             duration={0.4}
@@ -117,7 +126,7 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
           className={clsx(
             "grid",
             "md:grid-cols-1 md:gap-y-6",
-            "lg:grid-cols-3 lg:gap-4 lg:grid-rows-none"
+            "lg:grid-cols-3 lg:gap-4 lg:grid-rows-none",
           )}
         >
           {/* FilterCard */}
@@ -170,13 +179,13 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
                           className={clsx(
                             "flex flex-col items-center justify-center text-white text-center m-4",
                             "absolute inset-0 bg-black/80 rounded-xl opacity-0",
-                            "hover:opacity-100 transition duration-500 ease-in-out"
+                            "hover:opacity-100 transition duration-500 ease-in-out",
                           )}
                         >
                           <p
                             className={clsx(
                               "font-normal text-7xl text-number-overlay tracking-wider",
-                              "absolute right-4 top-4"
+                              "absolute right-4 top-4",
                             )}
                           >
                             {formattedIndex}

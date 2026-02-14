@@ -2,7 +2,7 @@ import { AnimatePresence, motion as Motion } from "motion/react";
 
 const AnimatedNumber = ({ value }) => {
   return (
-    <div className="relative w-4 h-8 flex items-center justify-center overflow-hidden">
+    <div className="relative flex items-center justify-center overflow-hidden h-8 w-8">
       <AnimatePresence mode="wait">
         <Motion.span
           key={value}

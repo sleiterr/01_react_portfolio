@@ -23,24 +23,21 @@ const FilterCard = ({
           "lg:py-6 lg:px-4",
           "md:rows-span-1 lg:col-span-1",
           "md:h-24",
-          "lg:min-h-[520px] lg:h-auto"
+          "lg:min-h-[520px] lg:h-auto",
         )}
       >
         {/* Check min height */}
         <div
           className={clsx(
             "flex flex-col justify-center lg:justify-between h-full",
-            ""
+            "",
           )}
         >
-          <div className="">
+          <div className="hidden lg:flex flex-col items-end justify-center">
             <FilterCaunter
               currentPage={currentPage}
               totalPage={totalPage}
-              className={clsx(
-                "text-white text-xl",
-                " hidden lg:flex flex-col items-end justify-center"
-              )}
+              className={clsx("text-white text-xl", "")}
             />
           </div>
 

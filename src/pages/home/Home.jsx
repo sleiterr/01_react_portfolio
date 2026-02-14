@@ -16,7 +16,9 @@ import { techLogos } from "../../utils/techLogos";
 
 const Home = () => {
   const [currentPage, setCurrentpage] = useState(1);
+  // Hook to reference the hero section for potential future use (e.g., scrolling, animations)
   const heroRef = React.useRef(null);
+
   return (
     <>
       <Header />

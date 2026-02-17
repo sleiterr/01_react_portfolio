@@ -16,7 +16,7 @@ const Skills = () => {
       <div className="py-[8rem] lg:px-4 mx-auto md:max-w-7xl">
         <SplitText
           tag="h2"
-          text="My Skills"
+          text="Skills"
           className="font-code font-bold text-6xl text-primary mb-15 w-full leading-[1.2]"
           delay={100}
           duration={0.4}

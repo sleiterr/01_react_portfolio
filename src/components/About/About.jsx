@@ -16,7 +16,7 @@ const About = () => {
           <SpanAbout />
           <SplitText
             tag="h2"
-            text="About Me"
+            text="About"
             className="font-code font-bold text-5xl md:text-6xl text-primary tracking-wide mb-4 w-full"
             delay={40}
             duration={0.6}
@@ -32,23 +32,24 @@ const About = () => {
 
           <div className="grid grid-row-2 lg:grid-cols-2 gap-8">
             <AboutItms duration={0.5} delay={500}>
-              I am a Junior Full Stack Developer based in Denmark, fluent in
-              Ukrainian, Danish, and English. I have completed my studies at
-              Viborg Media College, where I gained both practical and
-              theoretical skills in full stack web development and UX/UI design.
-              To further develop my UX/UI skills, I continuously improve my
-              sense of visual composition, color schemes, and typography,
-              creating intuitive interfaces that enhance user interaction with
-              digital products.
+              I am a Junior Front-end Developer, creating modern, structured,
+              and user-friendly web interfaces. I work with React and Next.js,
+              using a component-driven approach to create scalable and readable
+              interfaces. This approach helps maintain clean code architecture
+              and simplifies project maintenance. I use JavaScript both in React
+              projects and when creating standalone dynamic pages — working with
+              the DOM, forms Formik, ReactForm, interactive components, and data
+              handling. I have experience working with REST APIs fetching data,
+              POST/GET requests, integrating external services, and handling
+              JSON data to ensure correct display in the interface.
             </AboutItms>
             <AboutItms duration={0.8} delay={500}>
-              I am seeking my first commercial experience as a Junior Web
-              Developer, with a strong interest in developing both technical and
-              soft skills while contributing to team-based projects. I am also
-              eager to improve my workflow with GitHub in a collaborative
-              environment, including working with repositories, pull requests,
-              and code reviews. My primary focus is on further developing my
-              skills in React, Tailwind CSS, and Next.js.
+              I am interested in UI/UX design and understand the importance of
+              visual interface structure, focusing on improving usability in web
+              projects. I create wireframes and prototypes in Figma, focusing on
+              UI/UX interactions and improving usability. I use Adobe Creative
+              Cloud to prepare graphic and visual assets, allowing me to combine
+              technical implementation with thoughtful visual design.
             </AboutItms>
           </div>
         </div>
@@ -72,7 +73,7 @@ const AboutItms = ({ children, duration = 1, delay }) => {
             "font-light text-content text-base leading-[1.6] tracking-normal",
             "sm:text-lg sm:leading-[1.65]",
             "md:text-lg md:leading-[1.65] md:tracking-[0.02em]",
-            "lg:text-xl lg:leading-[1.7]",
+            "lg:text-lg lg:leading-[1.4]",
           )}
         >
           {child}

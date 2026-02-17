@@ -97,7 +97,7 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
         <div className="relative md:mb-12 lg:mb-6">
           <SplitText
             tag="h2"
-            text="My Projects"
+            text="Projects"
             className={clsx(
               "font-code font-bold text-4xl md:text-6xl text-primary leading-[1.2]",
               "mb-4 md:mb-6",

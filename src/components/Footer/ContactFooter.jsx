@@ -24,17 +24,19 @@ const contactData = [
 export const ContactFooter = () => {
   return (
     <ul className="flex flex-col items-start lg:flex-row lg:items-center justify-center gap-2 lg:gap-6">
-      {contactData.map((item) => (
-        <li key={item.id} className={item.className}>
-          {item.icon}
-          <a
-            href={item.href}
-            className="footer-link font-light text-lg tracking-wide text-content"
-          >
-            {item.text}
-          </a>
-        </li>
-      ))}
+      {contactData
+        .filter((item) => item.id !== 2)
+        .map((item) => (
+          <li key={item.id} className={item.className}>
+            {item.icon}
+            <a
+              href={item.href}
+              className="footer-link font-light text-lg tracking-wide text-content"
+            >
+              {item.text}
+            </a>
+          </li>
+        ))}
     </ul>
   );
 };

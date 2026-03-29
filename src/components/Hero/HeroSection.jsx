@@ -24,11 +24,14 @@ const HeroSection = () => {
   return (
     <>
       <section
-        className="relative w-full min-w-[320px] h-screen lg:h-auto bg-cover bg-no-repeat bg-center md:aspect-[8/5]"
+        className={clsx(
+          "relative w-full min-w-[320px] bg-cover bg-no-repeat md:bg-center lg:bg-center h-screen lg:h-auto md:aspect-[8/5]",
+          "bg-left",
+        )}
         id="hero"
         style={{
           backgroundImage: `url(${heroBg})`,
-          backgroundPosition: "center center",
+          // backgroundPosition: "center center",
           // aspectRatio: "8 / 5",
         }}
       >

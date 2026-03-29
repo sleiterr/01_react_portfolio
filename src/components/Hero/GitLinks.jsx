@@ -9,7 +9,7 @@ export const GitLinks = () => {
     <>
       <div
         className={clsx(
-          "absolute bottom-3 right-5 sm:bottom-12",
+          "absolute bottom-8 right-5 sm:bottom-12",
           "lg:end-25 lg:bottom-15",
           "md:end-12 md:bottom-12",
         )}

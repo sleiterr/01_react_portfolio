@@ -15,3 +15,12 @@ const fetchEducationData = async () => {
 };
 
 export { fetchEducationData };
+
+const fetchBlogData = async () => {
+  const res = await fetch("/data/blogData.json");
+  if (!res.ok) throw new Error("Error fetching Blog Data");
+  const data = await res.json();
+  return data.dataBlog || [];
+};
+
+export { fetchBlogData };

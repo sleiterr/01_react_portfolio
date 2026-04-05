@@ -67,3 +67,8 @@ html {
 .bg-burger {
   background-color: var(--bg-burger);
 }
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}

@@ -1,29 +1,40 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import "./index.css";
-import { Routes, Route } from "react-router-dom";
+import { useLocation, Route, Routes } from "react-router-dom";
 import { loadGoogleAnalytics } from "./utils/gtag.js";
+import Header from "./components/Header/Header.jsx";
+import ScrollToHash from "./components/ScrollToHash/ScrollToHash.jsx";
 import CookieModal from "./components/CookieModal/CookieModal.jsx";
 import Footer from "./components/Footer/Footer";
 // import Header from "./components/Header/Header";
 import Home from "./pages/home/Home";
+import Blog from "./pages/blog/Blog.jsx";
 
 import ProjectDetail from "./pages/projectDetail/project-detail";
 
 function App() {
-  useEffect(() => { 
-    if (localStorage.getItem("cookiesConset") === 'accepted') { 
+  const location = useLocation();
+
+  // Hide header on project detail route and its dynamic children
+  const showHeader = !location.pathname.startsWith("/project-detail");
+
+  useEffect(() => {
+    if (localStorage.getItem("cookiesConset") === "accepted") {
       loadGoogleAnalytics();
     }
-  }, [])
+  }, []);
 
   return (
     <>
-      <CookieModal/>
+      <CookieModal />
+      {showHeader && <Header />}
       <main className="bg-projects-gradient min-h-screen">
+        <ScrollToHash />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project-detail/:id" element={<ProjectDetail />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
       </main>
       <Footer />

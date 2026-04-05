@@ -55,8 +55,6 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
     (p) => selectCategory === "all" || p.category === selectCategory,
   );
 
-  console.log("Filtered projects:", categoryProjects);
-
   // Match.ceil to calculate total pages based on the number of filtered projects and items per page
   // cateoryProjects.length is the total number of projects after filtering by category
   // itrmsPerPage is the number of projects we want to display on each page
@@ -156,8 +154,6 @@ const Portfolio = ({ currentPage, setCurrentpage }) => {
                   const realIndex =
                     (currentPage - 1) * itemsPerPage + index + 1;
                   const formattedIndex = realIndex.toString().padStart(2, "0");
-
-                  console.log("Image", item.image[0]);
 
                   return (
                     <Motion.div

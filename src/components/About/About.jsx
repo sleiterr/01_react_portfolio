@@ -4,9 +4,7 @@ import { SpanAbout } from "./SpanAbout";
 import SplitText from "../animation/SplitText";
 import clsx from "clsx";
 
-const handleAnimationComplete = () => {
-  console.log("All letters have animated!");
-};
+const handleAnimationComplete = () => {};
 
 const About = () => {
   return (

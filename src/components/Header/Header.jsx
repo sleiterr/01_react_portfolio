@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 import { useScroll, useMotionValueEvent } from "framer-motion";
 
@@ -24,12 +24,6 @@ const Header = () => {
   const isProjectDetail = location.pathname
     .toLowerCase()
     .startsWith("/project-detail");
-  console.log(
-    "isProjectDetail",
-    isProjectDetail,
-    "pathname:",
-    location.pathname,
-  );
 
   useEffect(() => {
     if (!isHome) {
@@ -41,7 +35,6 @@ const Header = () => {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (!isHome) return;
-    console.log("Page scroll: ", latest);
 
     if (latest > 0 && !scrolled) {
       setScrolled(true);
@@ -63,13 +56,9 @@ const Header = () => {
   }, [menuOpen]);
 
   // Log current location and isHome state
-  useEffect(() => {
-    console.log("location:", location.pathname, "isHome:", isHome);
-  }, [location.pathname, isHome]);
+  useEffect(() => {}, [location.pathname, isHome]);
 
-  useEffect(() => {
-    console.log("scrolled changed ->", scrolled);
-  }, [scrolled]);
+  useEffect(() => {}, [scrolled]);
 
   const defaultClasses =
     "flex items-center justify-between inset-0 border-b-1 px-[1rem] md:px-[1.5rem]";
@@ -84,7 +73,6 @@ const Header = () => {
     navBarClasses = `${defaultClasses}  bg-transparent`;
   }
 
-  console.log("pathname", location.pathname, "isHome", isHome);
   return (
     <>
       <header
@@ -111,7 +99,7 @@ const Header = () => {
           style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}
         >
           <div className="relative py-[0.5rem] md:py-[1rem] shrink-0 cursor-pointer">
-            <Link to="hero" smooth={true} duration={800}>
+            <Link to="/">
               {!scrolled ? (
                 <img src={whiteLogo} alt="logo" className="w-[8rem] h-auto" />
               ) : (

@@ -8,7 +8,7 @@ export const ButtHero = () => {
         target="_blank"
         rel="noopener noreferrer"
         href="/Doc/Oleg_Troian_CV.pdf"
-        download="Oleg_Troian_CV.pdf"
+        target="_blank"
         className={clsx(
           "inline-block",
           "font-light text-lg tracking-wide rounded-md text-content py-3 px-12 bg-button-gradient mt-8",

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
+import { HiMiniChevronRight } from "react-icons/hi2";
 import clsx from "clsx";
 import s from "./Experience.module.css";
 
@@ -11,7 +12,7 @@ const AccordionStudy = ({ educationPosts = [] }) => {
   };
   return (
     <div className="">
-      {educationPosts.map(({ id, title, subtitle, year }, index) => {
+      {educationPosts.map(({ id, title, subtitle, list, year }, index) => {
         const accordionIndex = (index + 1).toString().padStart(2, "0");
         const isActive = clicked === index;
 
@@ -68,25 +69,50 @@ const AccordionStudy = ({ educationPosts = [] }) => {
             <div
               className={clsx(
                 "max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-out ml-5 bg-transparent",
-                isActive && "max-h-[500px] opacity-100",
+                isActive && "max-h-[900px] md:max-h-[500px] opacity-100",
               )}
             >
-              <p className="font-light text-base text-accordion tracking-wide leading-[1.6em] p-0 py-4 md:p-6">
-                <span className="font-normal text-lg text-green-400 pr-2">
-                  {year}
-                </span>
-                {subtitle}
-                {id === 2 && (
-                  <a
-                    href="/Doc/certificate.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-normal text-cyan-400 underline hover:text-blue-500 transition-colors duration-300 ml-2"
-                  >
-                    View Сertificate
-                  </a>
-                )}
-              </p>
+              <div className="p-0 py-4 md:p-4">
+                <p className="font-light text-base text-accordion tracking-wide leading-[1.6em]">
+                  <span className="font-normal text-lg text-green-400 pr-2">
+                    {year}
+                  </span>
+                  {subtitle}
+                  {id === 1 && (
+                    <a
+                      href="/Doc/Media_College_Denmark.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-normal text-cyan-400 underline hover:text-blue-500 transition-colors duration-300 ml-2"
+                    >
+                      View Сertificate
+                    </a>
+                  )}
+                  {id === 2 && (
+                    <a
+                      href="/Doc/certificate.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-normal text-cyan-400 underline hover:text-blue-500 transition-colors duration-300 ml-2"
+                    >
+                      View Сertificate
+                    </a>
+                  )}
+                </p>
+                <ul className="flex flex-col items-start mt-6">
+                  {list.map((item, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center justify-start gap-2 w-full"
+                    >
+                      <HiMiniChevronRight className="text-white" />
+                      <p className="font-light text-sm text-accordion tracking-wide leading-relaxed w-full">
+                        {item}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         );

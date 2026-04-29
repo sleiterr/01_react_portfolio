@@ -85,7 +85,7 @@ const AccordionStudy = ({ educationPosts = [] }) => {
                       rel="noopener noreferrer"
                       className="font-normal text-cyan-400 underline hover:text-blue-500 transition-colors duration-300 ml-2"
                     >
-                      View Сertificate
+                      View Diploma
                     </a>
                   )}
                   {id === 2 && (

@@ -4,12 +4,14 @@
       "id": 1,
       "title": "My internship",
       "year": "Duration: 6 weeks",
-      "subtitle": "Superego Holstebro was my first experience in the IT field specifically in production. It is an excellent place where I gained not only practical knowledge but also great enjoyment from the work. During my internship, I became familiar with modern CMS platforms, learned frameworks such as TailwindCSS and Next.js, and developed a new perspective on UI/UX design. Working with the CMS Sanity allowed me to dive into the world of TypeScript for the first time. I would like to especially highlight the team I worked with: thanks to their support and expertise, I received a strong motivation for further learning and growth in the IT field.",
+      "subtitle": "Front-end internship at Superego Holstebro, working in a real production environment with modern web technologies and team collaboration.",
       "list": [
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-        "Repellat hic omnis expedita consectetur esse minus soluta earum,",
-        "velit eius illo quia molestiae atque natus, laudantium numquam",
-        "velit eius illo quia molestiae atque natus, laudantium numquam"
+        "Developed components using Next.js and TypeScript",
+        "Worked with Sanity CMS for content management systems",
+        "Applied Tailwind CSS for responsive UI development",
+        "Participated in real client-based projects",
+        "Collaborated in a professional development team environment",
+        "Gained first experience with modern UI/UX workflows"
       ]
     },
     {

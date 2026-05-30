@@ -24,7 +24,8 @@ const BurgerMenu = ({ isOpen, toggleMenu, scrolled }) => {
 const StyledWrapper = styled.div`
   .burger {
     position: relative;
-    width: 50px;
+
+    width: 45px;
     height: 25px;
     background: transparent;
     cursor: pointer;
@@ -76,7 +77,7 @@ const StyledWrapper = styled.div`
 
   .burger input:checked ~ span:nth-of-type(1) {
     transform: rotate(45deg);
-    top: -8px;
+    top: -4px;
     left: 4px;
   }
 
@@ -85,8 +86,9 @@ const StyledWrapper = styled.div`
     opacity: 0;
   }
   .burger span:nth-of-type(2) {
-    height: 3px;
-    width: 100%;
+    left: 0;
+    height: 2px;
+    width: 50%;
   }
 
   .burger input:checked ~ span:nth-of-type(3) {

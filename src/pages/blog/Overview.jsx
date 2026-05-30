@@ -6,12 +6,7 @@ import BlogCard from "./BlogCard";
 const Overview = () => {
   const { blogData, loading, error } = useBlog();
 
-  if (loading)
-    return (
-      <p className="font-normal text-2xl text-yellow-500">
-        Loading blogData...
-      </p>
-    );
+  if (loading) return null;
 
   if (error)
     return <p className="font-normal text-2xl text-red-500">{error}</p>;
